@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block footer %}
+{{ super() }}
+
+<!-- 不蒜子统计 -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="visit-count" style="text-align:center; padding: 10px 0; font-size: 0.9rem; color: var(--md-default-fg-color--light);">
+本站访问量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span></span>
+</div>
+{% endblock %}
