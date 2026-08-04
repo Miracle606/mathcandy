@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
+<meta content="Miracle" name="author"/>
+<link href="https://miracle606.github.io/mathcandy/AM/Cauchy/" rel="canonical"/>
+<link href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/" rel="prev"/>
+<link href="../Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/" rel="next"/>
+<link href="../../graph/logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Cauchy-Schwarz不等式 - Miracle的数学小课糖</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Miracle的数学小课糖" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Miracle的数学小课糖">
+<img alt="logo" src="../../graph/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Miracle的数学小课糖
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Cauchy-Schwarz不等式
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="切换暗色模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="切换暗色模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="切换亮色模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="切换亮色模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+          
+  
+  
+    
+  
+  高数数分
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/">
+          
+  
+  
+    
+  
+  线代高代
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Miracle的数学小课糖" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Miracle的数学小课糖">
+<img alt="logo" src="../../graph/logo.png"/>
+</a>
+    Miracle的数学小课糖
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    高数数分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    高数数分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<span class="md-ellipsis">
+    
+  
+    组合积分法
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<span class="md-ellipsis">
+    
+  
+    轮换对称性
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Cauchy-Schwarz不等式
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Cauchy-Schwarz不等式
+  
+
+    
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        定理
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      
+        方法1：重积分法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        方法2：判别式法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        方法3：变限积分法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+</a>
+<nav aria-label="应用" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_1">
+<span class="md-ellipsis">
+      
+        例1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_1">
+<span class="md-ellipsis">
+      
+        例2
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+<nav aria-label="习题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        直接应用
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      
+        结合牛莱公式
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      
+        构造辅助函数
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
+<span class="md-ellipsis">
+    
+  
+    Poisson积分公式
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
+<span class="md-ellipsis">
+    
+  
+    你真的懂分部积分吗?
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    线代高代
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    线代高代
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/">
+<span class="md-ellipsis">
+    
+  
+    矩阵的秩
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        定理
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      
+        方法1：重积分法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        方法2：判别式法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        方法3：变限积分法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+</a>
+<nav aria-label="应用" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_1">
+<span class="md-ellipsis">
+      
+        例1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_1">
+<span class="md-ellipsis">
+      
+        例2
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+<nav aria-label="习题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        直接应用
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      
+        结合牛莱公式
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      
+        构造辅助函数
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1><span>Cauchy-Schwarz<span class="heti-spacing"> </span></span>不等式</h1>
+<p>孔乙己曾谈及“茴字有四种写法”，与之相仿，柯西–施瓦茨积分不等式（Cauchy-Schwarz inequality）也存在四种经典证法：定积分性质法、判别式法、变上限积分法与二重积分法。下面就分享在考试与数学竞赛中常用的后三种证法。</p>
+<h2 id="_1">定理<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>首先给出柯西<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>施瓦茨积分不等式：</p>
+<div class="admonition abstract">
+<p class="admonition-title">Cauchy-Schwarz inequality</p>
+<div class="arithmatex">\[
+\left( \int^{b}_{a} f\left( x\right)  g\left( x\right)  \mathrm{d} x\right)^{2}  \leqslant \int^{b}_{a} f^{2}\left( x\right)  \mathrm{d} x\int^{b}_{a} g^{2}\left( x\right)  \mathrm{d} x
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(f\left( x\right)\)</span></span>， <span><span class="arithmatex">\(g\left( x\right)\)</span><span class="heti-spacing"> </span></span>均为区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\left[a,b\right]\)</span><span class="heti-spacing"> </span></span>上的连续函数。</p>
+</div>
+<h2 id="1">方法<span><span class="heti-spacing"> </span>1</span>：重积分法<a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>记区域<span><span class="heti-spacing"> </span><span class="arithmatex">\(D: a\leqslant x\leqslant b,\ a\leqslant y\leqslant b\)</span></span>，则</p>
+<div class="arithmatex">\[
+\begin{aligned} \left( \int_a^b f(x)g(x)\,\mathrm{d}x \right)^2 &amp;= \int_a^b f(x)g(x)\,\mathrm{d}x \cdot \int_a^b f(y)g(y)\,\mathrm{d}y \\ &amp;= \iint\limits_D f(x)g(x)f(y)g(y)\,\mathrm{d}x\mathrm{d}y \\ &amp;= \iint\limits_D \big[f(x)g(y)\big]\big[f(y)g(x)\big]\,\mathrm{d}x\mathrm{d}y. \end{aligned}
+\]</div>
+<p>由基本不等式<span><span class="heti-spacing"> </span><span class="arithmatex">\(ab \leqslant \dfrac{a^2+b^2}{2}\)</span></span>，得</p>
+<div class="arithmatex">\[
+\big[f(x)g(y)\big]\big[f(y)g(x)\big] \leqslant \frac12\Big[f^2(x)g^2(y)+f^2(y)g^2(x)\Big].
+\]</div>
+<p>代入上式并积分：</p>
+<div class="arithmatex">\[
+\begin{aligned} \left( \int_a^b f(x)g(x)\,\mathrm{d}x \right)^2 &amp;\leqslant \iint\limits_D \frac12\Big[f^2(x)g^2(y)+f^2(y)g^2(x)\Big]\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\iint\limits_D f^2(x)g^2(y)\,\mathrm{d}x\mathrm{d}y  + \frac12\iint\limits_D f^2(y)g^2(x)\,\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\left( \int_a^b f^2\,\mathrm{d}x \int_a^b g^2\,\mathrm{d}y \right)  + \frac12\left( \int_a^b f^2\,\mathrm{d}y \int_a^b g^2\,\mathrm{d}x \right) \\ &amp;= \left( \int_a^b f^2(x)\,\mathrm{d}x \right) \left( \int_a^b g^2(x)\,\mathrm{d}x \right). \end{aligned}
+\]</div>
+<p>不等式得证。</p>
+<p>下面分析何时取等：</p>
+<p>不等式取等号，当且仅当证明中每一步不等式都取等号。 唯一的不等式来自均值不等式，下面分两种情况讨论：</p>
+<ul>
+<li><strong>情况<span><span class="heti-spacing"> </span>1</span></strong>：存在某个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y_0\)</span><span class="heti-spacing"> </span></span>使<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(y_0)\neq0\)</span></span> ，此时对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in[a,b]\)</span></span> ，有</li>
+</ul>
+<div class="arithmatex">\[
+f(x)g(y_0)=f(y_0)g(x) \implies f(x)=\frac{f(y_0)}{g(y_0)}g(x).
+\]</div>
+<p>令常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(k=\dfrac{f(y_0)}{g(y_0)}\)</span></span> ，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)=k\,g(x),\quad\forall x\in[a,b].\)</span></span></p>
+<ul>
+<li><strong>情况<span><span class="heti-spacing"> </span>2</span></strong>：对所有<span><span class="heti-spacing"> </span><span class="arithmatex">\(y\in[a,b]\)</span></span> ，都有<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(y)=0\)</span></span> ，此时<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\equiv0\)</span></span> ，不等式两边均为<span><span class="heti-spacing"> </span><span class="arithmatex">\(0\)</span></span> ，等号成立。</li>
+</ul>
+<p>综上：<span>Cauchy-Schwarz<span class="heti-spacing"> </span></span>不等式等号成立<span><span class="heti-spacing"> </span><span class="arithmatex">\(\iff\text{存在常数 } k, \text{ 使得 } f(x)=k\,g(x) \text{ 在 }[a,b]\text{ 上几乎处处成立}.\)</span></span></p>
+<h2 id="2">方法<span><span class="heti-spacing"> </span>2</span>：判别式法<a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>类比高中柯西不等式的常见证明方式，我们可以构造一个非负二次函数，利用其判别式<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\leqslant 0\)</span><span class="heti-spacing"> </span></span>推导出不等式<span><span class="heti-spacing"> </span>.</span></p>
+<p>构造关于参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>的非负积分： <span class="arithmatex">\(F(t)=\displaystyle\int_{a}^{b}\big(tf(x)-g(x)\big)^2\mathrm{d}x\)</span></p>
+<p>显然对任意实数<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span></span>，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\big(tf(x)-g(x)\big)^2\geqslant 0\)</span></span> ，因此<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(t)\geqslant 0,\quad\forall\,t\in\mathbb R.\)</span></span></p>
+<p>将积分展开：</p>
+<div class="arithmatex">\[
+\begin{aligned} F(t) &amp;=\int_{a}^{b}\Big[t^2f^2(x)-2tf(x)g(x)+g^2(x)\Big]\mathrm{d}x \\ &amp;=\left(\int_{a}^{b}f^2(x)\mathrm{d}x\right)t^2 -2\left(\int_{a}^{b}f(x)g(x)\mathrm{d}x\right)t +\int_{a}^{b}g^2(x)\mathrm{d}x. \end{aligned}
+\]</div>
+<p>记</p>
+<div class="arithmatex">\[
+A=\int_{a}^{b}f^2(x)\mathrm{d}x,\quad B=\int_{a}^{b}f(x)g(x)\mathrm{d}x,\quad C=\int_{a}^{b}g^2(x)\mathrm{d}x,
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+F(t)=At^2-2Bt+C \geqslant 0,\quad \forall t\in\mathbb R.
+\]</div>
+<ul>
+<li>
+<p><strong>情况<span><span class="heti-spacing"> </span>1</span></strong>：若<span><span class="heti-spacing"> </span><span class="arithmatex">\(A=0\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\equiv 0\)</span></span>，原不等式显然取等成立。</p>
+</li>
+<li>
+<p><strong>情况<span><span class="heti-spacing"> </span>2</span></strong>：若<span><span class="heti-spacing"> </span><span class="arithmatex">\(A&gt;0\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F(t)\)</span><span class="heti-spacing"> </span></span>是开口向上的恒非负二次函数，故判别式满足<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta \leqslant 0\)</span>.<span class="heti-spacing"> </span></span>计算判别式并化简得：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\left(\int_{a}^{b} f(x)g(x)\mathrm{d}x\right)^2 \leqslant \left(\int_{a}^{b} f^2(x)\mathrm{d}x\right) \left(\int_{a}^{b} g^2(x)\mathrm{d}x\right).
+\]</div>
+<p>不等式取等<span><span class="heti-spacing"> </span><span class="arithmatex">\(\iff \Delta=0\iff \text{二次方程} F(t)=0 \text{存在唯一实根} t_0\)</span></span></p>
+<div class="arithmatex">\[
+\int_{a}^{b}\big(t_0 f(x)-g(x)\big)^2\mathrm{d}x=0
+\]</div>
+<p>由非负可积函数积分零的性质得</p>
+<div class="arithmatex">\[
+t_0 f(x)-g(x)\equiv 0,\quad x\in[a,b]
+\]</div>
+<p>即存在常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(t_0\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)=t_0 f(x) \quad(\text{或 }f(x)\equiv 0,\ g(x)\equiv 0).\)</span></span></p>
+<h2 id="3">方法<span><span class="heti-spacing"> </span>3</span>：变限积分法<a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>构造辅助函数：</p>
+<div class="arithmatex">\[
+F(t)=\int_{a}^{t} f^2(x)\mathrm{d}x\cdot \int_{a}^{t} g^2(x)\mathrm{d}x -\left(\int_{a}^{t} f(x)g(x)\mathrm{d}x\right)^2,\quad t\geqslant a
+\]</div>
+<p>显然初值：<span class="arithmatex">\(F(a)=0\)</span></p>
+<p>对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>求导：</p>
+<div class="arithmatex">\[
+\begin{aligned} F'(t) &amp;= g^2(t)\int_{a}^{t} f^2(x)\mathrm{d}x + f^2(t)\int_{a}^{t} g^2(x)\mathrm{d}x - 2f(t)g(t)\int_{a}^{t} f(x)g(x)\mathrm{d}x \\ &amp;= \int_{a}^{t} \big[f(x)g(t)\big]^2 \mathrm{d}x - \int_{a}^{t} 2f(x)g(t)f(t)g(x)\mathrm{d}x + \int_{a}^{t} \big[f(t)g(x)\big]^2 \mathrm{d}x \\ &amp;= \int_{a}^{t} \Big[f^2(x)g^2(t)-2f(x)g(t)f(t)g(x)+f^2(t)g^2(x)\Big]\mathrm{d}x \\ &amp;= \int_{a}^{t} \big[f(x)g(t)-f(t)g(x)\big]^2 \mathrm{d}x \geqslant 0 \end{aligned}
+\]</div>
+<p>因此<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F(t)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上<strong>单调递增</strong>，故：<span><span class="arithmatex">\(F(b)\geqslant F(a)=0\)</span><span class="heti-spacing"> </span></span>代入得：</p>
+<div class="arithmatex">\[
+\int_{a}^{b} f^2(x)\mathrm{d}x\int_{a}^{b} g^2(x)\mathrm{d}x -\left(\int_{a}^{b} f(x)g(x)\mathrm{d}x\right)^2 \geqslant 0
+\]</div>
+<p>得证，下面分析取等条件：</p>
+<p>不等式取等<span><span class="heti-spacing"> </span><span class="arithmatex">\(\iff F(b)=0 \iff F(t)\equiv 0,\forall t\in[a,b] \iff F'(t)\equiv 0\)</span></span></p>
+<div class="arithmatex">\[
+\int_{a}^{t} \big[f(x)g(t)-f(t)g(x)\big]^2 \mathrm{d}x \equiv 0
+\]</div>
+<p>由<strong>非负连续函数积分为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>则函数恒为<span><span class="heti-spacing"> </span>0</span></strong>： <span class="arithmatex">\(f(x)g(t)-f(t)g(x)=0,\quad \forall x,t\in[a,b]\)</span></p>
+<p>整理得：存在常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\equiv k\,g(x) \quad \text{或} \quad g(x)\equiv 0\)</span></span></p>
+<h2 id="_2">应用<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="1_1">例<span><span class="heti-spacing"> </span>1</span><a class="headerlink" href="#1_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x):[0,1]\to\mathbb R\)</span></span>，满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\int_0^1 xf(x)\mathrm{d}x=0\)</span></span>，求证： </p>
+<div class="arithmatex">\[ \displaystyle \int_0^1 f^2(x)\mathrm{d}x \geqslant 4\left(\int_0^1 f(x)\mathrm{d}x\right)^2. \]</div>
+</div>
+<p>由<span class="heti-skip"><span class="heti-spacing"> </span>Cauchy-Schwarz<span class="heti-spacing"> </span></span>不等式，结合条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\int_0^1 xf(x)\mathrm{d}x=0\)</span></span>，有</p>
+<div class="arithmatex">\[
+\begin{aligned} \left(\int_0^1 f(x)\mathrm{d}x\right)^2 &amp;=\left(\int_0^1 \left(1-\frac32 x\right)f(x)\mathrm{d}x\right)^2 \\ &amp;\leqslant \int_0^1 \left(1-\frac32 x\right)^2\mathrm{d}x \cdot \int_0^1 f^2(x)\mathrm{d}x \\ &amp;=\frac14 \int_0^1 f^2(x)\mathrm{d}x, \end{aligned}
+\]</div>
+<p>整理即得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_0^1 f^2(x)\mathrm{d}x \geqslant 4\left(\int_0^1 f(x)\mathrm{d}x\right)^2.\)</span><span class="heti-spacing"> </span></span>证毕。</p>
+<h3 id="2_1">例<span><span class="heti-spacing"> </span>2</span><a class="headerlink" href="#2_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_0^1 f(x)\,\mathrm{d}x = 1\)</span></span>，试分别说明定积分<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I = \displaystyle\int_0^1 (x+1)f^2(x)\,\mathrm{d}x\)</span><span class="heti-spacing"> </span></span>是否存在最小值与最大值？如存在，请求出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>及<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span><span class="heti-spacing"> </span></span>的值；如不存在，请说明理由。</p>
+</div>
+<p>本题是江苏省<span class="heti-skip"><span class="heti-spacing"> </span>2026<span class="heti-spacing"> </span></span>年第二十三届高数竞赛的第七道大题</p>
+<ul>
+<li>最小值分析（Cauchy-Schwarz  inequality）</li>
+</ul>
+<p>对函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sqrt{x+1}f(x) \text{和} \dfrac{1}{\sqrt{x+1}}\)</span><span class="heti-spacing"> </span></span>应用柯西<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>施瓦茨不等式：</p>
+<div class="arithmatex">\[
+\left( \int_0^1 f(x)\,\mathrm{d}x \right)^2 = \left( \int_0^1 \sqrt{x+1}f(x)\cdot\frac{1}{\sqrt{x+1}}\,\mathrm{d}x \right)^2 \leqslant \left( \int_0^1 (x+1)f^2(x)\,\mathrm{d}x \right)\left( \int_0^1 \frac{1}{x+1}\,\mathrm{d}x \right)
+\]</div>
+<p>由题设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_0^1 f(x)\,\mathrm{d}x=1\)</span></span>，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\int_0^1 \frac{1}{x+1}\,\mathrm{d}x = \ln(x+1)\bigg|_0^1 = \ln 2\)</span></span><br/>
+代入不等式得：  <span class="arithmatex">\(1^2 \leqslant I \cdot \ln 2\)</span>  因此  <span class="arithmatex">\(I \geqslant \dfrac{1}{\ln 2}\)</span><br/>
+等号成立当且仅当 <span class="arithmatex">\(\sqrt{x+1}f(x)\)</span> 与 <span class="arithmatex">\(\dfrac{1}{\sqrt{x+1}}\)</span> 成比例，即存在常数 <span class="arithmatex">\(k\)</span>，使得</p>
+<div class="arithmatex">\[
+\sqrt{x+1}f(x) = k \cdot \frac{1}{\sqrt{x+1}} \implies f(x) = \frac{k}{x+1}
+\]</div>
+<p>结合约束条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_0^1 f(x)\,\mathrm{d}x=1\)</span></span>：  </p>
+<div class="arithmatex">\[
+\int_0^1 \frac{k}{x+1}\,\mathrm{d}x = k\ln 2 = 1 \implies k=\frac{1}{\ln 2}
+\]</div>
+<p>故取到最小值时： </p>
+<div class="arithmatex">\[
+f(x) = \frac{1}{\ln 2}\cdot\frac{1}{x+1}, \quad I_{\min} = \frac{1}{\ln 2} 2
+\]</div>
+<ul>
+<li>最大值分析（构造无界序列）</li>
+</ul>
+<p>取函数序列<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_n(x)=(n+1)x^n\)</span></span>，显然<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_n(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，且满足</p>
+<div class="arithmatex">\[
+\int_0^1 f_n(x)\,\mathrm{d}x = (n+1)\int_0^1 x^n\,\mathrm{d}x = (n+1)\cdot\frac{1}{n+1}=1
+\]</div>
+<p>计算对应的<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_n\)</span></span>：</p>
+<div class="arithmatex">\[
+I_n = \int_0^1 (x+1)f_n^2(x)\,\mathrm{d}x = (n+1)^2\int_0^1 (x+1)x^{2n}\,\mathrm{d}x
+\]</div>
+<p>展开积分：</p>
+<div class="arithmatex">\[
+\int_0^1 (x+1)x^{2n}\,\mathrm{d}x = \int_0^1 x^{2n+1}\,\mathrm{d}x + \int_0^1 x^{2n}\,\mathrm{d}x = \frac{1}{2n+2} + \frac{1}{2n+1}
+\]</div>
+<p>因此<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_n = (n+1)^2\left(\dfrac{1}{2n+2}+\dfrac{1}{2n+1}\right)\)</span></span> </p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\to\infty\)</span><span class="heti-spacing"> </span></span>时，  <span class="arithmatex">\(I_n \sim (n+1)^2\left(\dfrac{1}{2(n+1)}+\dfrac{1}{2n}\right) \sim \dfrac{n}{2}+\dfrac{n}{2} \to +\infty\)</span>  </p>
+<p>这说明<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span><span class="heti-spacing"> </span></span>可以任意大，故最大值不存在。</p>
+<ul>
+<li>最小值存在，为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{\ln 2}\)</span></span>，取到最小值时的函数为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle f(x)=\frac{1}{(x+1)\ln 2}\)</span></span>；</li>
+<li>最大值不存在。</li>
+</ul>
+<h2 id="_3">习题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_4">直接应用<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上可积，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{0}^{1} xf(x) \mathrm{~d} x \right)^{2}\leqslant \frac{1}{3}\int_{0}^{1}f^{2}(x)  \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q2">Q2<a class="headerlink" href="#q2" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>已知<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\geqslant 0\)</span></span>，且在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续，又<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_{a}^{b} f(x) \mathrm{~d} x=1\)</span></span>，<span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>为任意实数，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{a}^{b} f(x)\cos kx \mathrm{~d} x  \right)^{2}+\left( \int_{a}^{b} f(x)\sin kx \mathrm{~d} x  \right)^{2}\leqslant 1
+\]</div>
+</div>
+<h4 id="q3">Q3<a class="headerlink" href="#q3" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{0}^{1} \frac{f(x)}{1+x^{2}} \mathrm{~d} x  \right)^{2}\leqslant \frac{\pi}{4}\int_{0}^{1} \frac{f^{2}(x)}{1+x^{2}} \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q4">Q4<a class="headerlink" href="#q4" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(a&gt;0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{\pi} xa^{\sin x} \mathrm{~d} x \cdot \int_{0}^{\frac{\pi}{2}} a^{-\cos x} \mathrm{~d} x \geqslant \frac{\pi^{3}}{4}
+\]</div>
+</div>
+<h4 id="q5">Q5（康托洛维奇不等式）<a class="headerlink" href="#q5" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续，且当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\in[a,b]\)</span><span class="heti-spacing"> </span></span>时，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;m\leqslant f(x)\leqslant M\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+(b-a)^{2}\leqslant \int_{0}^{1} f(x) \mathrm{~d} x \cdot \int_{0}^{1} \frac{1}{f(x)} \mathrm{~d} x \leqslant (b-a)^{2}\frac{(m+M)^{2}}{4mM}
+\]</div>
+</div>
+<h4 id="q6">Q6<a class="headerlink" href="#q6" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>证明不等式：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} \mathrm{e}^{ x^{2} }\mathrm{~d} x \cdot \int_{0}^{1} \mathrm{e}^{ -x^{2} } \mathrm{~d} x  \leqslant \frac{(\mathrm{e} +1)^{2}}{4\mathrm{e}}
+\]</div>
+</div>
+<h3 id="_5">结合牛莱公式<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="q7">Q7<a class="headerlink" href="#q7" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} f^{2}(x) \mathrm{~d} x \leqslant \frac{1}{2}\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q8">Q8<a class="headerlink" href="#q8" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=f(1)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} f^{2}(x) \mathrm{~d} x \leqslant \frac{1}{4}\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q9">Q9<a class="headerlink" href="#q9" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=f(1)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} f^{2}(x) \mathrm{~d} x \leqslant \frac{1}{8}\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q10">Q10<a class="headerlink" href="#q10" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+|f(x)|\leqslant \sqrt{ \int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x  }
+\]</div>
+</div>
+<h4 id="q11">Q11<a class="headerlink" href="#q11" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f'(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(1)-f(0)=1\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x \geqslant 1
+\]</div>
+</div>
+<h4 id="q12">Q12<a class="headerlink" href="#q12" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>连续可导且单调增加，<span class="arithmatex">\(f(0)=0\)</span>，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{0}^{1} f(x) \mathrm{~d} x  \right)^{2}\leqslant \frac{4}{9}\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q13">Q13<a class="headerlink" href="#q13" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续可导，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(b)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{a}^{b} f(x) \mathrm{~d} x  \right)^{2}\leqslant \frac{(b-a)^{3}}{3}\int_{a}^{b} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<details class="answer">
+<summary>Answer</summary>
+<p>见 <a href="">你真的懂分部积分吗</a></p>
+</details>
+<h4 id="q14">Q14<a class="headerlink" href="#q14" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续可导，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(a)=f(b)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{a}^{b} f(x) \mathrm{~d} x  \right)^{2}\leqslant \frac{(b-a)^{3}}{12}\int_{a}^{b} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<details class="answer">
+<summary>Answer</summary>
+<p>见 <a href="">你真的懂分部积分吗</a></p>
+</details>
+<h4 id="q15">Q15<a class="headerlink" href="#q15" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上二阶连续可导，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(a)=f(b)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{a}^{b} f(x) \mathrm{~d} x  \right)^{2}\leqslant \frac{(b-a)^{5}}{120}\int_{a}^{b} [f''(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<details class="answer">
+<summary>Answer</summary>
+<p>见 <a href="">你真的懂分部积分吗</a></p>
+</details>
+<h3 id="_6">构造辅助函数<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="q16">Q16<a class="headerlink" href="#q16" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上具有连续的导函数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=f(1)=-\dfrac{1}{6}\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x \geqslant 2\int_{0}^{1} f(x) \mathrm{~d} x +\frac{1}{4}
+\]</div>
+</div>
+<h4 id="q17">Q17<a class="headerlink" href="#q17" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_{0}^{1} f(x) \mathrm{~d} x=1\)</span></span>，<span class="arithmatex">\(\displaystyle \int_{0}^{1} xf(x) \mathrm{~d} x=\frac{27}{2}\)</span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} f^{2}(x) \mathrm{~d} x &gt; 2027
+\]</div>
+</div>
+<h4 id="q18">Q18<a class="headerlink" href="#q18" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=f(1)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{0}^{1} xf(x) \mathrm{~d} x  \right)^{2}\leqslant \frac{1}{45}\int_{0}^{1} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+<p>并给出取等时的<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span>.</span></p>
+</div>
+<h4 id="q19">Q19<a class="headerlink" href="#q19" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_{0}^{1} f(x) \mathrm{~d} x=1\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\left( \int_{0}^{1} xf(x) \mathrm{~d} x  \right)^{2}\leqslant \frac{1}{12}\int_{0}^{1} f^{2}(x) \mathrm{~d} x 
+\]</div>
+</div>
+<h4 id="q20">Q20<a class="headerlink" href="#q20" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有二阶连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=f(1)=f'(0)=0\)</span></span>，<span class="arithmatex">\(f'(1)=1\)</span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} [f''(x)]^{2} \mathrm{~d} x \geqslant 4
+\]</div>
+<p>并给出取等时的<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span>.</span></p>
+</div>
+<h4 id="q21">Q21<a class="headerlink" href="#q21" title="Permanent link">¶</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有二阶连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f'(0)=\mathrm{e}f(1)\)</span></span>，证明：若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_{0}^{1} [f''(x)]^{2} \mathrm{~d} x\leqslant 1\)</span></span>，则：</p>
+<div class="arithmatex">\[
+\left| \int_{0}^{1} \mathrm{e}^{ x }(x+1)f(x) \mathrm{~d} x  \right| &lt;1
+\]</div>
+</div>
+<ul>
+<li>更多精彩内容欢迎关注我的微信公众号！</li>
+</ul>
+<center>
+<p>搜一搜</p>
+<a href="../graph/qcode2.png" target="_blank">
+<img src="../graph/qcode2.png" style="width: 450px; height: auto;"/>
+</a>
+</center>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月4日 10:45:11 UTC">2026年8月4日</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 轮换对称性" class="md-footer__link md-footer__link--prev" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                轮换对称性
+              </div>
+</div>
+</a>
+<a aria-label="下一页: Poisson积分公式" class="md-footer__link md-footer__link--next" href="../Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                Poisson积分公式
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Miracle的数学小课糖 · 内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="http://mp.weixin.qq.com/mp/homepage?__biz=MzcwNDM0MTUyNQ==&amp;hid=3&amp;sn=ccdc4d61f574d84acd58a4fe4830da59&amp;scene=18#wechat_redirect" rel="noopener" target="_blank" title="mp.weixin.qq.com">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154m-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4m-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2M563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4m-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6m107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.action.edit", "content.tabs.link", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
