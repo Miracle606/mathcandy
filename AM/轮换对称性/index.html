@@ -4,11 +4,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
 <meta content="Miracle" name="author"/>
-<link href="https://miracle606.github.io/mathcandy/AM/%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/" rel="canonical"/>
-<link href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/" rel="next"/>
+<link href="https://miracle606.github.io/mathcandy/AM/%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/" rel="canonical"/>
+<link href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/" rel="prev"/>
 <link href="../../graph/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>组合积分法 - Miracle的数学小课糖</title>
+<title>轮换对称性 - Miracle的数学小课糖</title>
 <link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              组合积分法
+              轮换对称性
             
           </span>
 </div>
@@ -117,7 +117,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="./">
+<a class="md-tabs__link" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
           
   
   
@@ -166,13 +166,25 @@
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<span class="md-ellipsis">
+    
+  
+    组合积分法
+  
+
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     
   
-    组合积分法
+    轮换对称性
   
 
     
@@ -183,7 +195,7 @@
 <span class="md-ellipsis">
     
   
-    组合积分法
+    轮换对称性
   
 
     
@@ -215,10 +227,10 @@
 <nav aria-label="例题" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1">
+<a class="md-nav__link" href="#11994t4">
 <span class="md-ellipsis">
       
-        例1
+        例1（1994年数一T4）
       
     </span>
 </a>
@@ -228,6 +240,24 @@
 <span class="md-ellipsis">
       
         例2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        例3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        例4
       
     </span>
 </a>
@@ -308,41 +338,11 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q8">
-<span class="md-ellipsis">
-      
-        Q8（难）
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q9">
-<span class="md-ellipsis">
-      
-        Q9（难）
-      
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
-<span class="md-ellipsis">
-    
-  
-    轮换对称性
-  
-
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -381,10 +381,10 @@
 <nav aria-label="例题" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1">
+<a class="md-nav__link" href="#11994t4">
 <span class="md-ellipsis">
       
-        例1
+        例1（1994年数一T4）
       
     </span>
 </a>
@@ -394,6 +394,24 @@
 <span class="md-ellipsis">
       
         例2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        例3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        例4
       
     </span>
 </a>
@@ -474,24 +492,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q8">
-<span class="md-ellipsis">
-      
-        Q8（难）
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q9">
-<span class="md-ellipsis">
-      
-        Q9（难）
-      
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -502,346 +502,159 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>组合积分法</h1>
+<h1>轮换对称性</h1>
+<p>本小节分享的题目是一道<strong>二重积分积分方程</strong>，它的求解需要用到<strong>轮换对称性</strong>，这一技巧在第一章中有所提及，但是你是否真的掌握了呢？下面先通过几道经典例题帮你回顾这一技巧的适用场景和使用方法。</p>
 <h2 id="_1">简要介绍<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>有些积分往往很难求出，我们记它为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，但是如果能找到和它“共轭<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>对偶”的另一半<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>，并且满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>、<span class="arithmatex">\(I+J\)</span>、<span><span class="arithmatex">\(I-J\)</span><span class="heti-spacing"> </span></span>这三者至少有两项容易求出，那么原问题迎刃而解。下面先通过一个经典的组合积分法例题引入：</p>
+<div class="admonition abstract">
+<p class="admonition-title">轮换对称性</p>
+<p><strong>重积分的轮换对称性</strong>是利用积分区域和被积函数关于变量的对称性，下面举例说明。 </p>
+<p>考虑积分： </p>
+<div class="arithmatex">\[
+I_1 = \iint\limits_D x\cos xy \,\mathrm{d}x\mathrm{d}y,\quad I_2 = \iint\limits_D y\cos xy \,\mathrm{d}x\mathrm{d}y,
+\]</div>
+<p>其中区域<span><span class="heti-spacing"> </span><span class="arithmatex">\(D: x\geqslant 0,\ y\geqslant 0,\ x+y\leqslant 1\)</span></span>。 </p>
+<p>若将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_1\)</span><span class="heti-spacing"> </span></span>中的变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>换为<span><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span></span>、<span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>换为<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span></span>，积分区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>的表达式不变，因此 </p>
+<div class="arithmatex">\[I_1=I_2.\]</div>
+<p>同理对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_2\)</span><span class="heti-spacing"> </span></span>互换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x,y\)</span><span class="heti-spacing"> </span></span>也得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_2=I_1\)</span></span>。 这是因为积分区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>对变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x,y\)</span><span class="heti-spacing"> </span></span>轮换不变，积分值只和被积结构、积分范围有关，与变量记号无关；<span><span class="arithmatex">\(I_1,I_2\)</span><span class="heti-spacing"> </span></span>仅变量符号不同，积分相等，该性质称为<strong>重积分的轮换对称性</strong>。</p>
+</div>
+<p>简而言之就是如下结论：</p>
+<div class="admonition success">
+<p class="admonition-title">命题</p>
+<p>区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>满足：<span class="arithmatex">\((x,y)\in D \iff (y,x)\in D\)</span>，则 </p>
+<div class="arithmatex">\[ \displaystyle\iint\limits_D f(x,y)\,\mathrm{d}x\mathrm{d}y=\iint\limits_D f(y,x)\,\mathrm{d}x\mathrm{d}y. \]</div>
+</div>
 <h2 id="_2">例题<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="1">例<span><span class="heti-spacing"> </span>1</span><a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<!-- !!!表示永久展开；???表示默认折叠；???+默认展开 -->
+<h3 id="11994t4">例<span><span class="heti-spacing"> </span>1</span>（<span>1994<span class="heti-spacing"> </span></span>年数一<span><span class="heti-spacing"> </span>T4</span>）<a class="headerlink" href="#11994t4" title="Permanent link">¶</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>求积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int\dfrac{\sin x}{\sin x + \cos x}\mathrm dx\)</span></span></p>
+<p><span class="arithmatex">\(\displaystyle I=\iint\limits_D \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}\right)\mathrm{d}x\mathrm{d}y,\ D:x^2+y^2\leqslant R^2\)</span> </p>
 </div>
-<p>我们记题目所求积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，考虑还有一个积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J = \displaystyle\int\frac{\cos x}{\sin x + \cos x}\mathrm dx\)</span>.</span></p>
-<p>则有</p>
 <div class="arithmatex">\[
-\begin{aligned} I+J&amp;=\int\frac{\sin x + \cos x}{\sin x + \cos x}\mathrm dx\cr &amp;=\int\mathrm dx\cr &amp;=x+C \end{aligned} 
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned} -I+J&amp;=\int\frac{-\sin x + \cos x}{\sin x + \cos x}\mathrm dx\cr &amp;=\int\frac{1}{\sin x + \cos x}\mathrm d\left(\cos x + \sin x\right)\cr &amp;=\ln\left| \sin x + \cos x \right|+C \end{aligned}
-\]</div>
-<p>那么上面两式相减就可以解出<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span> ：</p>
-<div class="arithmatex">\[
-\begin{aligned} &amp;2I=x-\ln\left| \sin x + \cos x \right|+C\cr \Rightarrow I&amp;=\frac{x}{2}-\frac{1}{2}\ln\left| \sin x + \cos x \right|+C \end{aligned}
+\begin{aligned} I&amp;=\iint\limits_D \frac{x^2}{a^2}\mathrm{d}x\mathrm{d}y+\iint\limits_D \frac{y^2}{b^2}\mathrm{d}x\mathrm{d}y\\ \xrightarrow{\text{轮换对称}} I&amp;=\iint\limits_D \frac{y^2}{a^2}\mathrm{d}x\mathrm{d}y+\iint\limits_D \frac{x^2}{b^2}\mathrm{d}x\mathrm{d}y\\ \Rightarrow 2I&amp;=\left(\frac1{a^2}+\frac1{b^2}\right)\iint\limits_D(x^2+y^2)\mathrm{d}x\mathrm{d}y\\ I&amp;=\frac12\left(\frac1{a^2}+\frac1{b^2}\right)\int_0^{2\pi}\mathrm{d}\theta\int_0^R r^2\cdot r\mathrm{d}r =\frac{\pi R^4}{4}\left(\frac1{a^2}+\frac1{b^2}\right). \end{aligned}
 \]</div>
 <h3 id="2">例<span><span class="heti-spacing"> </span>2</span><a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>求积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_{0}^{1} \dfrac   {\arctan \,\sqrt[]{2+x^2}}{(1+x^2)\,\, \sqrt[]{2   +x^2}}\)</span></span></p>
+<p>证明<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>曲面<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((z-a)\varphi(x)+(z-b)\varphi(y)=0,\,x^2+y^2=c^2\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z=0\)</span><span class="heti-spacing"> </span></span>所围成的形体的体积为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle V = \dfrac12\pi(a+b)c^2\)</span></span>，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi\)</span><span class="heti-spacing"> </span></span>为任意正的连续函数，<span><span class="arithmatex">\(a,b,c\)</span><span class="heti-spacing"> </span></span>为正常数。</p>
 </div>
-<p>首先先回忆一个常用恒等式——<strong>反正切函数恒等式</strong>： </p>
+<p>由<span><span class="heti-spacing"> </span><span class="arithmatex">\((z-a)\varphi(x)+(z-b)\varphi(y)=0\)</span></span>，解得 </p>
+<div class="arithmatex">\[ z=\dfrac{a\varphi(x)+b\varphi(y)}{\varphi(x)+\varphi(y)}, \]</div>
+<p>记区域<span><span class="heti-spacing"> </span><span class="arithmatex">\(D:x^2+y^2\leqslant c^2\)</span></span>。于是</p>
 <div class="arithmatex">\[
-\arctan x+\arctan \dfrac1x=\dfrac\pi2\quad(x&gt;0)\]</div>
-<p>这也正是我们构造题目积分“另一半”的思路来源，于是我们记：</p>
+\begin{aligned} V &amp;= \iint\limits_D \frac{a\varphi(x)+b\varphi(y)}{\varphi(x)+\varphi(y)}\mathrm{d}x\mathrm{d}y \\ &amp;\xlongequal{轮换对称性} \iint\limits_D \frac{a\varphi(y)+b\varphi(x)}{\varphi(y)+\varphi(x)}\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\iint\limits_D \left[\frac{a\varphi(x)+b\varphi(y)}{\varphi(x)+\varphi(y)}+\frac{a\varphi(y)+b\varphi(x)}{\varphi(y)+\varphi(x)}\right]\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12(a+b)\iint\limits_D \mathrm{d}x\mathrm{d}y = \frac12\pi(a+b)c^2. \end{aligned}
+\]</div>
+<p><strong>三重积分</strong>也是有轮换对称性的，常见于球体，此时将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x,y,z\)</span><span class="heti-spacing"> </span></span>三者随意交换不改变积分区域的形式，因此对称性成立，如下面的例题<span><span class="heti-spacing"> </span>3</span>：</p>
+<h3 id="3">例<span><span class="heti-spacing"> </span>3</span><a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>计算 </p>
+<div class="arithmatex">\[ I=\displaystyle \iiint\limits_\Omega (x+3y+5z)\,\mathrm{d}x\mathrm{d}y\mathrm{d}z, \]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Omega:x^2+y^2+z^2\leqslant R^2,\ x\geqslant0,\,y\geqslant0,\,z\geqslant0\)</span></span>。  </p>
+</div>
+<p>由三重积分轮换对称性 </p>
+<div class="arithmatex">\[ \displaystyle\iiint\limits_\Omega x\,\mathrm{d}x\mathrm{d}y\mathrm{d}z =\iiint\limits_\Omega y\,\mathrm{d}x\mathrm{d}y\mathrm{d}z =\iiint\limits_\Omega z\,\mathrm{d}x\mathrm{d}y\mathrm{d}z. \]</div>
+<p>于是</p>
 <div class="arithmatex">\[
-I=\displaystyle\int_0^1 \dfrac{\arctan\sqrt{2+x^2}}{(1+x^2)\sqrt{2+x^2}}\mathrm{d}x,\quad J=\displaystyle\int_0^1 \dfrac{\arctan\dfrac1{\sqrt{2+x^2}}}{(1+x^2)\sqrt{2+x^2}}\mathrm{d}x,\]</div>
-<p>那么利用上面给出的恒等式，我们将两个积分相加得到：</p>
-<div class="arithmatex">\[\begin{aligned} I+J &amp;=\int_0^1 \frac{\arctan\sqrt{2+x^2}+\arctan\frac1{\sqrt{2+x^2}}}{(1+x^2)\sqrt{2+x^2}}\mathrm{d}x \\ &amp;=\frac\pi2\int_0^1 \frac{\mathrm{d}x}{(1+x^2)\sqrt{2+x^2}}\\ &amp;\xlongequal{t=1+x^2}\frac\pi2\cdot \frac12\int_1^2 \frac{\mathrm{d}t}{t\sqrt{t+1}\sqrt{t-1}} \\&amp;=\frac\pi4\int_1^2 \frac{\mathrm{d}t}{t\sqrt{t^2-1}}\\ &amp;\xlongequal{t=\sec\theta}\frac\pi4\int_0^{\frac\pi3}\frac{\sec\theta\tan\theta\mathrm{d}\theta}{\sec\theta\tan\theta} =\frac{\pi^2}{12}. \end{aligned}\]</div>
-<p>现在，我们只需要求出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span><span class="heti-spacing"> </span></span>就大功告成了！</p>
-<p>而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span><span class="heti-spacing"> </span></span>直接求并不好求，这里要利用<strong>含参变量积分</strong>中的一个常用技巧：化一重积分为二重积分进行计算。我们利用有理函数积分公式： </p>
-<div class="arithmatex">\[\int \frac{\mathrm{d}x}{a^2+x^2}=\frac1a\arctan\frac xa+C\quad(a&gt;0).\]</div>
-<p>得到：</p>
-<div class="arithmatex">\[\frac1{\sqrt{2+x^2}}\arctan\frac1{\sqrt{2+x^2}}=\int_0^1 \frac{\mathrm{d}y}{2+x^2+y^2},\]</div>
-<p>那么就可以把<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span><span class="heti-spacing"> </span></span>变换成如下的二重积分：</p>
-<div class="arithmatex">\[ J=\int_0^1\int_0^1 \frac1{(1+x^2)(2+x^2+y^2)}\mathrm{d}x\mathrm{d}y. \]</div>
-<div class="arithmatex">\[ \begin{aligned} J&amp;=\int_0^1\int_0^1 \frac1{(1+y^2)(2+x^2+y^2)}\mathrm{d}x\mathrm{d}y \\&amp;=\frac12\int_0^1\int_0^1\left(\frac1{1+x^2}+\frac1{1+y^2}\right)\frac1{2+x^2+y^2}\mathrm{d}x\mathrm{d}y\\ &amp;=\frac12\int_0^1\int_0^1 \frac1{(1+x^2)(1+y^2)}\mathrm{d}x\mathrm{d}y \\&amp;=\frac12\left(\int_0^1\frac{\mathrm{d}x}{1+x^2}\right)\left(\int_0^1\frac{\mathrm{d}y}{1+y^2}\right) \\&amp;=\frac12\cdot \frac\pi4\cdot\frac\pi4=\frac{\pi^2}{32}. \end{aligned} \]</div>
-<p>上面的第一个等号利用的是<strong>轮换对称性</strong>，因为我们此时二重积分的区域是一个正方形区域，而它是关于直线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y=x\)</span><span class="heti-spacing"> </span></span>对称的，因此我们就可以将被积函数中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>全部互换，等式是不变的，然后我们将得到两个积分相加除以二，结果仍然是不变的，这就是上面第一个等号的由来！</p>
-<p>于是 </p>
-<div class="arithmatex">\[ I=\frac{\pi^2}{12}-\frac{\pi^2}{32}=\frac{5\pi^2}{96}. \]</div>
+\begin{aligned} I &amp;=9\iiint\limits_\Omega z\,\mathrm{d}x\mathrm{d}y\mathrm{d}z \\ &amp;=9\int_0^{\frac\pi2}\mathrm{d}\theta\int_0^{\frac\pi2}\mathrm{d}\varphi\int_0^R r\cos\varphi\cdot r^2\sin\varphi\,\mathrm{d}r \\ &amp;=\frac{9\pi}{2}\int_0^{\frac\pi2}\sin\varphi\cos\varphi\,\mathrm{d}\varphi\int_0^R r^3\,\mathrm{d}r =\frac9{16}\pi R^4. \end{aligned}
+\]</div>
+<p>有了上面三道题目的铺垫，我们就可以开始解决本小节的重点题目了。</p>
+<h3 id="4">例<span><span class="heti-spacing"> </span>4</span><a class="headerlink" href="#4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(D=\{(x,y)\mid 4\leqslant x^2+y^2\leqslant 9,\,x\geqslant0,\,y\geqslant0\}\)</span></span>，函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x,y)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>上连续，满足 </p>
+<div class="arithmatex">\[ \displaystyle f(x,y)=\sin\left(\pi\sqrt{x^2+y^2}\right)+\dfrac1\pi\displaystyle\iint\limits_D \dfrac{xf(x,y)}{x+y}\mathrm{d}x\mathrm{d}y, \]</div>
+<p>求二重积分<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\iint\limits_D f(x,y)\mathrm{d}x\mathrm{d}y\)</span><span class="heti-spacing"> </span></span>的值。</p>
+</div>
+<p>由于题干中二重积分的结果一定是一个常数，我们不妨将其记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span></span>，即记，</p>
+<div class="arithmatex">\[
+\displaystyle A=\iint\limits_D \frac{xf(x,y)}{x+y}\mathrm{d}x\mathrm{d}y
+\]</div>
+<p>则原式就变成：</p>
+<div class="arithmatex">\[
+ \displaystyle f(x,y)=\sin\left(\pi\sqrt{x^2+y^2}\right)+\dfrac1\pi A, 
+\]</div>
+<p>那么现在得到这个式子如何处理呢？我们为了解出这个常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span></span>，考虑将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(LHS\)</span><span class="heti-spacing"> </span></span>配凑成<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>中被积函数的形式，也就是对等式左右两侧同时乘以<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span></span>，再同时除以<span><span class="heti-spacing"> </span><span class="arithmatex">\((x+y)\)</span></span>，得：</p>
+<div class="arithmatex">\[
+ \displaystyle\dfrac{xf(x,y)}{x+y}=\dfrac{x}{x+y}\sin\left(\pi\sqrt{x^2+y^2}\right)+\dfrac{A}{\pi}\cdot\dfrac{x}{x+y}. 
+\]</div>
+<p>然后对上式左右两侧同时在区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>上积分，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(LHS\)</span><span class="heti-spacing"> </span></span>恰好就是我们设的常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span></span>，即：</p>
+<div class="arithmatex">\[
+\begin{aligned} A &amp;= \iint\limits_D \frac{x}{x+y}\sin\left(\pi\sqrt{x^2+y^2}\right)\mathrm{d}x\mathrm{d}y +\frac{A}{\pi}\iint\limits_D \frac{x}{x+y}\mathrm{d}x\mathrm{d}y \\ &amp;\xlongequal{轮换对称性} \iint\limits_D \frac{y}{x+y}\sin\left(\pi\sqrt{x^2+y^2}\right)\mathrm{d}x\mathrm{d}y +\frac{A}{\pi}\iint\limits_D \frac{y}{x+y}\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\iint\limits_D \sin\left(\pi\sqrt{x^2+y^2}\right)\mathrm{d}x\mathrm{d}y +\frac{A}{2\pi}\iint\limits_D \mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\int_0^{\frac\pi2}\mathrm{d}\theta\int_2^3 r\sin(\pi r)\mathrm{d}r +\frac{A}{2\pi}\cdot\frac{5\pi}{4} \\ &amp;=\frac54+\frac{5A}{8}, \end{aligned}
+\]</div>
+<p>解得<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle A=\dfrac{10}{3}\)</span>.</span></p>
+<p>此时就可以把<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的值带回原式，并对左右两边同时积分就可以得到题目要求的式子啦，于是：</p>
+<div class="arithmatex">\[
+\begin{aligned} \iint\limits_D f(x,y)\mathrm{d}x\mathrm{d}y &amp;=\iint\limits_D \sin\left(\pi\sqrt{x^2+y^2}\right)\mathrm{d}x\mathrm{d}y +\frac{A}{\pi}\iint\limits_D \mathrm{d}x\mathrm{d}y \\ &amp;\xlongequal{\text{极坐标}} \int_{0}^{\frac{\pi}{2}}\mathrm{d}\theta\int_{2}^{3} r\sin(\pi r)\,\mathrm{d}r +\frac{A}{\pi}\cdot S_D \\ &amp;=\frac{\pi}{2}\cdot\left[\frac{-r\cos\pi r}{\pi}\bigg|_{2}^{3}+\frac1\pi\int_{2}^{3}\cos\pi r\,\mathrm{d}r\right] +\frac{A}{\pi}\cdot \frac14\pi(9-4) \\ &amp;=\frac12\Big[-3\cos3\pi+2\cos2\pi+0\Big]+\frac54 A \\ &amp;=\frac12\big[-3\cdot(-1)+2\cdot1\big]+\frac54 A \\&amp;=\frac52+\frac54 A \\ &amp;\xlongequal{A=\frac{10}{3}} \frac52+\frac54\cdot\frac{10}{3} \\&amp;=\frac52+\frac{25}{6} \\&amp;=\frac{15+25}{6}=\frac{40}{6}=\frac{20}{3}. \end{aligned}
+\]</div>
+<p>至此我们已对二重、三重积分里的轮换对称性做了系统梳理。事实上轮换对称性并非重积分独有，<strong>曲线积分与曲面积分</strong>同样可以依托积分区域轮换不变的特征简化运算，借助变量轮换替换，省去繁琐分步计算<span><span class="heti-spacing"> </span>.</span></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>本题所使用的<strong>反正切函数恒等式</strong>非常重要，请务必熟练掌握！</p>
+<p>轮换对称性还可以用来证明一些积分不等式，本章的习题<span><span class="heti-spacing"> </span>5</span>、<span>6<span class="heti-spacing"> </span></span>和接下来的第三小节——<strong><span>Cauchy-Schwarz<span class="heti-spacing"> </span></span>不等式</strong>就是一个典型的例子，后续我还会出专题进行整理。</p>
 </div>
 <h2 id="_3">习题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>下面给出<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>道难度逐渐递增的积分题目，方法不唯一，我下面仅给出使用组合积分法的详细求解过程。</p>
-<p><img alt="✏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/270f.svg" title=":pencil2:"/> 一定要先自行思考再看解答哦！</p>
 <h3 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \frac{\sin x}{a\cos x+b\sin x}\mathrm{d} x\]</div>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续，且为正值函数，求证：</p>
+<div class="arithmatex">\[
+\iint\limits_{D} \frac{f(x)}{f(y)}\mathrm{~d} \sigma\geqslant (b-a)^{2} 
+\]</div>
+<p>其中区域<span><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span></span>：<span class="arithmatex">\(a\leqslant x\leqslant b\)</span>，<span class="arithmatex">\(a\leqslant y \leqslant b\)</span>.</p>
 </div>
-<details class="answer">
-<summary>Answer</summary>
-<p>本题是例题<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的推广，可以用万能公式来做，但是比较麻烦。我们根据正文中介绍的方法，记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造一个配对的积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int \frac{\cos x}{a\cos x+b\sin x}\mathrm{~d} x 
-\]</div>
-<p>把它们组合起来，得：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-bI+aJ&amp;=\int \frac{b\sin x+a\cos x}{a\cos x+b\sin x}\mathrm{~d} x\\
-&amp;= \int \mathrm{~d} x\\
-&amp;= x+C_{1}
-\end{aligned}
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
--aI+bJ&amp;=\int \frac{-a\sin x+b\cos x}{a\cos x+b\sin x}\mathrm{~d} x\\
-&amp;= \int \frac{\mathrm{~d} (a\cos x+b\sin x) }{a\cos x+b\sin x}\\
-&amp;= \ln |a\cos x+b\sin x|+C_{2}
-\end{aligned} 
-\]</div>
-<p>联立两个方程就可以解出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>，即：</p>
-<div class="arithmatex">\[
-I=\frac{1}{a^{2}+b^{2}}(bx-a\ln |a\cos x+b\sin x|)+C
-\]</div>
-<p>大部分情况组合的结果会包含分母的倍数或者是分母的导数，因此我们也可以根据这个思路直接使用待定系数法将分子配凑成想要的形式，这种方法被称作“积木法”，感兴趣的朋友可以自行搜索了解。</p>
-</details>
 <h3 id="q2">Q2<a class="headerlink" href="#q2" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \frac{\mathrm{e}^{ x }}{a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }}\mathrm{~d} x \]</div>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Sigma\)</span><span class="heti-spacing"> </span></span>为上半球面<span><span class="heti-spacing"> </span><span class="arithmatex">\(x^{2}+y^{2}+z^{2}=a^{2}(a&gt;0,z\geqslant 0)\)</span></span>，求积分：</p>
+<div class="arithmatex">\[
+\iint\limits_{\Sigma}(\sqrt{ 2 }x+z+1)^{2}\mathrm{~d} S 
+\]</div>
 </div>
-<details class="answer">
-<summary>Answer</summary>
-<p>记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造配对积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int \frac{\mathrm{e}^{ -x }}{a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }}\mathrm{~d} x 
-\]</div>
-<p>则组合可以得到：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-aI+bJ &amp;= \int \frac{a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }}{a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }}\mathrm{~d} x\\
-&amp;= \int \mathrm{~d} x\\
-&amp;= x+C_{1}
-\end{aligned}
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
-aI-bJ &amp;= \int \frac{a\mathrm{e}^{ x }-b\mathrm{e}^{ -x }}{a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }}\mathrm{~d} x\\
-&amp;= \int \frac{\mathrm{~d} (a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }) }{a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }}\mathrm{~d} x\\
-&amp;= \ln |a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }|+C_{2}
-\end{aligned}
-\]</div>
-<p>联立两个方程，解得：</p>
-<div class="arithmatex">\[
-I= \frac{1}{2a}(x+\ln |a\mathrm{e}^{ x }+b\mathrm{e}^{ -x }|)+C
-\]</div>
-</details>
 <h3 id="q3">Q3<a class="headerlink" href="#q3" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \frac{\sin x}{1+\sin x\cos x}\mathrm{~d} x\]</div>
+<p>对于<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>次齐次函数：<span class="arithmatex">\(f(x,y,z)=a_{1}x^{4}+a_{2}y^{4}+a_{3}z^{4}+3a_{4}x^{2}y^{2}+3a_{5}y^{2}z^{2}+3a_{6}x^{2}z^{2}\)</span>，求解曲面积分：</p>
+<div class="arithmatex">\[
+\iint\limits_{\Sigma}f(x,y,z)\mathrm{~d} S 
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Sigma\)</span></span>：<span class="arithmatex">\(x^{2}+y^{2}+z^{2}=1\)</span>.</p>
 </div>
-<details class="answer">
-<summary>Answer</summary>
-<p>本题组合方式很简单，但是将组合后的积分计算出来很考察三角恒等变形的基本功！</p>
-<p>记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造配对积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int \frac{\cos x}{1+\sin x\cos x}\mathrm{~d} x 
-\]</div>
-<p>组合得：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I+J &amp;= \int \frac{\sin x+\cos x}{1+\sin x\cos x}\mathrm{~d} x\\
-&amp;= \int \frac{\sin x+\cos x}{1+ \frac{1}{2}\left( 1-(\sin x-\cos x)^{2} \right) }\mathrm{~d} x \\
-&amp;= 2\int \frac{\mathrm{~d} (\sin x-\cos x) }{3-(\sin x-\cos x)^{2}}\\
-&amp;= 2\int\frac{\mathrm{d}u}{(\sqrt{3})^{2}-u^{2}} \\ &amp;=2\cdot \frac{1}{2\sqrt{3}}\ln\left| \frac{\sqrt{3}+u}{\sqrt{3}-u} \right|+C \\ &amp;=\frac{1}{\sqrt{3}}\ln\left| \frac{\sqrt{3}+\sin x-\cos x}{\sqrt{3}-\sin x+\cos x} \right|+C_{1}
-\end{aligned}
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
-J-I &amp;= \int \frac{\cos x-\sin x}{1+\sin x\cos x}\mathrm{~d} x\\
-&amp;= \int \frac{\cos x-\sin x}{1+\frac{1}{2}((\sin x+\cos x)^{2}-1)}\mathrm{~d} x\\
-&amp;= 2\int \frac{\mathrm{~d} (\sin x+\cos x) }{1+(\sin x+\cos x)^{2}}\\
-&amp;= 2\arctan(\sin x+\cos x)+C_{2}
-\end{aligned}
-\]</div>
-<p>联立两式解得：</p>
-<div class="arithmatex">\[
-I=\frac{1}{2\sqrt{3}}\ln\left| \frac{\sqrt{3}+\sin x-\cos x}{\sqrt{3}-\sin x+\cos x} \right|-\arctan(\sin x+\cos x)+C
-\]</div>
-</details>
 <h3 id="q4">Q4<a class="headerlink" href="#q4" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \frac{\tan x}{a\tan x+b\cot x}\mathrm{~d} x \]</div>
+<p>设二元函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z=f(x,y)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D=\{0&lt;x^2+y^2\leqslant 1\}\)</span><span class="heti-spacing"> </span></span>上连续且满足：</p>
+<div class="arithmatex">\[
+\sqrt{x^2+y^2}\left(|f(x,y)|+|f(y,x)|\right)\leqslant 1
+\]</div>
+<p>证明： </p>
+<div class="arithmatex">\[ \left|\iint\limits_{D} f(x,y)\mathrm dx\mathrm dy\right| \leqslant \pi. \]</div>
+<p>另外，找一个满足题设条件的函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x,y)\)</span><span class="heti-spacing"> </span></span>并使得：</p>
+<div class="arithmatex">\[ \left|\iint\limits_D f(x,y)\mathrm dx\mathrm dy\right| = \pi. \]</div>
 </div>
-<details class="answer">
-<summary>Answer</summary>
-<p>记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造配对积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int \frac{\cot x}{a\tan x+b\cot x}\mathrm{~d} x 
-\]</div>
-<p>组合得：</p>
-<div class="arithmatex">\[
-aI+bJ = \int \mathrm{~d} x = x+C_{1}
-\]</div>
-<p>下面这个积分也很考察三角积分功底。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I+J &amp;= \int \frac{\tan x+\cot x}{a\tan x+b\cot x}\mathrm{~d} x\\
-&amp;= \int \frac{\frac{\sin ^{2}x+\cos ^{2}x}{\sin x\cos x}}{a\tan x+b\cot x}\mathrm{~d} x\\
-&amp;= \int \frac{\mathrm{~d} x }{\sin x\cos x(a\tan x+b\cot x)}\\
-&amp;= \int \frac{\mathrm{~d} x }{a\sin ^{2}x+b\cos ^{2}x}\\
-&amp;= \frac{1}{b}\int \frac{\sec ^{2}x}{1+\frac{a}{b}\tan ^{2}x}\mathrm{~d} x \\
-&amp;= \frac{1}{\sqrt{ ab }}\int \frac{\mathrm{~d} \left( \sqrt{ \frac{a}{b}}\tan x  \right) }{1+\left( \sqrt{ \frac{a}{b}}\tan x  \right)^{2}}\\
-&amp;= \frac{1}{\sqrt{ ab }}\arctan\left( \sqrt{ \frac{a}{b} }\tan x \right)+C_{2}
-\end{aligned}
-\]</div>
-<p>联立两式解得：</p>
-<div class="arithmatex">\[
-I=\frac{1}{a-b}\left[ x-\sqrt{ \frac{b}{a} }\arctan\left( \sqrt{ \frac{a}{b} }\tan x \right) \right]+C
-\]</div>
-</details>
 <h3 id="q5">Q5<a class="headerlink" href="#q5" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \mathrm{e}^{ ax }\cos bx\mathrm{~d} x \]</div>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)&gt;0\)</span><span class="heti-spacing"> </span></span>且连续、单调减少，证明：</p>
+<div class="arithmatex">\[
+\frac{\int_{0}^{1} xf^{2}(x) \mathrm{~d} x }{\int_{0}^{1}xf(x)  \mathrm{~d} x }\leqslant \frac{\int_{0}^{1} f^{2}(x) \mathrm{~d} x }{\int_{0}^{1}f(x)  \mathrm{~d} x }
+\]</div>
 </div>
-<details class="answer">
-<summary>Answer</summary>
-<p>分部积分可做，下面来看看组合积分法怎么解决。记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造配对积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int \mathrm{e}^{ ax }\sin bx\mathrm{~d} x 
-\]</div>
-<p>首先考虑对两个被积函数求导，从而得到组合方式：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-(\mathrm{e}^{ ax }\cos bx)' &amp;= a\mathrm{e}^{ ax }\cos bx-b\mathrm{e}^{ ax }\sin bx\\
-(\mathrm{e}^{ ax }\sin bx)' &amp;= a\mathrm{e}^{ ax }\sin bx+b\mathrm{e}^{ ax }\cos bx
-\end{aligned}
-\]</div>
-<p>对两个等式的两边同时积分，得：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\mathrm{e}^{ ax }\cos bx &amp;= a\int \mathrm{e}^{ ax }\cos bx\mathrm{~d} x-b\int \mathrm{e}^{ ax }\sin bx\mathrm{~d} x\\
-&amp;= aI-bJ
-\end{aligned}
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
-\mathrm{e}^{ ax }\sin bx &amp;= a\int \mathrm{e}^{ ax }\sin bx\mathrm{~d} x+b\int \mathrm{e}^{ ax }\cos bx\mathrm{~d} x\\
-&amp;= aJ+bI
-\end{aligned}
-\]</div>
-<p>联立解得：</p>
-<div class="arithmatex">\[
-I=\frac{1}{a^{2}+b^{2}}\mathrm{e}^{ ax }(a\cos bx+b\sin bx)+C
-\]</div>
-</details>
 <h3 id="q6">Q6<a class="headerlink" href="#q6" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int x\mathrm{e}^{ ax }\cos bx\mathrm{~d} x \]</div>
-</div>
-<details class="answer">
-<summary>Answer</summary>
-<p>思路和上题完全一致，同时本题需要借助上一题的结果进行计算。下面给出最后的答案：</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>区间上的连续函数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)&gt;-1\)</span></span>，证明：</p>
 <div class="arithmatex">\[
-I= \frac{x\mathrm{e}^{ ax }}{a^{2}+b^{2}}(a\cos bx+b\sin bx)-\frac{\mathrm{e}^{ ax }}{(a^{2}+b^{2})^{2}}[(a^{2}-b^{2})\cos bx+2ab\sin bx]+C
+\int_{a}^{b} f(x) \mathrm{~d} x \geqslant \frac{(b-a)\int_{a}^{b} \frac{f(x)}{1+f(x)} \mathrm{~d} x }{(b-a)-\int_{a}^{b} \frac{f(x)}{1+f(x)} \mathrm{~d} x }
 \]</div>
-</details>
+</div>
 <h3 id="q7">Q7<a class="headerlink" href="#q7" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \frac{1}{1+x^{4}}\mathrm{~d} x \]</div>
+<p>计算三重积分：</p>
+<div class="arithmatex">\[
+I=\iiint_{\Omega}x^{2}+y^{2}+z^{2}\mathrm{~d} x\mathrm{d} y\mathrm{d} z   
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Omega=\{(x,y,z)|x^{2}+4y^{2}+9z^{2}\leqslant 4x+8y+6z\}\)</span>.</span></p>
 </div>
-<details class="answer">
-<summary>Answer</summary>
-<p>经典题，相信大家都做过。构造如下两个积分：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I &amp;= \int \frac{x^{2}-1}{x^{4}+1}\mathrm{~d} x\\
-&amp;= \int \frac{1-\frac{1}{x^{2}}}{x^{2}+\frac{1}{x^{2}}}\mathrm{~d} x\\
-&amp;= \int \frac{\mathrm{~d} \left( x+\frac{1}{x} \right) }{\left( x+\frac{1}{x} \right)^{2}-2}\\
-&amp;= \frac{1}{2\sqrt{ 2 }}\ln \left| \frac{x^{2}-\sqrt{ 2 }x+1}{x^{2}+\sqrt{ 2 }x+1} \right| +C_{1}
-\end{aligned}
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
-J &amp;= \int \frac{x^{2}+1}{x^{4}+1}\mathrm{~d} x \\
-&amp;= \int \frac{1+\frac{1}{x^{2}}}{x^{2}+\frac{1}{x^{2}}}\mathrm{~d} x\\
-&amp;= \int \frac{\mathrm{~d} \left( x-\frac{1}{x} \right) }{\left( x-\frac{1}{x} \right)^{2}+2}\\
-&amp;= \frac{1}{\sqrt{ 2 }}\arctan \frac{x^{2}-1}{\sqrt{ 2 }x}+C_{2}
-\end{aligned}
-\]</div>
-<p>所以原积分可以通过上面两个积分组合得到：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int \frac{1}{1+x^{4}}\mathrm{~d} x &amp;= \frac{1}{2}(J-I)\\
-&amp;= \frac{1}{2\sqrt{ 2 }}\arctan \frac{x^{2}-1}{\sqrt{ 2 }x} - \frac{1}{4\sqrt{ 2 }}\ln \left| \frac{x^{2}-\sqrt{ 2 }x+1}{x^{2}+\sqrt{ 2 }x+1} \right|+C
-\end{aligned}
-\]</div>
-</details>
-<h3 id="q8">Q8（难）<a class="headerlink" href="#q8" title="Permanent link">¶</a></h3>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int_{0}^{\frac{\pi}{6}} \frac{\cos ^{2}x}{\cos x+\sqrt{ 3 }\sin x} \mathrm{~d} x \]</div>
-</div>
-<details class="answer">
-<summary>Answer</summary>
-<p>定积分也是可以用组合积分法的，构造两个积分限一致的积分即可，记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造配对积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int_{0}^{\frac{\pi}{6}} \frac{\sin^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x
-\]</div>
-<p>组合得：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I+J &amp;= \int_{0}^{\frac{\pi}{6}} \frac{\cos^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x + \int_{0}^{\frac{\pi}{6}} \frac{\sin^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x \\
-&amp;= \int_{0}^{\frac{\pi}{6}} \frac{\cos^{2}x+\sin^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x \\
-&amp;= \int_{0}^{\frac{\pi}{6}} \frac{1}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x \\
-&amp;= \frac{1}{2}\int_{0}^{\frac{\pi}{6}} \frac{1}{\sin\left(x+\frac{\pi}{6}\right)}\mathrm{~d} x \\
-&amp;= \frac{1}{2}\int_{0}^{\frac{\pi}{6}} \csc\left(x+\frac{\pi}{6}\right)\mathrm{~d} x \\
-&amp;= -\frac{1}{2}\ln\left|\csc\left(x+\frac{\pi}{6}\right)+\cot\left(x+\frac{\pi}{6}\right)\right|\bigg|_{0}^{\frac{\pi}{6}} \\
-&amp;= -\frac{1}{2}\ln\left [\csc\left(\frac{\pi}{6}+\frac{\pi}{6}\right)+\cot\left(\frac{\pi}{6}+\frac{\pi}{6}\right)\right] -\left\{-\frac{1}{2}\ln\left [\csc\left(0+\frac{\pi}{6}\right)+\cot\left(0+\frac{\pi}{6}\right)\right] \right\} \\
-&amp;= -\frac{1}{2}\ln\left(\frac{1}{\cos\frac{\pi}{3}}+\cot\frac{\pi}{3}\right)+\frac{1}{2}\ln\left(\frac{1}{\cos\frac{\pi}{6}}+\cot\frac{\pi}{6}\right) \\
-&amp;= \frac{1}{2}\ln(2+\sqrt{3})-\frac{1}{2}\ln\left(\frac{2}{\sqrt{3}}+\frac{1}{\sqrt{3}}\right) \\
-&amp;= \frac{1}{2}\ln(2+\sqrt{3})-\frac{1}{2}\ln\frac{3}{\sqrt{3}} \\
-&amp;= \frac{1}{2}\ln(2+\sqrt{3})-\frac{1}{2}\ln(3^{\frac{1}{2}}) \\
-&amp;= \frac{1}{2}\ln(2+\sqrt{3})-\frac{\ln 3}{4}
-\end{aligned}
-\]</div>
-<p>并且：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I-3J &amp;= \int_{0}^{\frac{\pi}{6}} \frac{\cos^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x - \int_{0}^{\frac{\pi}{6}} \frac{3\sin^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x \\
-&amp;= \int_{0}^{\frac{\pi}{6}} \frac{\cos^{2}x-3\sin^{2}x}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x \\
-&amp;= \int_{0}^{\frac{\pi}{6}} \frac{(\cos x-\sqrt{3}\sin x)(\cos x+\sqrt{3}\sin x)}{\cos x+\sqrt{3}\sin x}\mathrm{~d} x \\
-&amp;= \int_{0}^{\frac{\pi}{6}} (\cos x-\sqrt{3}\sin x)\mathrm{~d} x \\
-&amp;= \left(\sin x+\sqrt{3}\cos x\right)\bigg|_{0}^{\frac{\pi}{6}} \\
-&amp;= \left(\sin\frac{\pi}{6}+\sqrt{3}\cos\frac{\pi}{6}\right)-\left(\sin 0+\sqrt{3}\cos 0\right) \\
-&amp;= \left(\frac{1}{2}+\sqrt{3}\cdot\frac{\sqrt{3}}{2}\right)-\left(0+\sqrt{3}\right) \\
-&amp;= 2-\sqrt{3}
-\end{aligned}
-\]</div>
-<p>联立上面两个式子就可以解出要求的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span><span class="heti-spacing"> </span></span>了：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I &amp;= \frac{1}{4}\big [3(I+J)+(I-3 J)\big] \\
-&amp;=\frac{1}{4}\left [\left(\frac{1}{2}\ln(2+\sqrt{3})-\frac{\ln 3}{4}\right)+(2-\sqrt{3})\right]  \\
-&amp;= \frac{3}{8}\ln(2+\sqrt{3})-\frac{3}{16}\ln 3+\frac{1}{2}-\frac{\sqrt{3}}{4}
-\end{aligned}
-\]</div>
-</details>
-<h3 id="q9">Q9（难）<a class="headerlink" href="#q9" title="Permanent link">¶</a></h3>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<div class="arithmatex">\[\int \frac{\cos ^{3}x}{1+\cos x\sin x}\mathrm{~d} x \]</div>
-</div>
-<details class="answer">
-<summary>Answer</summary>
-<p>记原积分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>，构造配对积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(J\)</span></span>：</p>
-<div class="arithmatex">\[
-J=\int \frac{\sin^{3}x}{1+\cos x\sin x}\mathrm{~d} x
-\]</div>
-<p>组合得：</p>
-<div class="arithmatex">\[
-\begin{aligned} I+J &amp;= \int \frac{\cos^{3}x}{1+\cos x\sin x}\mathrm{~d} x + \int \frac{\sin^{3}x}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{\cos^{3}x+\sin^{3}x}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{(\cos x+\sin x)(\cos^{2}x-\cos x\sin x+\sin^{2}x)}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{(\cos x+\sin x)(1-\cos x\sin x)}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{1-\cos x\sin x}{1+\cos x\sin x}\mathrm{~d}(\sin x-\cos x) \\ &amp;= \int \frac{2-2\cos x\sin x}{2+2\cos x\sin x}\mathrm{~d}(\sin x-\cos x) \\ &amp;= \int \frac{1+\sin^{2}x-2\sin x\cos x+\cos^{2}x}{3-(\sin^{2}x-2\sin x\cos x+\cos^{2}x)}\mathrm{~d}(\sin x-\cos x) \\ &amp;= \int \frac{1+(\sin x-\cos x)^{2}}{3-(\sin x-\cos x)^{2}}\mathrm{~d}(\sin x-\cos x) \\ &amp;\xlongequal{u=\sin x-\cos x} \int \frac{1+u^{2}}{3-u^{2}}\mathrm{~d} u \\
-&amp;= \int \frac{-(1-u^{2}+4-4)}{3-u^{2}}\mathrm{~d} u \\ &amp;= \int \frac{-(3-u^{2}-4)}{3-u^{2}}\mathrm{~d} u \\
-&amp;= 4\int \frac{\mathrm{d}u}{3-u^{2}} - \int \frac{3-u^{2}}{3-u^{2}}\mathrm{~d} u \\ &amp;= -4\int \frac{\mathrm{d}u}{u^{2}-3} - \int \mathrm{d}u \\
-&amp;= -4\int \frac{\mathrm{d}u}{(u-\sqrt{3})(u+\sqrt{3})} - u \\ &amp;= -4\int \frac{1}{2\sqrt{3}}\left(\frac{1}{u-\sqrt{3}}-\frac{1}{u+\sqrt{3}}\right)\mathrm{d}u - u \\ &amp;= -\frac{2}{\sqrt{3}}\int \frac{\mathrm{d}(u-\sqrt{3})}{u-\sqrt{3}} + \frac{2}{\sqrt{3}}\int \frac{\mathrm{d}(u+\sqrt{3})}{u+\sqrt{3}} - u \\ &amp;= -\frac{2}{\sqrt{3}}\ln|u-\sqrt{3}|+\frac{2}{\sqrt{3}}\ln|u+\sqrt{3}|-u+C_{1} \\ &amp;= \frac{2}{\sqrt{3}}\ln\left|\frac{u+\sqrt{3}}{u-\sqrt{3}}\right|-u+C_{1} \\ &amp;= \frac{2}{\sqrt{3}}\ln\left|\frac{\sin x-\cos x+\sqrt{3}}{\sin x-\cos x-\sqrt{3}}\right|-(\sin x-\cos x)+C_{1} \\ &amp;= \frac{2}{\sqrt{3}}\ln\left|\frac{\sin x-\cos x+\sqrt{3}}{\sin x+\cos x-\sqrt{3}}\right|+\cos x-\sin x+C_{1}. \end{aligned} 
-\]</div>
-<p>并且： </p>
-<div class="arithmatex">\[
-\begin{aligned} I-J &amp;= \int \frac{\cos^{3}x}{1+\cos x\sin x}\mathrm{~d} x - \int \frac{\sin^{3}x}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{\cos^{3}x-\sin^{3}x}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{(\cos x-\sin x)(\cos^{2}x+\cos x\sin x+\sin^{2}x)}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int \frac{(\cos x-\sin x)(1+\cos x\sin x)}{1+\cos x\sin x}\mathrm{~d} x \\ &amp;= \int (\cos x-\sin x)\mathrm{~d} x \\
-&amp;= \sin x+\cos x+C_{2}. \end{aligned} 
-\]</div>
-<p>两式相加即可解出要求的<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>： </p>
-<div class="arithmatex">\[
-I = \frac{1}{\sqrt{3}}\ln\left|\frac{\sin x-\cos x+\sqrt{3}}{\sin x+\cos x-\sqrt{3}}\right|+\cos x+C
-\]</div>
-</details>
 <ul>
 <li>更多精彩内容欢迎关注我的微信公众号！</li>
 </ul>
@@ -871,17 +684,17 @@ I = \frac{1}{\sqrt{3}}\ln\left|\frac{\sin x-\cos x+\sqrt{3}}{\sin x+\cos x-\sqrt
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="下一页: 轮换对称性" class="md-footer__link md-footer__link--next" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<a aria-label="上一页: 组合积分法" class="md-footer__link md-footer__link--prev" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
 <div class="md-footer__title">
 <span class="md-footer__direction">
-                下一页
+                上一页
               </span>
 <div class="md-ellipsis">
-                轮换对称性
+                组合积分法
               </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
 </div>
 </a>
 </nav>

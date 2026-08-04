@@ -338,6 +338,8 @@
       
         
       
+        
+      
     
     
     
@@ -413,6 +415,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/mathcandy/AM/%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    轮换对称性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -474,6 +504,7 @@
         
       </main>
       
+  
         <footer class="md-footer">
   
     
@@ -514,6 +545,10 @@
   </div>
 </footer>
       
+  <div class="visit-count" style="text-align:center; padding: 10px 0; font-size: 0.9rem; color: var(--md-default-fg-color--light);">
+    本站访问量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span></span>
+  </div>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -526,6 +561,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "/mathcandy/", "features": ["navigation.expand", "navigation.footer", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.action.edit", "content.tabs.link", "search.suggest", "search.share"], "search": "/mathcandy/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
+  
       <script src="/mathcandy/assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="/mathcandy/javascripts/mathjax.js"></script>
@@ -533,5 +569,25 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
       
     
+  <!-- 兼容 Material 主题的 Instant Loading -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var script = document.createElement("script");
+      script.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+      script.async = true;
+      document.body.appendChild(script);
+    });
+
+    // 如果使用了 navigation.instant，需要在页面切换后重新加载不蒜子
+    if (typeof document$ !== "undefined") {
+      document$.subscribe(function() {
+        var script = document.createElement("script");
+        script.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+        script.async = true;
+        document.body.appendChild(script);
+      });
+    }
+  </script>
+
   </body>
 </html>
