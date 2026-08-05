@@ -4,12 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
 <meta content="Miracle" name="author"/>
-<link href="https://miracle606.github.io/mathcandy/AM/%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/" rel="canonical"/>
-<link href="../%E6%8B%86%E5%8C%BA%E9%97%B4/" rel="prev"/>
-<link href="../%E5%80%92%E4%BB%A3%E6%8D%A2/" rel="next"/>
+<link href="https://miracle606.github.io/mathcandy/AM/%E6%9E%81%E9%99%90%E5%AD%98%E5%9C%A8/" rel="canonical"/>
+<link href="../%E4%BA%8C%E7%BA%A7%E7%BB%93%E8%AE%BA/" rel="prev"/>
+<link href="../%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/" rel="next"/>
 <link href="../../graph/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>结合积分中值定理 - Miracle的数学小课糖</title>
+<title>一道证明函数极限存在的好题 - Miracle的数学小课糖</title>
 <link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              结合积分中值定理
+              一道证明函数极限存在的好题
             
           </span>
 </div>
@@ -221,8 +221,8 @@
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -234,7 +234,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_1">
 <span class="md-nav__icon md-icon"></span>
             
@@ -292,8 +292,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%E6%9E%81%E9%99%90%E5%AD%98%E5%9C%A8/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    一道证明函数极限存在的好题
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -303,6 +315,23 @@
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -457,8 +486,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -470,7 +499,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
             
@@ -504,20 +533,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    结合积分中值定理
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
 <span class="md-ellipsis">
     
   
@@ -527,41 +544,6 @@
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      
-        例题
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        拓展
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        习题
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E5%80%92%E4%BB%A3%E6%8D%A2/">
@@ -1026,24 +1008,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        拓展
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        习题
-      
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </div>
@@ -1067,118 +1031,71 @@
 </a>
 </li>
 <li class="md-path__item">
-<a class="md-path__link" href="../%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
+<a class="md-path__link" href="../Cauchy/">
 <span class="md-ellipsis">
-    定积分
+    函数与极限
   </span>
 </a>
 </li>
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/edit/master/docs/AM/结合中值定理.md" rel="edit" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/edit/master/docs/AM/极限存在.md" rel="edit" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
 </a>
-<h1>结合积分中值定理</h1>
-<p>本节分享一道三角拆区间的积分问题，本题还需额外结合积分中值定理加以解决，下面一起来看看吧！</p>
+<h1>一道证明函数极限存在的好题</h1>
+<p>在<a href="">导数有界约束下积分估值证明</a>中，我介绍过两种常用的<strong>处理导函数和原函数关系</strong>的方法吗，本节分享的题目需要用到这种处理手段，是一道<strong>证明函数极限存在</strong>的题目。</p>
 <h2 id="_1">例题<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>求：<span class="arithmatex">\(\displaystyle \lim_{n \to \infty} \int_{0}^{\pi} x^{2022} \left | \sin nx \right | \mathrm{d}x\)</span></p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([1,+\infty)\)</span><span class="heti-spacing"> </span></span>上有连续一阶导数，且满足：</p>
+<div class="arithmatex">\[
+f'(x) = \frac{1}{1+f^2(x)} \left[ \sqrt{\frac1x} - \sqrt{\ln\left(1+\frac1x \right)} \right]
+\]</div>
+<p>证明：<span><span class="arithmatex">\(\displaystyle \lim_{x \to +\infty} f(x)\)</span><span class="heti-spacing"> </span></span>存在<span><span class="heti-spacing"> </span>.</span></p>
 </div>
-<p>首先先换元，令<span><span class="heti-spacing"> </span><span class="arithmatex">\(t = nx\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(x = \dfrac{t}{n}\)</span></span>，<span class="arithmatex">\(\mathrm{d}x = \dfrac{\mathrm{d}t}{n}\)</span>。
-当  <span class="arithmatex">\(x=0\)</span> 时，<span class="arithmatex">\(t=0\)</span>；当 <span class="arithmatex">\(x=\pi\)</span> 时，<span class="arithmatex">\(t=n\pi\)</span>。</p>
-<p>代入原积分：</p>
-<div class="arithmatex">\[
-\begin{aligned}\int_0^\pi x^{2022} |\sin nx| \, \mathrm{d}x
-&amp;= \int_0^{n\pi} \left( \frac{t}{n} \right)^{2022} |\sin t| \cdot \frac{\mathrm{d}t}{n}
-\\&amp;= \frac{1}{n^{2023}} \int_0^{n\pi} t^{2022} |\sin t| \, \mathrm{d}t\end{aligned}
-\]</div>
-<p>显然被积函数在积分区间内符号是不停变化的，所以为了去掉绝对值我们需要拆分积分区间，这也就是我在<a href="https://miracle606.github.io/mathcandy/AM/%E6%8B%86%E5%8C%BA%E9%97%B4/">拆区间解决一类积分问题</a>中介绍的这一类题目的常见套路。于是将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0, n\pi]\)</span><span class="heti-spacing"> </span></span>拆为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个长度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\pi\)</span><span class="heti-spacing"> </span></span>的区间：</p>
-<div class="arithmatex">\[
-\int_0^{n\pi} t^{2022} |\sin t| \, \mathrm{d}t
-= \sum_{k=0}^{n-1} \int_{k\pi}^{(k+1)\pi} t^{2022} |\sin t| \, \mathrm{d}t
-\]</div>
-<p>对每个区间应用<strong>积分中值定理</strong>：
-存在 <span class="arithmatex">\(\xi_k \in (k\pi, (k+1)\pi)\)</span>，使得</p>
-<div class="arithmatex">\[
-\int_{k\pi}^{(k+1)\pi} t^{2022} |\sin t| \, \mathrm{d}t
-= \xi_k^{2022} \int_{k\pi}^{(k+1)\pi} |\sin t| \, \mathrm{d}t
-\]</div>
-<p>由于<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\int_{k\pi}^{(k+1)\pi} |\sin t| \, \mathrm{d}t = \int_0^\pi \sin t \, \mathrm{d}t = 2\)</span></span>，因此：</p>
-<div class="arithmatex">\[
-\int_{k\pi}^{(k+1)\pi} t^{2022} |\sin t| \, \mathrm{d}t = 2 \xi_k^{2022}
-\]</div>
-<p>由<span><span class="heti-spacing"> </span><span class="arithmatex">\(k\pi &lt; \xi_k &lt; (k+1)\pi\)</span></span>，得：</p>
-<div class="arithmatex">\[
-(k\pi)^{2022} &lt; \xi_k^{2022} &lt; ((k+1)\pi)^{2022}
-\]</div>
-<p>因此：</p>
-<div class="arithmatex">\[
-2 \sum_{k=0}^{n-1} (k\pi)^{2022}
-&lt; \int_0^{n\pi} t^{2022} |\sin t| \, \mathrm{d}t
-&lt; 2 \sum_{k=0}^{n-1} ((k+1)\pi)^{2022}
-\]</div>
-<p>两边同除以<span><span class="heti-spacing"> </span><span class="arithmatex">\(n^{2023}\)</span></span>：</p>
-<div class="arithmatex">\[
-\frac{2\pi^{2022}}{n^{2023}} \sum_{k=0}^{n-1} k^{2022}
-&lt; \frac{1}{n^{2023}} \int_0^{n\pi} t^{2022} |\sin t| \, \mathrm{d}t
-&lt; \frac{2\pi^{2022}}{n^{2023}} \sum_{k=1}^{n} k^{2022}
-\]</div>
-<ul>
-<li>左边极限：</li>
-</ul>
-<div class="arithmatex">\[
-\begin{aligned}\lim_{n\to\infty} \frac{2\pi^{2022}}{n^{2023}} \sum_{k=0}^{n-1} k^{2022}
-&amp;=  2\pi^{2022}\lim_{n\to\infty} \frac1n \sum_{k=0}^{n-1} \left(\frac{k}{n}\right)^{2022} \\&amp;=2\pi^{2022}\int_0^1 x^{2022}\,\mathrm{d}x \\&amp;=2\pi^{2022} \cdot \frac{1}{2023}\end{aligned}
-\]</div>
-<ul>
-<li>右边极限：</li>
-</ul>
-<div class="arithmatex">\[
-\begin{aligned}\lim_{n\to\infty} \frac{2\pi^{2022}}{n^{2023}} \sum_{k=1}^{n} k^{2022}
-&amp;=  2\pi^{2022}\lim_{n\to\infty} \frac1n \sum_{k=1}^{n} \left(\frac{k}{n}\right)^{2022} \\&amp;=2\pi^{2022}\int_0^1 x^{2022}\,\mathrm{d}x  \\&amp;=2\pi^{2022} \cdot \frac{1}{2023}\end{aligned}
-\]</div>
-<p>由迫敛性，中间项极限为：</p>
-<div class="arithmatex">\[
-\lim_{n\to\infty} \frac{1}{n^{2023}} \int_0^{n\pi} t^{2022} |\sin t| \, \mathrm{d}t
-= \frac{2\pi^{2022}}{2023}
-\]</div>
-<p>故：</p>
-<div class="arithmatex">\[
-\color{red}{\boxed{
-\lim_{n\to\infty} \int_0^\pi x^{2022} |\sin nx| \, \mathrm{d}x
-= \frac{2\pi^{2022}}{2023}
-}}
-\]</div>
-<h2 id="_2">拓展<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>事实上，本题使用我在 <a href="https://miracle606.github.io/mathcandy/AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/4/#riemann-lebesgue">小数部分的周期性</a> 一文中介绍的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Riemann-Lebesgue \;Lemma}\)</span><span class="heti-spacing"> </span></span>即可一步秒杀，下面先来回顾一下这个引理。</p>
-<div class="admonition success">
-<p class="admonition-title">Riemann-Lebesgue Lemma</p>
-<p>有限区间形式：</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>是以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T\)</span><span class="heti-spacing"> </span></span>为周期的连续（或分段连续）周期函数， <span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a, b]\)</span><span class="heti-spacing"> </span></span>上可积，则：</p>
-<div class="arithmatex">\[
-\lim_{n \to \infty} \int_a^b g(x) f(nx) \,\mathrm{d}x = \left( \frac{1}{T} \int_0^T f(x) \,\mathrm{d}x \right) \cdot \int_a^b g(x) \,\mathrm{d}x
-\]</div>
-</div>
-<p>使用上面这个引理我们来秒杀本节的这个题目：</p>
-<p><span class="arithmatex">\(g(x)=x^{2022}\)</span>，<span class="arithmatex">\(f(x)=|\sin x|\)</span>，<span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>的周期为：<span class="arithmatex">\(T=\dfrac{1}{2}\cdot \dfrac{2\pi}{\omega}=\pi\)</span></p>
-<p>故：</p>
+<p><strong>分析</strong>：证明函数极限存在，常用的方法有两种，一种是利用<strong>迫敛性</strong>；另一种则是利用<strong>单调有界准则</strong>。而本题给出了导函数的关系式，根据导数的正负性我们就可以判断原函数的增减性，因此我们考虑使用单调有界准则来进行证明。</p>
+<p><strong>证明</strong>：首先根据题目条件考察导函数的符号，由于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{1}{1+f^2(x)}\)</span><span class="heti-spacing"> </span></span>显然是正的，因此我们重点研究<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sqrt{\frac1x} - \sqrt{\ln\left(1+\frac1x \right)}\)</span><span class="heti-spacing"> </span></span>的符号。</p>
+<p>考虑不等式<span><span class="heti-spacing"> </span><span class="arithmatex">\(\ln(1+x) \leqslant x\)</span></span>，故中括号内的部分为正，因此<span><span class="heti-spacing"> </span><span class="arithmatex">\(f'(x) \geqslant 0\)</span>.</span></p>
+<p>所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在定义域内单调增，故接下来只需要证明<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>上有界即可说明极限存在。</p>
+<p>为了联系起导函数和原函数之间的关系，我们考虑使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Newton-Leibniz}\)</span><span class="heti-spacing"> </span></span>公式。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-I&amp;=\left( \frac{1}{\pi} \int_{0}^{\pi} |\sin x| \mathrm{~d} x  \right)\cdot \int_{0}^{\pi} x^{2022} \mathrm{~d} x \\
-&amp;=\frac{1}{\pi}\cdot 2\cdot \frac{\pi^{2023}}{2023}\\
-&amp;= \frac{2\pi^{2022}}{2023}
+f(x) - f(1) &amp;= \int_1^x f'(t) \mathrm{d}t\\[0.2cm]
+&amp;= \int_1^x \frac{1}{1+f^2(t)} \left[ \sqrt{\frac1t} - \sqrt{\ln\left(1+\frac1t \right)} \right] \mathrm{d}t\\[0.2cm]
+&amp; \leqslant \int_1^x \left[ \sqrt{\frac1t} - \sqrt{\ln\left(1+\frac1t \right)} \right] \mathrm{d}t\\[0.2cm]
 \end{aligned}
 \]</div>
-<h2 id="_3">习题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>求解：</p>
+<p>考虑不等式<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{x}{1+x} \leqslant \ln(1+x)\)</span></span>，代入得：</p>
 <div class="arithmatex">\[
-\displaystyle\lim_{n\to\infty} \int_0^{+\infty} \mathrm{e}^{-x} (nx - [nx]) \mathrm{d}x
+\begin{aligned}
+f(x) - f(1) &amp; \leqslant \int_1^x \left[ \sqrt{\frac1t} - \sqrt{\ln\left(1+\frac1t \right)} \right] \mathrm{d}t\\[0.2cm]
+ &amp; \leqslant \int_1^x \left[ \sqrt{\frac1t} - \sqrt{\frac{1}{1+t}} \right] \mathrm{d}t\\[0.2cm]
+\end{aligned}
 \]</div>
-<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([x]\)</span><span class="heti-spacing"> </span></span>表示不超过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>的最大整数。</p>
+<p>两个根号相减，形式上不难想到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Lagrange}\)</span><span class="heti-spacing"> </span></span>中值定理，即：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sqrt{\frac1t} - \sqrt{\frac{1}{1+t}} &amp;= -\frac12 \cdot \frac{1}{\sqrt{\xi^3}} \cdot[t - (t+1)]\\[0.2cm]
+&amp; = \frac{1}{2\sqrt{\xi^3}}
+\end{aligned}
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi \in (t,t+1)\)</span>.</span></p>
+<p>因此：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(x) - f(1) &amp; \leqslant \int_1^x \left[ \sqrt{\frac1t} - \sqrt{\frac{1}{1+t}} \right] \mathrm{d}t\\[0.2cm]
+&amp; = \int_1^x \frac{1}{2\sqrt{\xi^3}} \mathrm{d}t\\[0.2cm]
+&amp; \leqslant \int_1^x \frac{1}{2\sqrt{t^3}} \mathrm{d}t\\[0.2cm]
+&amp; \leqslant \int_1^{+\infty} \frac{1}{2\sqrt{t^3}} \mathrm{d}t\\[0.2cm]
+\end{aligned}
+\]</div>
+<p>根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(p\)</span>-<span class="heti-spacing"> </span></span>审敛法可知，不等式右端的这个反常积分<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(p=\dfrac32 &gt;1\)</span><span class="heti-spacing"> </span></span>是收敛的，因此有上界，又因为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(1)\)</span><span class="heti-spacing"> </span></span>也是一个有限值，所以我们就证明出来了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>上有界。</p>
+<p>综上，<span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>单增且上有界，根据单调有界准则可知，<span><span class="arithmatex">\(\displaystyle \lim_{x \to +\infty} f(x)\)</span><span class="heti-spacing"> </span></span>存在<span><span class="heti-spacing"> </span>.</span></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>当然，放缩的方法是多种多样的，也可以考虑不使用中值定理，在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\ln\)</span><span class="heti-spacing"> </span></span>的那一步直接使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Taylor}\)</span><span class="heti-spacing"> </span></span>展开亦可，最后也是化归到判断这个反常积分的敛散性。</p>
+<p>总的来看，这个题目还是比较综合的，希望大家都能好好掌握！</p>
 </div>
 <ul>
 <li>更多精彩内容欢迎关注我的微信公众号！</li>
@@ -1245,7 +1162,7 @@ I&amp;=\left( \frac{1}{\pi} \int_{0}^{\pi} |\sin x| \mathrm{~d} x  \right)\cdot 
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 拆区间" class="md-footer__link md-footer__link--prev" href="../%E6%8B%86%E5%8C%BA%E9%97%B4/">
+<a aria-label="上一页: 两个二级结论" class="md-footer__link md-footer__link--prev" href="../%E4%BA%8C%E7%BA%A7%E7%BB%93%E8%AE%BA/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -1254,17 +1171,17 @@ I&amp;=\left( \frac{1}{\pi} \int_{0}^{\pi} |\sin x| \mathrm{~d} x  \right)\cdot 
                 上一页
               </span>
 <div class="md-ellipsis">
-                拆区间
+                两个二级结论
               </div>
 </div>
 </a>
-<a aria-label="下一页: 倒代换经典模型" class="md-footer__link md-footer__link--next" href="../%E5%80%92%E4%BB%A3%E6%8D%A2/">
+<a aria-label="下一页: 高阶导数" class="md-footer__link md-footer__link--next" href="../%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                倒代换经典模型
+                高阶导数
               </div>
 </div>
 <div class="md-footer__button md-icon">
