@@ -4,11 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
 <meta content="Miracle" name="author"/>
-<link href="https://miracle606.github.io/mathcandy/LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/" rel="canonical"/>
-<link href="../../AM/%E5%8F%8C%E9%98%B6%E4%B9%98/" rel="prev"/>
+<link href="https://miracle606.github.io/mathcandy/AM/%E6%8B%86%E5%8C%BA%E9%97%B4/" rel="canonical"/>
+<link href="../%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/" rel="prev"/>
+<link href="../%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/" rel="next"/>
 <link href="../../graph/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>矩阵的秩 - Miracle的数学小课糖</title>
+<title>拆区间 - Miracle的数学小课糖</title>
 <link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
@@ -59,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              矩阵的秩
+              拆区间
             
           </span>
 </div>
@@ -137,8 +138,8 @@
 
       </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../AM/Cauchy/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../Cauchy/">
           
   
   
@@ -148,8 +149,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="./">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/">
           
   
   
@@ -197,9 +198,9 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
     
   
@@ -210,7 +211,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             
@@ -244,7 +245,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Cauchy/">
+<a class="md-nav__link" href="../Cauchy/">
 <span class="md-ellipsis">
     
   
@@ -256,7 +257,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E8%A3%82%E9%A1%B9/">
+<a class="md-nav__link" href="../%E8%A3%82%E9%A1%B9/">
 <span class="md-ellipsis">
     
   
@@ -268,7 +269,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Stolz%E6%B1%82%E8%A7%A3%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AE%9A%E4%B9%89/">
+<a class="md-nav__link" href="../Stolz%E6%B1%82%E8%A7%A3%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AE%9A%E4%B9%89/">
 <span class="md-ellipsis">
     
   
@@ -306,7 +307,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/">
+<a class="md-nav__link" href="../%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/">
 <span class="md-ellipsis">
     
   
@@ -344,7 +345,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<a class="md-nav__link" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
 <span class="md-ellipsis">
     
   
@@ -356,7 +357,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E4%B8%89%E8%A7%92%E7%A7%AF%E5%88%86/">
+<a class="md-nav__link" href="../%E4%B8%89%E8%A7%92%E7%A7%AF%E5%88%86/">
 <span class="md-ellipsis">
     
   
@@ -368,7 +369,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E6%AC%A7%E6%8B%89%E6%9B%BF%E6%8D%A2/">
+<a class="md-nav__link" href="../%E6%AC%A7%E6%8B%89%E6%9B%BF%E6%8D%A2/">
 <span class="md-ellipsis">
     
   
@@ -382,8 +383,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -395,7 +396,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_4">
 <span class="md-nav__icon md-icon"></span>
             
@@ -406,7 +407,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
+<a class="md-nav__link" href="../%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
 <span class="md-ellipsis">
     
   
@@ -417,8 +418,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E6%8B%86%E5%8C%BA%E9%97%B4/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    拆区间
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -428,9 +441,66 @@
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+<nav aria-label="习题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q12019t17">
+<span class="md-ellipsis">
+      
+        Q1（2019数一T17）
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q2">
+<span class="md-ellipsis">
+      
+        Q2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q3">
+<span class="md-ellipsis">
+      
+        Q3
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
 <span class="md-ellipsis">
     
   
@@ -465,7 +535,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Beta/1/">
+<a class="md-nav__link" href="../Beta/1/">
 <span class="md-ellipsis">
     
   
@@ -477,7 +547,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Beta/2/">
+<a class="md-nav__link" href="../Beta/2/">
 <span class="md-ellipsis">
     
   
@@ -489,7 +559,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Beta/3/">
+<a class="md-nav__link" href="../Beta/3/">
 <span class="md-ellipsis">
     
   
@@ -501,7 +571,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Beta/4/">
+<a class="md-nav__link" href="../Beta/4/">
 <span class="md-ellipsis">
     
   
@@ -513,7 +583,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Beta/5/">
+<a class="md-nav__link" href="../Beta/5/">
 <span class="md-ellipsis">
     
   
@@ -551,7 +621,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/1/">
+<a class="md-nav__link" href="../%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/1/">
 <span class="md-ellipsis">
     
   
@@ -563,7 +633,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/2/">
+<a class="md-nav__link" href="../%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/2/">
 <span class="md-ellipsis">
     
   
@@ -575,7 +645,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/3/">
+<a class="md-nav__link" href="../%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/3/">
 <span class="md-ellipsis">
     
   
@@ -587,7 +657,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/4/">
+<a class="md-nav__link" href="../%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/4/">
 <span class="md-ellipsis">
     
   
@@ -599,7 +669,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/5/">
+<a class="md-nav__link" href="../%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/5/">
 <span class="md-ellipsis">
     
   
@@ -611,7 +681,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/6/">
+<a class="md-nav__link" href="../%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/6/">
 <span class="md-ellipsis">
     
   
@@ -652,7 +722,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<a class="md-nav__link" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
 <span class="md-ellipsis">
     
   
@@ -690,7 +760,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
+<a class="md-nav__link" href="../Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
 <span class="md-ellipsis">
     
   
@@ -702,7 +772,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<a class="md-nav__link" href="../%E5%AF%B9%E7%A7%B0%E6%80%A7/">
 <span class="md-ellipsis">
     
   
@@ -740,7 +810,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86/">
+<a class="md-nav__link" href="../%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86/">
 <span class="md-ellipsis">
     
   
@@ -752,7 +822,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/Froullani/">
+<a class="md-nav__link" href="../Froullani/">
 <span class="md-ellipsis">
     
   
@@ -790,7 +860,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E4%B8%89%E8%A7%92%E7%BA%A7%E6%95%B0/">
+<a class="md-nav__link" href="../%E4%B8%89%E8%A7%92%E7%BA%A7%E6%95%B0/">
 <span class="md-ellipsis">
     
   
@@ -802,7 +872,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../AM/%E5%8F%8C%E9%98%B6%E4%B9%98/">
+<a class="md-nav__link" href="../%E5%8F%8C%E9%98%B6%E4%B9%98/">
 <span class="md-ellipsis">
     
   
@@ -819,9 +889,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     
   
@@ -832,7 +902,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -842,20 +912,8 @@
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    矩阵的秩
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/">
 <span class="md-ellipsis">
     
   
@@ -865,143 +923,6 @@
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      
-        简单介绍
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        重要性质
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        秩不等式
-      
-    </span>
-</a>
-<nav aria-label="秩不等式" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sylvester">
-<span class="md-ellipsis">
-      
-        Sylvester不等式
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#frobenius">
-<span class="md-ellipsis">
-      
-        Frobenius不等式
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      
-        例题
-      
-    </span>
-</a>
-<nav aria-label="例题" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#12007">
-<span class="md-ellipsis">
-      
-        例1（北大2007）
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        例2（幂等矩阵充要条件）
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3">
-<span class="md-ellipsis">
-      
-        例3
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      
-        习题
-      
-    </span>
-</a>
-<nav aria-label="习题" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q1">
-<span class="md-ellipsis">
-      
-        Q1
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q2">
-<span class="md-ellipsis">
-      
-        Q2
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q3">
-<span class="md-ellipsis">
-      
-        Q3
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1024,93 +945,13 @@
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
       
-        简单介绍
+        例题
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        重要性质
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        秩不等式
-      
-    </span>
-</a>
-<nav aria-label="秩不等式" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sylvester">
-<span class="md-ellipsis">
-      
-        Sylvester不等式
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#frobenius">
-<span class="md-ellipsis">
-      
-        Frobenius不等式
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      
-        例题
-      
-    </span>
-</a>
-<nav aria-label="例题" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#12007">
-<span class="md-ellipsis">
-      
-        例1（北大2007）
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        例2（幂等矩阵充要条件）
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3">
-<span class="md-ellipsis">
-      
-        例3
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       
         习题
@@ -1120,10 +961,10 @@
 <nav aria-label="习题" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#q1">
+<a class="md-nav__link" href="#q12019t17">
 <span class="md-ellipsis">
       
-        Q1
+        Q1（2019数一T17）
       
     </span>
 </a>
@@ -1165,326 +1006,120 @@
 </a>
 </li>
 <li class="md-path__item">
-<a class="md-path__link" href="./">
+<a class="md-path__link" href="../Cauchy/">
 <span class="md-ellipsis">
-    线代高代
+    高数数分
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
+<span class="md-ellipsis">
+    定积分
   </span>
 </a>
 </li>
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/edit/master/docs/LA/矩阵的秩.md" rel="edit" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/edit/master/docs/AM/拆区间.md" rel="edit" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
 </a>
-<h1>矩阵的秩</h1>
-<h2 id="_1">简单介绍<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>本节分享的是有关矩阵秩不等式的相关内容。这部分的题目一般使用分块矩阵能得到巧妙解决，它通过将大矩阵分割成若干更小的子矩阵块来简化矩阵运算。通过对这些子矩阵块应用初等变换，我们可以获得与对整个矩阵操作相同的结果。</p>
-<p>分块初等行变换有以下三个变换方式（列变换同理<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
-<ul>
-<li>互换两个分块行，</li>
-<li>某一分块行左乘可逆方阵<span><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span></span>，</li>
-<li>某一分块行左乘矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span><span class="heti-spacing"> </span></span>加到另一分块行。</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>以上三类分块初等变换，本质等价于原矩阵左<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>右乘可逆分块方阵，变换前后矩阵秩保持不变，这也是利用分块变换推导秩不等式的理论依据。</p>
+<h1>拆区间</h1>
+<p>本节通过一道经典的三角积分问题为大家介绍这类题目的常见处理方法。对于这种被积三角函数在积分区间内的符号反复横跳的定积分，我们通常将其拆成离散和的形式进行处理。</p>
+<h2 id="_1">例题<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>证明： </p>
+<div class="arithmatex">\[ f(n) = \displaystyle\sum_{m=1}^n \int_0^m \cos \frac{2\pi n \left \lfloor x+1 \right \rfloor }{m} dx \]</div>
+<p>等于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的所有因子（包括<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span></span>）之和，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\left \lfloor x+1 \right \rfloor\)</span><span class="heti-spacing"> </span></span>表示不超过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x+1\)</span><span class="heti-spacing"> </span></span>的最大整数，并计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(2021)\)</span></span>。 </p>
 </div>
-<h2 id="_2">重要性质<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>下面首先介绍常用的<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>条矩阵秩的性质，都是基础内容，较为简单，读者可自行证明：</p>
-<div class="admonition success">
-<p class="admonition-title"><span>7<span class="heti-spacing"> </span></span>大性质</p>
-<p>设矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A,B\)</span><span class="heti-spacing"> </span></span>运算满足对应阶数要求，<span><span class="arithmatex">\(r(\cdot)\)</span><span class="heti-spacing"> </span></span>表示矩阵的秩：</p>
-<ol>
-<li><span class="arithmatex">\(\displaystyle\ k\neq 0 \implies r(kA)=r(A);\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\ r(AB)\leqslant \min\big\{r(A),r(B)\big\};\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\ r\begin{pmatrix}A &amp; O\\ O &amp; B\end{pmatrix}=r(A)+r(B);\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\ r\begin{pmatrix}A &amp; C\\ O &amp; B\end{pmatrix}\geqslant r(A)+r(B);\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\ r\big(A\mid B\big)\leqslant r(A)+r(B),\quad r\begin{pmatrix}A\\ B\end{pmatrix}\leqslant r(A)+r(B);\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\ r(A+B)\leqslant r(A)+r(B),\quad r(A-B)\leqslant r(A)+r(B);\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\ r(A-B)\geqslant \big|r(A)-r(B)\big|.\)</span></li>
-</ol>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>其中性质（4）的取等条件是矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>可逆，这一点很重要！</p>
-</div>
-<h2 id="_3">秩不等式<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>下面介绍两个高频的不等式，借助分块初等变换都可以很轻松进行证明，一定要熟练掌握结论以及证明过程！</p>
-<h3 id="sylvester"><span>Sylvester<span class="heti-spacing"> </span></span>不等式<a class="headerlink" href="#sylvester" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition abstract">
-<p class="admonition-title"><span>Sylvester<span class="heti-spacing"> </span></span>不等式</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\times n\)</span><span class="heti-spacing"> </span></span>矩阵，<span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\times t\)</span><span class="heti-spacing"> </span></span>矩阵，求证： </p>
-<div class="arithmatex">\[r(AB)\geqslant r(A)+r(B)-n\]</div>
-</div>
+<p>很明显被积函数在积分区间内符号不定，因此我们先对积分做分段处理：</p>
 <div class="arithmatex">\[
-\begin{aligned} \begin{pmatrix} I_n &amp; O\\ O &amp; AB \end{pmatrix} \xrightarrow[\text{分块行变换}]{\text{下}+A\cdot \text{上}} &amp;\begin{pmatrix}I_n &amp; O\\A &amp; AB\end{pmatrix} \xrightarrow[\text{分块列变换}]{\text{右}-\text{左}\cdot B} \begin{pmatrix}I_n &amp; -B\\A &amp; O\end{pmatrix}\\ \xrightarrow{\text{第二列乘-1，交换分块列}} &amp;\begin{pmatrix}B &amp; I_n\\O &amp; A\end{pmatrix} \end{aligned}
+\begin{align*} \int_0^m \cos \frac{2\pi n \left \lfloor x+1 \right \rfloor }{m} dx &amp;= \sum_{k=1}^{m} \int_{k-1}^{k} \cos \frac{2\pi n  \left \lfloor x+1 \right \rfloor }{m} dx \\ &amp;= \sum_{k=1}^{m} \int_{k-1}^{k} \cos \frac{2\pi n k}{m} dx \\ &amp;= \sum_{k=1}^{m} \cos \frac{2\pi n k}{m} \end{align*}
 \]</div>
-<p>分块初等变换不改变矩阵的秩，故：</p>
+<p>分两种情况讨论：</p>
+<p><strong>情况<span><span class="heti-spacing"> </span>1</span></strong>：<span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的因子，此时<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{2\pi n k}{m}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2\pi\)</span><span class="heti-spacing"> </span></span>的整数倍，故：</p>
 <div class="arithmatex">\[
-r\begin{pmatrix}I_n &amp; O\\O &amp; AB\end{pmatrix}=r\begin{pmatrix}B &amp; I_n\\O &amp; A\end{pmatrix}
+\cos \dfrac{2\pi n k}{m} = 1
 \]</div>
-<p>左边：</p>
+<p>因此：</p>
 <div class="arithmatex">\[
-\displaystyle r\begin{pmatrix}I_n &amp; O\\O &amp; AB\end{pmatrix}=r(I_n)+r(AB)=n+r(AB)
+\sum_{k=1}^{m} \cos \frac{2\pi n k}{m} = \sum_{k=1}^{m} 1 = m
 \]</div>
-<p>右边：</p>
+<p><strong>情况<span><span class="heti-spacing"> </span>2</span></strong>：<span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>不是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的因子，我们用余弦求和公式：</p>
 <div class="arithmatex">\[
-\displaystyle r\begin{pmatrix}B &amp; I_n\\O &amp; A\end{pmatrix}\geqslant r(A)+r(B)
-\]</div>
-<p>联立： </p>
-<div class="arithmatex">\[ n+r(AB)\geqslant r(A)+r(B) \]</div>
-<p>整理即得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sylvester}\)</span><span class="heti-spacing"> </span></span>不等式：</p>
-<div class="arithmatex">\[
- r(AB)\geqslant r(A)+r(B)-n. 
-\]</div>
-<h3 id="frobenius"><span>Frobenius<span class="heti-spacing"> </span></span>不等式<a class="headerlink" href="#frobenius" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition abstract">
-<p class="admonition-title"><span>Frobenius<span class="heti-spacing"> </span></span>不等式</p>
-<p>设相关矩阵运算满足阶数要求，求证： </p>
-<div class="arithmatex">\[r(ABC)\geqslant r(AB)+r(BC)-r(B)\]</div>
-</div>
-<div class="arithmatex">\[
-\begin{aligned} \begin{pmatrix} ABC &amp; O\\ O &amp; B \end{pmatrix} &amp;\xrightarrow{\text{右}+\text{左}\cdot C} \begin{pmatrix}ABC &amp; AB\\O &amp; B\end{pmatrix}\\ &amp;\xrightarrow{\text{左}-\,A\cdot\text{右}} \begin{pmatrix}O &amp; AB\\-BC &amp; B\end{pmatrix}\\ &amp;\xrightarrow{\text{第一列乘-1，交换分块列}} \begin{pmatrix}AB &amp; O\\B &amp; BC\end{pmatrix} \end{aligned}
-\]</div>
-<p>分块初等变换不改变矩阵的秩，因此： </p>
-<div class="arithmatex">\[
-r\begin{pmatrix}ABC &amp; O\\O &amp; B\end{pmatrix}=r\begin{pmatrix}AB &amp; O\\B &amp; BC\end{pmatrix}
-\]</div>
-<p>左边： </p>
-<div class="arithmatex">\[
-r\begin{pmatrix}ABC &amp; O\\O &amp; B\end{pmatrix}=r(ABC)+r(B)
-\]</div>
-<p>右边：</p>
-<div class="arithmatex">\[
-r\begin{pmatrix}AB &amp; O\\B &amp; BC\end{pmatrix}\geqslant r(AB)+r(BC)
-\]</div>
-<p>联立不等式： </p>
-<div class="arithmatex">\[ r(ABC)+r(B)\geqslant r(AB)+r(BC) \]</div>
-<p>移项即得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Frobenius}\)</span><span class="heti-spacing"> </span></span>不等式： </p>
-<div class="arithmatex">\[
-r(ABC)\geqslant r(AB)+r(BC)-r(B).
+\sum_{k=1}^N \cos(kx) = \frac{\sin \dfrac{2N+1}{2}x - \sin \dfrac{x}{2}}{2\sin \dfrac{x}{2}}
 \]</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<ol>
-<li>
-<p><span><span class="arithmatex">\(\mathrm{Sylvester}\)</span><span class="heti-spacing"> </span></span>不等式等号成立条件，即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{\mathrm{rank}(AB)=\mathrm{rank}A+\mathrm{rank}B-n}\)</span><span class="heti-spacing"> </span></span>成立的充要条件是：矩阵方程<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(XA+BY=I_n\)</span><span class="heti-spacing"> </span></span>关于未知矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X,Y\)</span><span class="heti-spacing"> </span></span>有解。</p>
-</li>
-<li>
-<p>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Frobenius}\)</span><span class="heti-spacing"> </span></span>不等式中，令<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B = I, C = B\)</span><span class="heti-spacing"> </span></span>即可得到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sylvester}\)</span><span class="heti-spacing"> </span></span>不等式，也就是说<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sylvester}\)</span><span class="heti-spacing"> </span></span>不等式是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Frobenius}\)</span><span class="heti-spacing"> </span></span>不等式的一个特例。</p>
-</li>
-<li>记忆小窍门：<span><span class="arithmatex">\(\mathrm{Sylvester}\)</span><span class="heti-spacing"> </span></span>不等式减去的是两个矩阵相同维度的维度大小；<span><span class="arithmatex">\(\mathrm{Frobenius}\)</span><span class="heti-spacing"> </span></span>不等式减去的是两个乘积式的公共部分。</li>
-</ol>
+<p>上面这个公式的证明请参考<a href="">三角积分</a>，我介绍了余弦函数等差角的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>项累加和公式。</p>
 </div>
-<p>为了巩固上面介绍的秩不等式处理方法，下面我将通过<strong>北京大学<span class="heti-skip"><span class="heti-spacing"> </span>2007<span class="heti-spacing"> </span></span>年高等代数考研真题的第<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>题</strong>，细致讲解可交换矩阵下的经典秩不等式，熟练掌握这类题目的解题套路。</p>
-<h2 id="_4">例题<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="12007">例<span><span class="heti-spacing"> </span>1</span>（北大<span><span class="heti-spacing"> </span>2007</span>）<a class="headerlink" href="#12007" title="Permanent link">¶</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A,B\)</span><span class="heti-spacing"> </span></span>可交换，求证： </p>
-<div class="arithmatex">\[r(A)+r(B)\geqslant r(A+B)+r(AB).\]</div>
-</div>
-<p>首先通过“可交换”这一条件，我们可以得出<span><span class="heti-spacing"> </span><span class="arithmatex">\(AB=BA\)</span></span></p>
-<p>由于本题没有给出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>矩阵可逆的条件，所以我们不能构造  </p>
-<div class="arithmatex">\[C=B^{-1}A+I\]</div>
-<p>直接运用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Frobenius}\)</span><span class="heti-spacing"> </span></span>不等式，下面给出两个处理方法：</p>
-<h4 id="_5">法一<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>取<span><span class="heti-spacing"> </span><span class="arithmatex">\(x = \dfrac{2\pi n}{m}\)</span></span>，<span class="arithmatex">\(N = m\)</span>，则： </p>
 <div class="arithmatex">\[
-\begin{aligned}
-\begin{pmatrix}
-A &amp; \\
-&amp; B
-\end{pmatrix}
-&amp;\to
-\begin{pmatrix}
-A &amp; B \\
-&amp; B
-\end{pmatrix}
-\to
-\begin{pmatrix}
-A+B &amp; B \\
-B &amp; B
-\end{pmatrix}
-\to
-\begin{pmatrix}
-A+B &amp; B \\
--A &amp;
-\end{pmatrix}
-\\[6pt]
-&amp;\begin{pmatrix}
-A+B &amp; (A+B)B \\
--A &amp;
-\end{pmatrix}
-\to
-\begin{pmatrix}
-A+B &amp; \\
--A &amp; AB
-\end{pmatrix}
-\end{aligned}
+\begin{align*} \sum_{k=1}^{m} \cos \frac{2\pi n k}{m} &amp;= \dfrac{\sin\left(\frac{2m+1}{2} \cdot \frac{2\pi n}{m}\right) - \sin \frac{\pi n}{m}}{2\sin \frac{\pi n}{m}} \\ &amp;=  \frac{\sin\left(2\pi n + \frac{\pi n}{m}\right) - \sin \frac{\pi n}{m}}{2\sin \frac{\pi n}{m}} \\ &amp;=  \frac{\sin \frac{\pi n}{m} - \sin \frac{\pi n}{m}}{2\sin \frac{\pi n}{m}} \\ &amp;= 0 \end{align*}
 \]</div>
-<p>然后可知：</p>
+<p>综上，我们得到：</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\operatorname{r}(A) + \operatorname{r}(B)
-&amp;= \operatorname{r}\begin{pmatrix}
-A &amp; \\
-&amp; B
-\end{pmatrix}
-= \operatorname{r}\begin{pmatrix}
-A+B &amp; B \\
--A &amp;
-\end{pmatrix} \\[0.2cm]
-&amp;\geqslant \operatorname{r} \left( \begin{pmatrix} A+B &amp; B \\ -A &amp; 0 \end{pmatrix} \begin{pmatrix} I &amp; 0 \\ 0 &amp; A+B \end{pmatrix} \right)\\[0.2cm]
-&amp;= \operatorname{r}\begin{pmatrix}
-A+B &amp; B(A+B) \\
--A &amp;
-\end{pmatrix} \\[0.2cm]
-&amp;= \operatorname{r}\begin{pmatrix}
-A+B &amp; (A+B)B \\
--A &amp;
-\end{pmatrix}
-= \operatorname{r}\begin{pmatrix}
-A+B &amp; \\
--A &amp; AB
-\end{pmatrix} \\[0.2cm]
-&amp;\geqslant \operatorname{r}(A+B) + \operatorname{r}(AB).
-\end{aligned}
+\int_0^m \cos \frac{2\pi n [x+1]}{m} dx = \begin{cases} m, &amp; m \text{ 是 } n \text{ 的因子} \\ 0, &amp; m \text{ 不是 } n \text{ 的因子} \end{cases}
 \]</div>
-<h4 id="_6">法二<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>令：</p>
+<p>因此，</p>
 <div class="arithmatex">\[
-W_1 = \{X \in \mathbb{R}^n \mid AX = 0\},\quad W_2 = \{X \in \mathbb{R}^n \mid BX = 0\},
+f(n) = \sum_{m=1}^n \int_0^m \cos \frac{2\pi n [x+1]}{m} dx
 \]</div>
-<p>则<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dim W_1 = n - \operatorname{r}(A),\ \dim W_2 = n - \operatorname{r}(B)\)</span></span>。注意到：</p>
+<p>等于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的所有因子（包括<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span></span>）之和。 </p>
+<p>然后看第二个问题：计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(2021)\)</span></span> </p>
+<p>这个质因数分解可不容易想到，当年考场上很多同学认为只有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2021\)</span><span class="heti-spacing"> </span></span>两个，大家对于年份，尤其是考试当年的年份数字的根号化简、质因数分解等常用知识点一定要熟练！</p>
+<p>对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2021\)</span><span class="heti-spacing"> </span></span>进行质因数分解： </p>
+<div class="arithmatex">\[ 2021 = 43 \times 47 \]</div>
+<p>它的所有正因子为：<span class="arithmatex">\(1, 43, 47, 2021\)</span>。 </p>
+<p>因此：</p>
 <div class="arithmatex">\[
-W_1 \cap W_2 \subset \{X \in \mathbb{R}^n \mid (A+B)X = 0\},\quad W_1 + W_2 \subset \{X \in \mathbb{R}^n \mid (AB)X = 0\},
+ f(2021) = 1 + 43 + 47 + 2021 = 2112 
 \]</div>
-<p>结合<strong>维数公式</strong>就有：</p>
-<div class="arithmatex">\[
-n - \operatorname{r}(A) + n - \operatorname{r}(B) \leqslant n - \operatorname{r}(A+B) + n - \operatorname{r}(AB),
-\]</div>
-<p>移项即得结果。</p>
-<p>下面这道题要证明的是幂等矩阵的充要条件，今后只要看到这个条件，马上就要条件反射哦！</p>
-<h3 id="2">例<span><span class="heti-spacing"> </span>2</span>（幂等矩阵充要条件）<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>求证：<span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>为幂等矩阵（<span class="arithmatex">\(A^2=A\)</span>）的充要条件： </p>
-<div class="arithmatex">\[r(A)+r(I_n-A)=n\]</div>
-</div>
-<p>构造分块对角矩阵：</p>
-<div class="arithmatex">\[
-\begin{pmatrix}A &amp; O\\O &amp; I-A\end{pmatrix},\quad 且 \quad r\begin{pmatrix}A &amp; O\\O &amp; I-A\end{pmatrix}=r(A)+r(I-A)
-\]</div>
-<p>分块行初等变换得：</p>
-<div class="arithmatex">\[
-\begin{aligned} \begin{pmatrix}A &amp; O\\O &amp; I-A\end{pmatrix} &amp;\xrightarrow{C_1+C_2}\begin{pmatrix}A &amp; A\\O &amp; I-A\end{pmatrix}\\ &amp;\xrightarrow{R_2+R_1}\begin{pmatrix}A &amp; A\\A &amp; I\end{pmatrix}\\ &amp;\xrightarrow{C_1-AC_2}\begin{pmatrix}A-A^2 &amp; A\\O &amp; I\end{pmatrix}\\ &amp;\xrightarrow{R_1-AR_2}\begin{pmatrix}A-A^2 &amp; O\\O &amp; I\end{pmatrix} \end{aligned}
-\]</div>
-<p>分块初等变换不改变秩：</p>
-<div class="arithmatex">\[
-r(A)+r(I-A)=r(A-A^2)+r(I_n)=r(A-A^2)+n
-\]</div>
-<p>有了这个式子，我们就可以进行充分必要推导了：</p>
-<ul>
-<li><strong>必要性</strong>：即<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^2=A\Rightarrow r(A)+r(I-A)=n\)</span></span>：</li>
-</ul>
-<div class="arithmatex">\[
-A^2=A\implies A-A^2=O\implies r(A-A^2)=0
-\]</div>
-<p>代入上式： </p>
-<div class="arithmatex">\[r(A)+r(I-A)=n\]</div>
-<ul>
-<li><strong>充分性</strong>：即<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(A)+r(I-A)=n\Rightarrow A^2=A\)</span></span>：</li>
-</ul>
-<div class="arithmatex">\[
-r(A)+r(I-A)=n\implies r(A-A^2)+n=n\implies r(A-A^2)=0
-\]</div>
-<p>因为只有零矩阵的秩为<span><span class="heti-spacing"> </span>0</span>，故<span><span class="heti-spacing"> </span><span class="arithmatex">\(A-A^2=O\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^2=A\)</span></span>。 </p>
-<p><strong>综上</strong>：<span class="arithmatex">\(A^2=A \iff r(A)+r(I_n-A)=n\)</span>。</p>
-<p>下面这个题目是有关矩阵秩相关内容的综合运用，掌握本题，相信不会再有难住你的秩不等式证明题！</p>
-<h3 id="3">例<span><span class="heti-spacing"> </span>3</span><a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A,B\)</span><span class="heti-spacing"> </span></span>为数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>上<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，满足<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(AB=BA=O,\quad r(A)=r(A^2),\)</span><span class="heti-spacing"> </span></span>求证：</p>
-<div class="arithmatex">\[
-r(A+B)=r(A)+r(B).
-\]</div>
-</div>
-<p>由<a href="https://miracle606.github.io/mathcandy/LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/#_2"><span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>大性质</a>中提到的性质<span><span class="heti-spacing"> </span>6</span>，我们有秩不等式</p>
-<div class="arithmatex">\[
-r(A+B)\leqslant r(A)+r(B)
-\]</div>
-<p>因此根据迫敛性，我们只需证明：</p>
-<div class="arithmatex">\[
-\boldsymbol{r(A+B)\geqslant r(A)+r(B)}
-\]</div>
-<p>那么题目就被解决了。</p>
-<p>于是下证：<span class="arithmatex">\(\boldsymbol{r(A+B)\geqslant r(A)+r(B)}\)</span></p>
-<p>构造分块矩阵并做分块初等变换：</p>
-<div class="arithmatex">\[
-\begin{aligned} \begin{pmatrix}A+B &amp; O\\ O &amp; O\end{pmatrix} &amp;\xrightarrow[AB=O]{R_2 \leftarrow R_2 + A \cdot R_1} \begin{pmatrix}A+B &amp; O\\ A^2 &amp; O\end{pmatrix}\\ &amp;\xrightarrow[AB=O]{C_2 \leftarrow C_2 + C_1 \cdot A} \begin{pmatrix}A+B &amp; A^2\\ A^2 &amp; A^3\end{pmatrix}\\
-\end{aligned}
-\]</div>
-<p>前两步都很简单，但是接下来怎么变换呢？事实上，接下来的一步是整个题目最核心的地方，下面展开讲解：</p>
-<p>首先对于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span></span>，我们显然有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2\)</span><span class="heti-spacing"> </span></span>的列空间是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的列空间的“子空间”，那么再结合条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(A) = r(A^2)\)</span></span> ，也就是矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的列空间和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2\)</span><span class="heti-spacing"> </span></span>的列空间的维度是完全相等的。</p>
-<p>那么根据子空间维数定理：</p>
-<div class="admonition abstract">
-<p class="admonition-title">引理</p>
-<p>如果空间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V_1\)</span><span class="heti-spacing"> </span></span>是空间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V_2\)</span><span class="heti-spacing"> </span></span>的子空间（<span class="arithmatex">\(V_1 \subseteq V_2\)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，并且它们的维数相等（<span class="arithmatex">\(\dim(V_1) = \dim(V_2)\)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么这两个空间必定完全相同，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(V_1 = V_2\)</span></span>。</p>
-</div>
-<p>我们得到矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的列空间和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2\)</span><span class="heti-spacing"> </span></span>的列空间是完全相同的，这意味着<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的所有列向量都可以由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2\)</span><span class="heti-spacing"> </span></span>的列向量线性表出。用矩阵等式表达，即存在一个矩阵<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(A = A^2Y\)</span></span>。</p>
-<p>于是我们将第二分块列右乘<span><span class="heti-spacing"> </span><span class="arithmatex">\(-Y\)</span></span>，加到第一分块列上。</p>
-<p>左上角元素变为：<span class="arithmatex">\((A+B) - A^2Y\)</span>。把<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2Y = A\)</span><span class="heti-spacing"> </span></span>代入，得到<span><span class="heti-spacing"> </span><span class="arithmatex">\((A+B) - A = B\)</span></span>。</p>
-<p>左下角元素变为：<span class="arithmatex">\(A^2 - A^3Y\)</span>。这里可以提取出<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^2 - A(A^2Y)\)</span></span>，将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^2Y = A\)</span><span class="heti-spacing"> </span></span>代入，得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^2 - A \cdot A = A^2 - A^2 = 0\)</span></span>。</p>
-<p>于是我们得到：</p>
-<div class="arithmatex">\[
-\begin{pmatrix} A+B &amp; A^2 \\ A^2 &amp; A^3 \end{pmatrix} \rightarrow \begin{pmatrix} B &amp; A^2 \\ 0 &amp; A^3 \end{pmatrix}
-\]</div>
-<p>根据分块初等变换不改变秩，我们得到：</p>
-<div class="arithmatex">\[
-r(A+B)=r\begin{pmatrix}B &amp; A^2\\ O &amp; A^3\end{pmatrix}\geqslant r(B)+r(A^3)
-\]</div>
-<p>下证<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{r(A^3)=r(A)}\)</span></span>： </p>
-<p>对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Frobenius}\)</span><span class="heti-spacing"> </span></span>不等式 </p>
-<div class="arithmatex">\[
-r(XYZ)\geqslant r(XY)+r(YZ)-r(Y)
-\]</div>
-<p>令<span><span class="heti-spacing"> </span><span class="arithmatex">\(X=Y=Z=A\)</span></span>，得到：</p>
-<div class="arithmatex">\[
-r(A^3)\geqslant r(A^2)+r(A^2)-r(A)=2r(A^2)-r(A)
-\]</div>
-<p>由条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(A)=r(A^2)\)</span></span>，代入得</p>
-<div class="arithmatex">\[
-r(A^3)\geqslant 2r(A)-r(A)=r(A).
-\]</div>
-<p>又由<a href="https://miracle606.github.io/mathcandy/LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/#_2"><span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>大性质</a>中提到的性质<span><span class="heti-spacing"> </span>2</span>，乘积秩满足越乘越小，即： <span class="arithmatex">\(r(A^3)\leqslant r(A)\)</span></p>
-<p>故根据迫敛性，有：</p>
-<div class="arithmatex">\[
-\boldsymbol{r(A^3)=r(A)}.
-\]</div>
-<p>代回得到：</p>
-<div class="arithmatex">\[
-r(A+B)\geqslant r(B)+r(A)
-\]</div>
-<p>得证！</p>
-<h2 id="_7">习题<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h3>
+<p>本节题目非常经典，所用到的处理手法也是这类题目通用的，将积分拆成多个积分区间为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的积分累加的形式，本题按照这种方式拆分之后，每一段上的取整函数都可以直接化简，达到我们的目的。</p>
+<h2 id="_2">习题<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="q12019t17">Q1（<span>2019<span class="heti-spacing"> </span></span>数一<span><span class="heti-spacing"> </span>T17</span>）<a class="headerlink" href="#q12019t17" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A,B\)</span><span class="heti-spacing"> </span></span>均为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(AB=O\)</span></span>，证明：若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>为奇数，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(AB^{T}+A^{T}B\)</span><span class="heti-spacing"> </span></span>必为不可逆矩阵；若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>为偶数，举例说明上述结论一般不成立。</p>
+<p>求曲线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y=\mathrm{e}^{-x}\sin x\ (x\geqslant 0)\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>轴之间图形的面积<span><span class="heti-spacing"> </span>.</span></p>
 </div>
+<details class="answer">
+<summary>Answer</summary>
+<p>本题最简单的方法是使用<span class="heti-skip"><span class="heti-spacing"> </span>Laplace<span class="heti-spacing"> </span></span>变换，详见<a href=""></a></p>
+</details>
 <h3 id="q2">Q2<a class="headerlink" href="#q2" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>求证：<span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>是对合矩阵（即<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^{2}=I_{n}\)</span></span>）的充要条件是：</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上可导，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(|f'(x)| &lt; M\)</span></span>，证明：</p>
 <div class="arithmatex">\[
-r(I_{n}+A)+r(I_{n}-A)=n
+\left|\int_{0}^{1} f(x) \mathrm{~d} x - \frac{1}{n}\sum_{k=1}^{n} f\left( \frac{k}{n} \right) \right| \leqslant \frac{M}{2n}
 \]</div>
 </div>
+<details class="answer">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+\begin{aligned}
+LHS &amp;= \left|\int_{0}^{1} f(x) \mathrm{~d} x - \frac{1}{n}\sum_{k=1}^{n} f\left( \frac{k}{n} \right) \right|\\
+&amp;= \left| \sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} f(x) \mathrm{~d} x - \sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} f\left( \frac{k}{n} \right) \mathrm{~d} x  \right| \\
+&amp;= \left| \sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} \left[ f(x)-f\left( \frac{k}{n} \right) \right] \mathrm{~d} x  \right| \\
+&amp;\leqslant \sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} \left| f(x)-f\left( \frac{k}{n} \right) \right|  \mathrm{~d} x \\
+&amp;= \sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} \left|f'(\xi_{k})\left( x-\frac{k}{n} \right)\right| \mathrm{~d} x \quad\quad \xi_{k}\in\left( x,  \frac{k}{n} \right)\\
+&amp;\leqslant \sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} M\left| x-\frac{k}{n} \right| \mathrm{~d} x\\
+&amp;=M\sum_{k=1}^{n} \int_{\frac{k-1}{n}}^{\frac{k}{n}} \left( \frac{k}{n}-x \right) \mathrm{~d} x \\
+&amp;= M \sum_{k=1}^{n} \left( \frac{k}{n}\cdot \frac{1}{n} - \frac{2k-1}{2n^{2}} \right)\\
+&amp;= M\sum_{k=1}^{n} \frac{1}{2n^{2}}\\
+&amp;=\frac{M}{2n}
+\end{aligned}
+\]</div>
+</details>
 <h3 id="q3">Q3<a class="headerlink" href="#q3" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶矩阵，证明：<span class="arithmatex">\(r(A)+r(I_{n}+A)\geqslant n\)</span>.</p>
+<p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\geqslant m\in \mathbb{N^{*}}\)</span></span>，<span><span class="arithmatex">\(f\)</span><span class="heti-spacing"> </span></span>是一个非负递增的函数，则当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\geqslant m\)</span><span class="heti-spacing"> </span></span>时，证明：</p>
+<div class="arithmatex">\[
+\left| \sum_{k=m}^{\lfloor\xi\rfloor} f(k)-\int_{m}^{\xi} f(x) \mathrm{~d} x  \right| \leqslant f(\xi)
+\]</div>
 </div>
 <ul>
 <li>更多精彩内容欢迎关注我的微信公众号！</li>
@@ -1515,7 +1150,7 @@ r(I_{n}+A)+r(I_{n}-A)=n
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 双阶乘" class="md-footer__link md-footer__link--prev" href="../../AM/%E5%8F%8C%E9%98%B6%E4%B9%98/">
+<a aria-label="上一页: 你真的懂分部积分吗?" class="md-footer__link md-footer__link--prev" href="../%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -1524,8 +1159,21 @@ r(I_{n}+A)+r(I_{n}-A)=n
                 上一页
               </span>
 <div class="md-ellipsis">
-                双阶乘
+                你真的懂分部积分吗?
               </div>
+</div>
+</a>
+<a aria-label="下一页: 结合积分中值定理" class="md-footer__link md-footer__link--next" href="../%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                结合积分中值定理
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
 </div>
 </a>
 </nav>
