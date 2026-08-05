@@ -430,6 +430,18 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%8C%87%E6%95%B0%E7%A7%AF%E5%88%86/">
+<span class="md-ellipsis">
+    
+  
+    一类复杂的指数积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../AM/%E6%AC%A7%E6%8B%89%E6%9B%BF%E6%8D%A2/">
 <span class="md-ellipsis">
     
@@ -1801,7 +1813,7 @@ I_{m} &amp;= I_{m}+BA-\color{red}{BA}\\
 (I_{m}+BA)^{-1}=I_{m}-B(I_{n}+AB)^{-1}A
 \]</div>
 <p>减法情况同理，这里不再赘述。<span class="arithmatex">\(\square\)</span></p>
-<p>本题的结论非常的重要，我们所证明的逆矩阵的表达式不仅可以有效解决部分求逆问题（如<a href="">例<span><span class="heti-spacing"> </span>4</span></a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，也可以证明重要公式（见<a href="">例<span><span class="heti-spacing"> </span>5</span></a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。在<a href="">例题<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span></a>中，我会给出本题的第二种证明方法。</p>
+<p>本题的结论非常的重要，我们所证明的逆矩阵的表达式不仅可以有效解决部分求逆问题（如<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#4">例<span><span class="heti-spacing"> </span>4</span></a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，也可以证明重要公式（见<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#5smw">例<span><span class="heti-spacing"> </span>5</span></a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。在<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#832">例题<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span></a>中，我会给出本题的第二种证明方法。</p>
 <h3 id="4">例<span><span class="heti-spacing"> </span>4</span><a class="headerlink" href="#4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -1811,8 +1823,8 @@ I_{m} &amp;= I_{m}+BA-\color{red}{BA}\\
 \]</div>
 </div>
 <p><strong>解</strong>：注意到<span><span class="heti-spacing"> </span><span class="arithmatex">\(A+B=A(A^{-1}+B^{-1})B\)</span></span>，而已知<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^{-1}+B^{-1}\)</span><span class="heti-spacing"> </span></span>可逆，所以矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A+B\)</span><span class="heti-spacing"> </span></span>可逆。</p>
-<p>而<span><span class="heti-spacing"> </span><span class="arithmatex">\(A+B=A(I_{n}+A^{-1}B)\)</span></span>，因此我们要想求出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A+B\)</span><span class="heti-spacing"> </span></span>的逆，我们需要先求出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_{n}+A^{-1}B\)</span><span class="heti-spacing"> </span></span>的逆，而这一点可以利用刚刚<strong>例题<span><span class="heti-spacing"> </span>3</span></strong>的结论。</p>
-<p>由<strong>例题<span><span class="heti-spacing"> </span>3</span></strong>结论可得：</p>
+<p>而<span><span class="heti-spacing"> </span><span class="arithmatex">\(A+B=A(I_{n}+A^{-1}B)\)</span></span>，因此我们要想求出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A+B\)</span><span class="heti-spacing"> </span></span>的逆，我们需要先求出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_{n}+A^{-1}B\)</span><span class="heti-spacing"> </span></span>的逆，而这一点可以利用刚刚<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#3">例题<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span></a>的结论。</p>
+<p>由<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#3">例题<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span></a>结论可得：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 (I_{n}+A^{-1}B)^{-1} &amp;= I_{n}-A^{-1}(I_{n}+BA^{-1})^{-1}B\\
@@ -1836,18 +1848,18 @@ I_{m} &amp;= I_{m}+BA-\color{red}{BA}\\
 B^{-1}=A^{-1}-A^{-1}X(R^{-1}+YA^{-1}X)^{-1}YA^{-1}
 \]</div>
 </div>
-<p><strong>分析</strong>：初看这个公式你肯定会觉得怎么这么长！事实上，本公式的证明也是很有难度的……我先在这个板块给出一个使用凑因子法的比较有技巧性的证明，在后面还会在<a href="">例题<span class="heti-skip"><span class="heti-spacing"> </span>12<span class="heti-spacing"> </span></span></a>的证明结束后给出另一种更加精彩的证法！</p>
+<p><strong>分析</strong>：初看这个公式你肯定会觉得怎么这么长！事实上，本公式的证明也是很有难度的……我先在这个板块给出一个使用凑因子法的比较有技巧性的证明，在后面还会在<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#1252">例题<span class="heti-skip"><span class="heti-spacing"> </span>12<span class="heti-spacing"> </span></span></a>的证明结束后给出另一种更加精彩的证法！</p>
 <p><strong>证明</strong>：注意到：</p>
 <div class="arithmatex">\[
 B=A+XRY=A(I+{\color{blue}{A^{-1}X}}{\color{red}{RY}})
 \]</div>
-<p>观察上式右端，我们发现矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>是可逆的，所以我们想要证明矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>可逆就只需要证明矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+{\color{blue}{A^{-1}X}}{{\color{red}{RY}}}\)</span><span class="heti-spacing"> </span></span>可逆，我们可以将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\color{blue}{A^{-1}X}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\({\color{red}{RY}}\)</span><span class="heti-spacing"> </span></span>分别视作整体，可以和例题<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>进行联系，考虑证明矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+{\color{red}{RY}}\color{blue}{A^{-1}X}\)</span><span class="heti-spacing"> </span></span>是否可逆。</p>
+<p>观察上式右端，我们发现矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>是可逆的，所以我们想要证明矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>可逆就只需要证明矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+{\color{blue}{A^{-1}X}}{{\color{red}{RY}}}\)</span><span class="heti-spacing"> </span></span>可逆，我们可以将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\color{blue}{A^{-1}X}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\({\color{red}{RY}}\)</span><span class="heti-spacing"> </span></span>分别视作整体，可以和<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#3">例题<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span></a>进行联系，考虑证明矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+{\color{red}{RY}}\color{blue}{A^{-1}X}\)</span><span class="heti-spacing"> </span></span>是否可逆。</p>
 <p>由于：</p>
 <div class="arithmatex">\[
 I+{\color{red}{RY}}{\color{blue}{A^{-1}X}} = R(R^{-1}+YA^{-1}X)
 \]</div>
 <p>且根据已知条件我们知道<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{RHS}\)</span><span class="heti-spacing"> </span></span>是可逆的，所以左侧矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+{\color{red}{RY}}\color{blue}{A^{-1}X}\)</span><span class="heti-spacing"> </span></span>也是可逆的。</p>
-<p>根据我们刚刚证明完的例题<span><span class="heti-spacing"> </span>3</span>，我们可以得出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+\color{blue}{A^{-1}X}{\color{red}{RY}}\)</span><span class="heti-spacing"> </span></span>也是可逆的！这样我们就证明了矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>是可逆的！</p>
+<p>根据我们刚刚证明完的<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#3">例题<span><span class="heti-spacing"> </span>3</span></a>，我们可以得出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I+\color{blue}{A^{-1}X}{\color{red}{RY}}\)</span><span class="heti-spacing"> </span></span>也是可逆的！这样我们就证明了矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>是可逆的！</p>
 <p>并且逆矩阵的表达式我们也是知道的：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1886,7 +1898,7 @@ A=\begin{pmatrix}
 <div class="arithmatex">\[
 A=-I_{n}+\alpha\alpha^{T}
 \]</div>
-<p>由<strong>例题<span><span class="heti-spacing"> </span>5</span></strong>证明的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{SMW}\)</span><span class="heti-spacing"> </span></span>公式，我们有：</p>
+<p>由<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#5smw">例题<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span></a>证明的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{SMW}\)</span><span class="heti-spacing"> </span></span>公式，我们有：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 A^{-1} &amp;= -I_{n}^{-1}+I_{n}^{-1}\alpha(1+\alpha^{T}(-I_{n}^{-1})\alpha)^{-1}\alpha^{T}(-I_{n}^{-1})\\
@@ -1929,7 +1941,7 @@ A^{-1} &amp;= -I_{n}^{-1}+I_{n}^{-1}\alpha(1+\alpha^{T}(-I_{n}^{-1})\alpha)^{-1}
 <p class="admonition-title">Example</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A,B\)</span><span class="heti-spacing"> </span></span>分别是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\times m\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\times n\)</span><span class="heti-spacing"> </span></span>的矩阵，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_{n} \pm AB\)</span><span class="heti-spacing"> </span></span>可逆，证明：<span><span class="arithmatex">\(I_{m} \pm BA\)</span><span class="heti-spacing"> </span></span>可逆</p>
 </div>
-<p><strong>解</strong>：本题就是<strong>例题<span><span class="heti-spacing"> </span>3</span></strong>，这里提供另一种做法，我们根据除法思想猜测：</p>
+<p><strong>解</strong>：本题就是<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#832">例题<span><span class="heti-spacing"> </span>3</span></a>，这里提供另一种做法，我们根据除法思想猜测：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 (I_{m}-BA)^{-1} &amp;= I_{m}+(BA)+(BA)^{2}+\dots\\
@@ -2199,8 +2211,8 @@ A^{-1}+A^{-1}B(P/A)^{-1}CA^{-1} &amp; -A^{-1}B(P/A)^{-1}  \\
 <div class="arithmatex">\[
 (A-BD^{-1}C)^{-1} = A^{-1}+A^{-1}B(D-CA^{-1}B)^{-1}CA^{-1}
 \]</div>
-<p>发现了吗？这不就是我们<strong>例题<span><span class="heti-spacing"> </span>5</span></strong>证明的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sherman-Morrison-Woodbury}\)</span><span class="heti-spacing"> </span></span>公式吗？！！！</p>
-<p>至此我们一共介绍了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sherman-Morrison-Woodbury}\)</span><span class="heti-spacing"> </span></span>公式的两种证明角度，一种是利用巧妙的代数变换，结合<strong>例题<span><span class="heti-spacing"> </span>3</span></strong>的结论进行证明，技巧性较高；另一种则是使用上面的分块初等变换，采用“<strong>算两次</strong>”的数学思想得出结论。两种方法都十分巧妙，都需要掌握！</p>
+<p>发现了吗？这不就是我们<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#5smw">例题<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span></a>证明的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sherman-Morrison-Woodbury}\)</span><span class="heti-spacing"> </span></span>公式吗？！！！</p>
+<p>至此我们一共介绍了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Sherman-Morrison-Woodbury}\)</span><span class="heti-spacing"> </span></span>公式的两种证明角度，一种是利用巧妙的代数变换，结合<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#3">例题<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span></a>的结论进行证明，技巧性较高；另一种则是使用上面的分块初等变换，采用“<strong>算两次</strong>”的数学思想得出结论。两种方法都十分巧妙，都需要掌握！</p>
 <h3 id="13">例<span><span class="heti-spacing"> </span>13</span><a class="headerlink" href="#13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -2233,7 +2245,7 @@ O &amp; I\pm AB
 <p class="admonition-title">Example</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶矩阵，<span><span class="arithmatex">\(B,C\)</span><span class="heti-spacing"> </span></span>分别为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\times m\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\times n\)</span><span class="heti-spacing"> </span></span>阶矩阵，证明：<span><span class="arithmatex">\(I_{m} +CA^{-1}B\)</span><span class="heti-spacing"> </span></span>可逆<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(A+BC\)</span><span class="heti-spacing"> </span></span>可逆。</p>
 </div>
-<p><strong>解</strong>：证明方法同例题<span><span class="heti-spacing"> </span>13</span>：</p>
+<p><strong>解</strong>：证明方法同<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#13">例题<span><span class="heti-spacing"> </span>13</span></a>：</p>
 <div class="arithmatex">\[
 r \begin{pmatrix}
 A+BC &amp; B  \\
@@ -2303,7 +2315,7 @@ x_n=\frac1n\left(\,\frac{2}{n(n+1)}\sum_{j=1}^n b_j-b_n+b_1\,\right).
 <div class="arithmatex">\[ A= \begin{pmatrix} a &amp; a+1 &amp; a+2 &amp; \cdots &amp; a+(n-1) \\ a+(n-1) &amp; a &amp; a+1 &amp; \cdots &amp; a+(n-2) \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a+1 &amp; a+2 &amp; a+3 &amp; \cdots &amp; a \end{pmatrix}, \]</div>
 <p>求<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^{-1}\)</span></span></p>
 </div>
-<p><strong>分析</strong>：注意到本题依旧是一个循环矩阵，因此我们采用和例<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>一样的处理手法。</p>
+<p><strong>分析</strong>：注意到本题依旧是一个循环矩阵，因此我们采用和<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#15">例<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span></a>一样的处理手法。</p>
 <p><strong>解</strong>： 先求解线性方程组 </p>
 <div class="arithmatex">\[AX=\boldsymbol \beta\]</div>
 <p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol\beta=(b_1,b_2,\dots,b_n)^T\)</span></span>。 方程组写作：</p>
@@ -2322,7 +2334,7 @@ x_n=\frac1n\left(\,\frac{2}{n(n+1)}\sum_{j=1}^n b_j-b_n+b_1\,\right).
 <div class="arithmatex">\[
 S=\frac{\displaystyle\sum_{i=1}^n b_i}{na+\dfrac{n(n-1)}{2}}.
 \]</div>
-<p>类比例<span><span class="heti-spacing"> </span>15</span>，我们对<span><span class="heti-spacing"> </span><span class="arithmatex">\(j=1,2,\dots,n\)</span></span>，用第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>行减第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j+1\)</span><span class="heti-spacing"> </span></span>行（约定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n+1\)</span><span class="heti-spacing"> </span></span>行是第<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
+<p>类比<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#15">例<span><span class="heti-spacing"> </span>15</span></a>，我们对<span><span class="heti-spacing"> </span><span class="arithmatex">\(j=1,2,\dots,n\)</span></span>，用第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>行减第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j+1\)</span><span class="heti-spacing"> </span></span>行（约定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n+1\)</span><span class="heti-spacing"> </span></span>行是第<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <div class="arithmatex">\[
 S-nx_j = b_j-b_{j+1}\implies x_j=\frac{S-(b_j-b_{j+1})}{n}.
 \]</div>
@@ -2427,7 +2439,7 @@ A^{-1}=\frac{1}{|A|}A^{*}=\frac{1}{2}\begin{pmatrix}
 <p>这种方法如果熟练运用的话，还是非常快的（相比于初等变换法<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，对于三阶行列式的计算，就算你全部展开也只有六项，用三主对角减三副对角<strong>瞪眼</strong>都能瞪出来。</p>
 <h2 id="_9">互素多项式<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x),g(x)\)</span><span class="heti-spacing"> </span></span>是数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{F}\)</span><span class="heti-spacing"> </span></span>上的多项式，<span><span class="arithmatex">\(d(x)\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x),g(x)\)</span><span class="heti-spacing"> </span></span>的公因式，若对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x),g(x)\)</span><span class="heti-spacing"> </span></span>的任一公因式<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(x)\)</span></span>，都有<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(x) \mid d(x)\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>的最大公因式，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(d(x)=(f(x),g(x))\)</span>.</span></p>
-<p>特别地，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(d(x)=1\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x),g(x)\)</span><span class="heti-spacing"> </span></span>互素。下面的例题<span class="heti-skip"><span class="heti-spacing"> </span>18<span class="heti-spacing"> </span></span>给出了<strong>互素多项式</strong>在逆矩阵中的应用。</p>
+<p>特别地，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(d(x)=1\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x),g(x)\)</span><span class="heti-spacing"> </span></span>互素。下面的<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#18">例题<span class="heti-skip"><span class="heti-spacing"> </span>18<span class="heti-spacing"> </span></span></a>给出了<strong>互素多项式</strong>在逆矩阵中的应用。</p>
 <h3 id="18">例<span><span class="heti-spacing"> </span>18</span><a class="headerlink" href="#18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -2450,13 +2462,13 @@ f(A)u(A)+g(A)v(A)=I_{n}
 <p><strong>分析</strong>：本题可以采用<strong>凑因子法</strong>进行解决，因为我们可以凑出<span><span class="heti-spacing"> </span><span class="arithmatex">\(A(A-3I_{n})=-2I_{n}\)</span></span>，所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>是可逆阵；我们还可以凑出<span><span class="heti-spacing"> </span><span class="arithmatex">\((A+I_{n})(A-4I_{n})=-6I_{n}\)</span></span>，所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A+I_{n}\)</span><span class="heti-spacing"> </span></span>也是可逆阵。对于第二小问，我们根据已知条件得<span><span class="heti-spacing"> </span><span class="arithmatex">\((A-I_{n})(A-2I_{n})=O\)</span></span>，考虑反证即可，反证部分可以参考下面的解答。</p>
 <p>下面我们考虑从<strong>互素多项式</strong>的角度分析本题。</p>
 <p><strong>解</strong>：考虑多项式<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)=x^{2}-3x+2\)</span></span>，则根据条件我们有<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(A)=O\)</span></span>。
-- 考虑多项式 <span class="arithmatex">\(g(x)=x\)</span>，显然和 <span class="arithmatex">\(f(x)\)</span> 是互素的，故根据例题18结论可知，<span class="arithmatex">\(g(A)=A\)</span> 可逆。
-- 考虑多项式 <span class="arithmatex">\(g(x)=x+1\)</span>，显然和 <span class="arithmatex">\(f(x)\)</span> 是互素的，故根据例题18结论可知，<span class="arithmatex">\(g(A)=A+I_{n}\)</span> 可逆。
-- 考虑多项式 <span class="arithmatex">\(g(x) = x-2\)</span>，和 <span class="arithmatex">\(f(x)\)</span> 不互素，不满足例题18的条件，考虑反证法，由于 <span class="arithmatex">\((A-I_{n})(A-2I_{n})=O\)</span>，若 <span class="arithmatex">\(A-2I_{n}\)</span> 可逆，则有 <span class="arithmatex">\(A-I_{n}=O\)</span>，即 <span class="arithmatex">\(A=I_{n}\)</span>，矛盾，故 <span class="arithmatex">\(A-2I_{n}\)</span> 不可逆。</p>
+- 考虑多项式 <span class="arithmatex">\(g(x)=x\)</span>，显然和 <span class="arithmatex">\(f(x)\)</span> 是互素的，故根据<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#18">例题18</a>结论可知，<span class="arithmatex">\(g(A)=A\)</span> 可逆。
+- 考虑多项式 <span class="arithmatex">\(g(x)=x+1\)</span>，显然和 <span class="arithmatex">\(f(x)\)</span> 是互素的，故根据<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#18">例题18</a>结论可知，<span class="arithmatex">\(g(A)=A+I_{n}\)</span> 可逆。
+- 考虑多项式 <span class="arithmatex">\(g(x) = x-2\)</span>，和 <span class="arithmatex">\(f(x)\)</span> 不互素，不满足<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#18">例题18</a>的条件，考虑反证法，由于 <span class="arithmatex">\((A-I_{n})(A-2I_{n})=O\)</span>，若 <span class="arithmatex">\(A-2I_{n}\)</span> 可逆，则有 <span class="arithmatex">\(A-I_{n}=O\)</span>，即 <span class="arithmatex">\(A=I_{n}\)</span>，矛盾，故 <span class="arithmatex">\(A-2I_{n}\)</span> 不可逆。</p>
 <p><span class="arithmatex">\(\square\)</span></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>根据例题<span><span class="heti-spacing"> </span>18</span>，我们可以解决类似例题<span class="heti-skip"><span class="heti-spacing"> </span>19<span class="heti-spacing"> </span></span>的一大类逆矩阵问题，事实上，互素多项式理论还可以解决很多和秩有关的问题，它联系起了<strong>矩阵理论</strong>和<strong>线性空间理论</strong>，是一个非常强大的工具。</p>
+<p>根据<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#18">例题<span><span class="heti-spacing"> </span>18</span></a>，我们可以解决类似<a href="https://miracle606.github.io/mathcandy/LA/%E9%80%86%E7%9F%A9%E9%98%B5/#19">例题<span class="heti-skip"><span class="heti-spacing"> </span>19<span class="heti-spacing"> </span></span></a>的一大类逆矩阵问题，事实上，互素多项式理论还可以解决很多和秩有关的问题，它联系起了<strong>矩阵理论</strong>和<strong>线性空间理论</strong>，是一个非常强大的工具。</p>
 </div>
 <h2 id="_10">特征值<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>可逆<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的特征值不全为零，因此特征值的计算也是判断矩阵是否可逆的方法。</p>
@@ -2582,7 +2594,7 @@ A^{-1} &amp; O
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月5日 13:34:08 UTC">2026年8月5日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月5日 14:57:43 UTC">2026年8月5日</span>
 </span>
 </aside>
 <h2 id="__comments">评论区</h2>
