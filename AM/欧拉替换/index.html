@@ -1375,6 +1375,42 @@ I = \frac{1}{5}x - \frac{1}{5}\sqrt{x^2 - 5x + 6} + \frac{1}{2} \ln \left| x + \
 <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月5日 09:24:26 UTC">2026年8月5日</span>
 </span>
 </aside>
+<h2 id="__comments">评论区</h2>
+<!-- 你自己生成的 Giscus 代码 -->
+<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOTsrfcc4DCqOl" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Miracle606/mathcandy" data-repo-id="R_kgDOTsrfcQ" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- 同步 Giscus 主题与 MkDocs 明暗色调切换的代码 -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]")
+
+  // 初始加载时设置主题
+  var palette = __md_get("__palette")
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate"
+      ? "transparent_dark"
+      : "light"
+    giscus.setAttribute("data-theme", theme) 
+  }
+
+  // 监听右上角主题切换按钮的点击事件
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component=palette]")
+    ref.addEventListener("change", function() {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate"
+          ? "transparent_dark"
+          : "light"
+
+        var frame = document.querySelector(".giscus-frame")
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        )
+      }
+    })
+  })
+</script>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
