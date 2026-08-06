@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
+<meta content="Miracle" name="author"/>
+<link href="https://miracle606.github.io/mathcandy/History/%E5%B7%B4%E5%A1%9E%E5%B0%94/" rel="canonical"/>
+<link href="../../LA/%E9%80%86%E7%9F%A9%E9%98%B5/" rel="prev"/>
+<link href="../../40/" rel="next"/>
+<link href="../../graph/logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>巴塞尔问题 - Miracle的数学小课糖</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-DZQVL1DHKG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-DZQVL1DHKG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-DZQVL1DHKG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style><script src="../../assets/javascripts/toggle-sidebar.js"></script></head>
+<body data-md-color-accent="deep-orange" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Miracle的数学小课糖" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Miracle的数学小课糖">
+<img alt="logo" src="../../graph/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Miracle的数学小课糖
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              巴塞尔问题
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="切换暗色模式" class="md-option" data-md-color-accent="deep-orange" data-md-color-media="" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="切换暗色模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="切换亮色模式" class="md-option" data-md-color-accent="deep-orange" data-md-color-media="" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="切换亮色模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Miracle606/mathcandy" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    Miracle606/mathcandy
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../AM/Cauchy/">
+          
+  
+  
+    
+  
+  高数数分
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/">
+          
+  
+  
+    
+  
+  线代高代
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+  
+    
+  
+  数学科普
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../40/">
+          
+  
+  
+    
+  
+  数一真题全解
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Miracle的数学小课糖" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Miracle的数学小课糖">
+<img alt="logo" src="../../graph/logo.png"/>
+</a>
+    Miracle的数学小课糖
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Miracle606/mathcandy" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    Miracle606/mathcandy
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    高数数分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    高数数分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    函数与极限
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    函数与极限
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Cauchy/">
+<span class="md-ellipsis">
+    
+  
+    Cauchy-Schwarz不等式
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E8%A3%82%E9%A1%B9/">
+<span class="md-ellipsis">
+    
+  
+    裂项
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Stolz%E6%B1%82%E8%A7%A3%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AE%9A%E4%B9%89/">
+<span class="md-ellipsis">
+    
+  
+    Stolz解决定积分定义
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E4%BA%8C%E7%BA%A7%E7%BB%93%E8%AE%BA/">
+<span class="md-ellipsis">
+    
+  
+    两个二级结论
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%9E%81%E9%99%90%E5%AD%98%E5%9C%A8/">
+<span class="md-ellipsis">
+    
+  
+    一道证明函数极限存在的好题
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%B4%9B%E5%BF%85%E8%BE%BE%E5%A4%B1%E6%95%88/">
+<span class="md-ellipsis">
+    
+  
+    洛必达失效怎么办
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Abel/">
+<span class="md-ellipsis">
+    
+  
+    Abel变换
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    导数与微分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    导数与微分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/">
+<span class="md-ellipsis">
+    
+  
+    高阶导数
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    微分中值定理
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    微分中值定理
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/zzdl%E5%A5%BD%E9%A2%98/">
+<span class="md-ellipsis">
+    
+  
+    导数有界约束下积分估值证明
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E8%BE%85%E5%8A%A9%E5%A4%9A%E9%A1%B9%E5%BC%8F/">
+<span class="md-ellipsis">
+    
+  
+    辅助多项式OR待定系数法
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Flett/">
+<span class="md-ellipsis">
+    
+  
+    Flett中值定理
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    不定积分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    不定积分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<span class="md-ellipsis">
+    
+  
+    组合积分法
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E4%B8%89%E8%A7%92%E7%A7%AF%E5%88%86/">
+<span class="md-ellipsis">
+    
+  
+    三角积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%8C%87%E6%95%B0%E7%A7%AF%E5%88%86/">
+<span class="md-ellipsis">
+    
+  
+    一类复杂的指数积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%AC%A7%E6%8B%89%E6%9B%BF%E6%8D%A2/">
+<span class="md-ellipsis">
+    
+  
+    欧拉替换OR双元法
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E9%80%92%E6%8E%A8/">
+<span class="md-ellipsis">
+    
+  
+    递推求解不定积分
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    定积分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    定积分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E4%BD%A0%E7%9C%9F%E7%9A%84%E6%87%82%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%90%97/">
+<span class="md-ellipsis">
+    
+  
+    你真的懂分部积分吗?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86Cau/">
+<span class="md-ellipsis">
+    
+  
+    分部积分+Cauchy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%8B%86%E5%8C%BA%E9%97%B4/">
+<span class="md-ellipsis">
+    
+  
+    拆区间
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E7%BB%93%E5%90%88%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/">
+<span class="md-ellipsis">
+    
+  
+    结合积分中值定理
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%80%92%E4%BB%A3%E6%8D%A2/">
+<span class="md-ellipsis">
+    
+  
+    倒代换经典模型
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8C%BA%E9%97%B4%E5%86%8D%E7%8E%B0/">
+<span class="md-ellipsis">
+    
+  
+    区间再现最全模型
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%89%93%E5%BC%80%E6%8B%AC%E5%8F%B7/">
+<span class="md-ellipsis">
+    
+  
+    你不会准备把括号打开吧
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5_8" id="__nav_2_5_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Beta函数
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_5_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Beta函数
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Beta/1/">
+<span class="md-ellipsis">
+    
+  
+    初次见面
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Beta/2/">
+<span class="md-ellipsis">
+    
+  
+    积分求解级数
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Beta/3/">
+<span class="md-ellipsis">
+    
+  
+    三角形式
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Beta/4/">
+<span class="md-ellipsis">
+    
+  
+    分式形式（余元推广）
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Beta/5/">
+<span class="md-ellipsis">
+    
+  
+    完结
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5_9" id="__nav_2_5_9_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    取整函数
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_5_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    取整函数
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/1/">
+<span class="md-ellipsis">
+    
+  
+    神级结论
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/2/">
+<span class="md-ellipsis">
+    
+  
+    竟然是“高中题”
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/3/">
+<span class="md-ellipsis">
+    
+  
+    结合二重积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/4/">
+<span class="md-ellipsis">
+    
+  
+    小数部分的周期性
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/5/">
+<span class="md-ellipsis">
+    
+  
+    周期性神级结论1
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/6/">
+<span class="md-ellipsis">
+    
+  
+    周期性神级结论2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    重积分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    重积分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<span class="md-ellipsis">
+    
+  
+    轮换对称性
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    线面积分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    线面积分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
+<span class="md-ellipsis">
+    
+  
+    Poisson积分公式
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%AF%B9%E7%A7%B0%E6%80%A7/">
+<span class="md-ellipsis">
+    
+  
+    对称性
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    反常积分
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    反常积分
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86/">
+<span class="md-ellipsis">
+    
+  
+    泊松积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Froullani/">
+<span class="md-ellipsis">
+    
+  
+    Froullani积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Fresnel/">
+<span class="md-ellipsis">
+    
+  
+    菲涅尔积分和狄利克雷积分
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/Laplace/">
+<span class="md-ellipsis">
+    
+  
+    拉普拉斯变换
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    级数
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    级数
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E4%B8%89%E8%A7%92%E7%BA%A7%E6%95%B0/">
+<span class="md-ellipsis">
+    
+  
+    三角级数
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%8F%8C%E9%98%B6%E4%B9%98/">
+<span class="md-ellipsis">
+    
+  
+    双阶乘
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AM/%E5%B9%82%E7%BA%A7%E6%95%B0/">
+<span class="md-ellipsis">
+    
+  
+    幂级数还能这样求？
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    线代高代
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    线代高代
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LA/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9/">
+<span class="md-ellipsis">
+    
+  
+    矩阵的秩
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LA/%E9%80%86%E7%9F%A9%E9%98%B5/">
+<span class="md-ellipsis">
+    
+  
+    逆矩阵方法大全
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    数学科普
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    数学科普
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    巴塞尔问题
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    巴塞尔问题
+  
+
+    
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        天才般的证明
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        坐标变换带来的惊喜
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      
+        另一种坐标变换
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      
+        藏在三角中的秘密
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      
+        意外的收获
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      
+        黎曼 ζ 函数
+      
+    </span>
+</a>
+<nav aria-label="黎曼 ζ 函数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      
+        素数无穷多
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeta4">
+<span class="md-ellipsis">
+      
+        \(\zeta(4)\) 的计算
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      
+        有理还是无理
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      
+        黎曼猜想
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../40/">
+<span class="md-ellipsis">
+    
+  
+    数一真题全解
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    数一真题全解
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../40/1987数一真题.">
+<span class="md-ellipsis">
+    
+  
+    1987年
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        天才般的证明
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        坐标变换带来的惊喜
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      
+        另一种坐标变换
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      
+        藏在三角中的秘密
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      
+        意外的收获
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      
+        黎曼 ζ 函数
+      
+    </span>
+</a>
+<nav aria-label="黎曼 ζ 函数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      
+        素数无穷多
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeta4">
+<span class="md-ellipsis">
+      
+        \(\zeta(4)\) 的计算
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      
+        有理还是无理
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      
+        黎曼猜想
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="导航栏" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../..">
+<span class="md-ellipsis">
+    简介
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    数学科普
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/edit/master/docs/History/巴塞尔.md" rel="edit" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+</a>
+<h1 id="_1">跨越百年的智力接力：从巴塞尔问题到黎曼猜想<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image.png"><img alt="alt text" src="../graph/image.png"/></a></p>
+<h2 id="_2">前言<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在之前的<a href="https://miracle606.github.io/mathcandy/AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/2/">取整函数专题</a>中，我讲过下面这个题目，其求解过程用到了经典级数——<span>Eluer<span class="heti-spacing"> </span></span>级数，也就是我们常说的巴塞尔问题。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>求解：</p>
+<div class="arithmatex">\[
+\int_0^1 x\left ( \frac1x - \left[ \frac{1}{x}\right] \right ) \mathrm{d}x
+\]</div>
+<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([x]\)</span><span class="heti-spacing"> </span></span>表示不超过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>的最大整数。</p>
+</div>
+<p>最近我搜集了很多历史资料，把散落了三百年的故事一点点串起来，终于汇成了今天这篇科普文章。我们会从一个曾让整个欧洲数学界束手无策的难题 —— 巴塞尔问题讲起：它为什么难倒了雅各布・伯努利，又如何被年仅<span class="heti-skip"><span class="heti-spacing"> </span>28<span class="heti-spacing"> </span></span>岁的欧拉一剑封喉；从欧拉最初那个<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>不严谨却无比天才<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>的证明，到后来傅里叶、柯西、黎曼给出的严谨解法，我们会一路带大家学习历史上最经典的几种证明思路。</p>
+<p>最后，我们会顺着巴塞尔问题的答案，自然走进黎曼<span class="heti-skip"><span class="heti-spacing"> </span>ζ<span class="heti-spacing"> </span></span>函数的世界 —— 那个把素数分布藏在零点里的神秘函数，以及至今悬而未决的黎曼猜想。<strong>从一个简单的倒数平方和，到百万美金悬赏的世纪难题，这条路走了两百多年，而我们今天就来走完它</strong>。</p>
+<p>巴塞尔问题是一个著名的数论问题，由瑞士数学家皮尔提洛<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>门戈利于<span class="heti-skip"><span class="heti-spacing"> </span>1644<span class="heti-spacing"> </span></span>年提出。这个问题是以数学家莱敖哈德<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>欧拉德家乡：瑞士的第三大城市巴塞尔命名的。<span>1735<span class="heti-spacing"> </span></span>年，年仅<span class="heti-skip"><span class="heti-spacing"> </span>28<span class="heti-spacing"> </span></span>岁的欧拉得到该问题的第一个解答：</p>
+<div class="admonition abstract">
+<p class="admonition-title">巴塞尔问题</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6}
+\]</div>
+</div>
+<p>这个事实的一个重要解释是它导出了黎曼<span class="heti-skip"><span class="heti-spacing"> </span>ζ<span class="heti-spacing"> </span></span>函数的第一个非平凡值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)\)</span></span>，这一点我后面会讲到。不仅这一结果在数学史上具有显赫地位，它的几个极其优美的证明也拥有自己的历史，对它们的发现与再发现的乐趣被很多人分享，据说历史上叫的上名字的证明就有<span class="heti-skip"><span class="heti-spacing"> </span>23<span class="heti-spacing"> </span></span>个，从幂级数，到伯努利数、超几何正切函数……今天我将介绍其中的<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个证明。</p>
+<h2 id="_3">天才般的证明<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>提到巴塞尔问题，最不能落下的就是<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>的证明，他将幂级数和有限多项式联系在了一起，从而得到了答案，但是史料中没有记载<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>对下面的多项式证明，直到<span class="heti-skip"><span class="heti-spacing"> </span>100<span class="heti-spacing"> </span></span>年以后的<span class="heti-skip"><span class="heti-spacing"> </span>Weierstrass<span class="heti-spacing"> </span></span>得到了著名的<span class="heti-skip"><span class="heti-spacing"> </span>Weierstrass<span class="heti-spacing"> </span></span>分解定理才说明了这件事情。</p>
+<p>首先有：</p>
+<div class="arithmatex">\[
+\sin x=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\dots
+\]</div>
+<p>对等式两边同时除以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>得到：</p>
+<div class="arithmatex">\[
+\frac{\sin x}{x} = 1- \frac{x^{2}}{3!}+\frac{x^{4}}{5!}- \frac{x^{6}}{7!}+\dots
+\]</div>
+<p>由于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x=n\cdot \pi\)</span><span class="heti-spacing"> </span></span>是左式的根，所以<span class="heti-skip"><span class="heti-spacing"> </span>Eluer<span class="heti-spacing"> </span></span>得到如下式子：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac{\sin x}{x} &amp;= \left( 1-\frac{x}{\pi} \right)\left( 1+\frac{x}{\pi} \right)\left( 1-\frac{x}{2\pi} \right)\left( 1+\frac{x}{2\pi} \right)\left( 1-\frac{x}{3\pi} \right)\\
+&amp;= \left( 1-\frac{x^{2}}{\pi^{2}} \right)\left( 1-\frac{x^{2}}{4\pi^{2}} \right)\left( 1-\frac{x^{2}}{9\pi^{2}} \right)
+\end{aligned}
+\]</div>
+<p>对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x^{2}\)</span><span class="heti-spacing"> </span></span>项的系数进行研究，得到：</p>
+<div class="arithmatex">\[
+-\frac{1}{6}=-\left( \frac{1}{\pi^{2}}+\frac{1}{4\pi^{2}}+\frac{1}{9\pi^{2}}+\dots \right)=-\frac{1}{\pi^{2}}\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+\]</div>
+<p>所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n^{2}}=\dfrac{\pi^{2}}{6}\)</span><span class="heti-spacing"> </span></span>就得到了证明。</p>
+<p>当然这个方法人尽皆知，自然也不是我们今天的重点，时间来到<span class="heti-skip"><span class="heti-spacing"> </span>1956<span class="heti-spacing"> </span></span>年……</p>
+<h2 id="_4">坐标变换带来的惊喜<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span>1956<span class="heti-spacing"> </span></span>年<span class="heti-skip"><span class="heti-spacing"> </span>William J. LeVeque<span class="heti-spacing"> </span></span>的数论教科书中，有一道练习题，<span>Leveque<span class="heti-spacing"> </span></span>表示<heti-adjacent class="heti-adjacent-quarter">：</heti-adjacent>“关于这道题目的来源我毫无所知，但我确信它不是我的原创<heti-adjacent class="heti-adjacent-quarter">。</heti-adjacent>”</p>
+<p>这个证明包含对重积分</p>
+<div class="arithmatex">\[
+I = \int_{0}^{1} \int_{0}^{1} \frac{1}{1-xy} \mathrm{~d} x  \mathrm{d} y 
+\]</div>
+<p>的两个不同的估计，第一个，把<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{1}{1-xy}\)</span><span class="heti-spacing"> </span></span>展开成几何级数，把和式分解为乘积，然后毫不费力地求解积分：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \int_{0}^{1} \int_{0}^{1} \sum_{n=0}^{\infty} (xy)^{n} \mathrm{~d} x  \mathrm{d} y \\
+&amp;= \sum_{n=0}^{\infty} \int_{0}^{1} \int_{0}^{1} x^{n}y^{n} \mathrm{~d} x  \mathrm{d} y\\
+&amp;= \sum_{n=0}^{\infty} \left( \int_{0}^{1} x^{n} \mathrm{~d} x  \right) \left( \int_{0}^{1} y^{n} \mathrm{~d} y  \right)\\
+&amp;= \sum_{n=0}^{\infty} \frac{1}{n+1}\cdot \frac{1}{n+1}\\
+&amp;= \sum_{n=1}^{\infty} \frac{1}{n^{2}}\\
+&amp;= \zeta(2)
+\end{aligned} 
+\]</div>
+<p>这个计算也说明这个在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x=y=1\)</span><span class="heti-spacing"> </span></span>处有一个奇点的正函数的二重积分是有限的。注意，从后往前看这个计算也是简单且直接了当的，所以对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)\)</span><span class="heti-spacing"> </span></span>的估值把我们引向了二重积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>。</p>
+<p>第二个计算<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span><span class="heti-spacing"> </span></span>的方法来自坐标系变换：我们构造如下坐标系：<span class="arithmatex">\(u= \frac{x+y}{2}\)</span>，<span class="arithmatex">\(v= \frac{y-x}{2}\)</span>，其定积分的定义域是一个边长为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{1}{\sqrt{ 2 }}\)</span><span class="heti-spacing"> </span></span>的正方形，可以通过将旧坐标系旋转<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(45\)</span><span class="heti-spacing"> </span></span>度再以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sqrt{ 2 }\)</span><span class="heti-spacing"> </span></span>的比例缩小。如下图所示：</p>
+<div align="center">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image-1.png"><img src="../graph/image-1.png" style="width:60%; height:auto;"/></a>
+</div>
+<p>于是做换元：<span class="arithmatex">\(x=u-v,y=u+v\)</span>，结合<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Jacobi}\)</span><span class="heti-spacing"> </span></span>换元得到：</p>
+<div class="arithmatex">\[
+\frac{1}{1-xy}\mathrm{~d} x\mathrm{d} y  =\frac{1}{1-u^{2}+v^{2}}\cdot 2\mathrm{~d} u\mathrm{d} v  
+\]</div>
+<p>新积分的定义域和被积函数都是关于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u\)</span><span class="heti-spacing"> </span></span>轴对称的，所以我们只需要计算在上半平面积分的两倍即可，如图所示：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= 4\int_{0}^{\frac{1}{2}} \left( \int_{0}^{u} \frac{\mathrm{~d} v }{1-u^{2}+v^{2}}   \right) \mathrm{~d} u + 4\int_{\frac{1}{2}}^{1} \left( \int_{0}^{1-u} \frac{\mathrm{~d} v }{1-u^{2}+v^{2}}   \right) \mathrm{~d} u \\
+&amp;= 4\int_{0}^{\frac{1}{2}} \frac{1}{\sqrt{ 1-u^{2} }}\arctan\left( \frac{u}{\sqrt{ 1-u^{2} }} \right) \mathrm{~d} u + 4\int_{\frac{1}{2}}^{1} \frac{1}{\sqrt{ 1-u^{2} }}\arctan\left( \frac{1-u}{\sqrt{ 1-u^{2} }} \right) \mathrm{~d} u 
+\end{aligned}
+\]</div>
+<div align="center">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image-2.png"><img src="../graph/image-2.png" style="width:60%; height:auto;"/></a>
+</div>
+<p>而这两个积分可以通过三角换元化简并计算处理，但我们也可以直接做，考虑函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(u)=\arctan\left( \frac{u}{\sqrt{ 1-u^{2} }} \right)\)</span><span class="heti-spacing"> </span></span>的导数是<span><span class="heti-spacing"> </span><span class="arithmatex">\(g'(u)=\frac{1}{\sqrt{ 1-u^{2} }}\)</span></span>；函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(h(u)=\arctan\left( \frac{1-u}{\sqrt{ 1-u^{2} }} \right)\)</span><span class="heti-spacing"> </span></span>的导数是<span><span class="heti-spacing"> </span><span class="arithmatex">\(h'(u)=-\frac{1}{2} \frac{1}{\sqrt{ 1-u^{2} }}\)</span></span>，所以我们可以利用如下积分公式：</p>
+<div class="admonition success">
+<p class="admonition-title">公式</p>
+<div class="arithmatex">\[
+\int_{a}^{b} f(x)f'(x) \mathrm{~d} x = \frac{1}{2}f^{2}(b)-\frac{1}{2}f^{2}(a)
+\]</div>
+</div>
+<p>从而得到原积分的结果：<span>(<span class="heti-spacing"> </span></span>注：我这里写的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f^{2}(a)\)</span><span class="heti-spacing"> </span></span>均表示<span><span class="heti-spacing"> </span><span class="arithmatex">\([f(a)]^{2}\)</span>)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= 4\int_{0}^{\frac{1}{2}} g'(u)g(u) \mathrm{~d} u + 4\int_{\frac{1}{2}}^{1} (-2h'(u)h(u)) \mathrm{~d} u \\
+&amp;= 2g^{2}(u)\bigg|_{0}^{\frac{1}{2}} - 4 h^{2}(u)\bigg|_{\frac{1}{2}}^1\\
+&amp;= 2g^{2}\left( \frac{1}{2} \right)-2g^{2}(0)-4h^{2}(1)+4h^{2}\left( \frac{1}{2} \right)\\
+&amp;= 2\left( \frac{\pi}{6} \right)^{2}-0-0+4\left( \frac{\pi}{6} \right)^{2}\\
+&amp;= \frac{\pi^{2}}{6}
+\end{aligned}
+\]</div>
+<p>以上的证明通过一个定积分来的<span class="heti-skip"><span class="heti-spacing"> </span>Eluer<span class="heti-spacing"> </span></span>级数的值，仅仅是利用了一个很简单的<strong>坐标变换</strong>。后来<span><span class="heti-spacing"> </span>Beukers</span>，<span>Calabi<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Kolk<span class="heti-spacing"> </span></span>发现了同样类型的一个精巧证明，却用到了一个全然非平凡的坐标转换，而那个证明的起点在于将<span class="heti-skip"><span class="heti-spacing"> </span>Eluer<span class="heti-spacing"> </span></span>级数拆成偶数项和奇数项，显然偶数项的和：</p>
+<div class="arithmatex">\[
+\frac{1}{2^{2}}+\frac{1}{4^{2}}+\frac{1}{6^{2}}+\dots=\sum_{k=1}^{\infty} \frac{1}{(2k)^{2}}=\frac{1}{4}\zeta(2)
+\]</div>
+<p>那么通过这样的拆分，我们就可以得到级数项的和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\sum_{k=0}^{\infty} \frac{1}{(2k+1)^{2}}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)\)</span><span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{3}{4}\)</span></span>，因此<span class="heti-skip"><span class="heti-spacing"> </span>Eluer<span class="heti-spacing"> </span></span>级数等价于：</p>
+<div class="admonition abstract">
+<p class="admonition-title">等价命题</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty} \frac{1}{(2k+1)^{2}} = \frac{\pi^{2}}{8}
+\]</div>
+</div>
+<h2 id="_5">另一种坐标变换<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>如前文所述，Beukers，<span>Calabi<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Kolk<span class="heti-spacing"> </span></span>将其表示为二重积分：</p>
+<div class="arithmatex">\[
+J = \sum_{k=0}^{\infty} \frac{1}{(2k+1)^{2}}=\int_{0}^{1} \int_{0}^{1} \frac{1}{1-x^{2}y^{2}} \mathrm{~d} x  \mathrm{d} y 
+\]</div>
+<p>并且他们三个提出了新的坐标变换：</p>
+<div class="arithmatex">\[
+u=\arccos \sqrt{ \frac{1-x^{2}}{1-x^{2}y^{2}} }
+\]</div>
+<div class="arithmatex">\[
+v=\arccos \sqrt{ \frac{1-y^{2}}{1-x^{2}y^{2}} }
+\]</div>
+<p>计算重积分可以丢掉边界，仅考虑在区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;x&lt;1\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;y&lt;1\)</span><span class="heti-spacing"> </span></span>中的<span><span class="heti-spacing"> </span><span class="arithmatex">\(x,y\)</span></span>，这时<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u,v\)</span><span class="heti-spacing"> </span></span>在三角形<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u&gt;0,v&gt;0,u+v&lt; \frac{\pi}{2}\)</span><span class="heti-spacing"> </span></span>中，显然这个坐标变换是可逆的，那么有：</p>
+<div class="arithmatex">\[
+x=\frac{\sin u}{\cos v},\quad y=\frac{\sin v}{\cos u}
+\]</div>
+<p>从而可见以上的公式在单位正方形<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S=\left\{ (x,y)\mid 0\leqslant x,y\leqslant 1 \right\}\)</span><span class="heti-spacing"> </span></span>的内部和三角形<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T=\left\{ (u,v)\mid u,v\geqslant 0,u+v\leqslant \frac{\pi}{2} \right\}\)</span><span class="heti-spacing"> </span></span>的内部之间定义了一个双射的坐标变换。如下图所示：</p>
+<div align="center">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image-3.png"><img src="../graph/image-3.png" style="width:60%; height:auto;"/></a>
+</div>
+<p>现在我们要计算坐标变换的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Jacobi}\)</span><span class="heti-spacing"> </span></span>行列式，奇妙的是它就是：</p>
+<div class="arithmatex">\[
+\begin{vmatrix}
+\dfrac{\cos u}{\cos v} &amp; \dfrac{\sin u\sin v}{\cos ^{2}v} \\
+\dfrac{\sin u\sin v}{\cos ^{2}u} &amp; \dfrac{\cos v}{\cos u}
+\end{vmatrix}=1-\frac{\sin ^{2}u\sin ^{2}v}{\cos ^{2}u\cos ^{2}v}=1-x^{2}y^{2}
+\]</div>
+<p>这样我们想要计算的积分就变成了：</p>
+<div class="arithmatex">\[
+J = \int_{0}^{\frac{\pi}{2}} \int_{0}^{\frac{\pi}{2}} 1 \mathrm{~d} u  \mathrm{d} v 
+\]</div>
+<p>它正是三角形区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T\)</span><span class="heti-spacing"> </span></span>的面积：<span class="arithmatex">\(\frac{1}{2}\left( \frac{\pi}{2} \right)^{2}=\frac{\pi^{2}}{8}\)</span></p>
+<p>简直太漂亮了！事实上，对于所有的<span><span class="heti-spacing"> </span><span class="arithmatex">\(k\geqslant 1\)</span></span>，上述证明所使用的方法还可以推广到通过计算<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2k\)</span><span class="heti-spacing"> </span></span>重积分的定积分来得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2k)\)</span></span>，可以参考<span><span class="heti-spacing"> </span>Beukers</span>，<span>Calabi<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Kolk<span class="heti-spacing"> </span></span>三人的文章，里面用到了伯努利数，这个我之后有机会也会出文章介绍，文章放在下面，感兴趣的朋友可以看看：</p>
+<ul>
+<li><a href="https://webspace.science.uu.nl/~kolk0101/Publications/calabi.pdf">calabi</a></li>
+</ul>
+<h2 id="_6">藏在三角中的秘密<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在这两个坐标变换的证明之后，我将介绍另一个<strong>彻底不同且完全初等</strong>的对<span class="heti-skip"><span class="heti-spacing"> </span>Eluer<span class="heti-spacing"> </span></span>级数的证明，它最初出现在孪生兄弟<span class="heti-skip"><span class="heti-spacing"> </span>Akiva<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Isaak Yaglom<span class="heti-spacing"> </span></span>著的习题集的一系列练习里面，该俄文书于<span class="heti-skip"><span class="heti-spacing"> </span>1954<span class="heti-spacing"> </span></span>年问世。这个美丽证明的其他版本被后人多次重新发现和描述，这包括<span><span class="heti-spacing"> </span>F.Holme(1970)</span>，I.Papadimitriou(1973)，和将之归功于<span class="heti-skip"><span class="heti-spacing"> </span>John Scholes<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>Ransford(1982)</span>。</p>
+<p>首先我们考虑一个和余切函数值的平方有关的恒等式：</p>
+<div class="arithmatex">\[
+\cot ^{2}\left( \frac{\pi}{2m+1} \right)+\cot ^{2}\left( \frac{2\pi}{2m+1} \right)+\dots+\cot ^{2}\left( \frac{m\pi}{2m+1} \right) = \frac{2m(2m-1)}{6}
+\]</div>
+<p>为验证这个关系，我们从欧拉公式<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{e}^{ ix }=\cos x+i\sin x\)</span><span class="heti-spacing"> </span></span>开始，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>次幂<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{e}^{ inx }=(\mathrm{e}^{ ix })^{n}\)</span></span>，我们有：</p>
+<div class="arithmatex">\[
+\cos nx+i\sin nx=(\cos x+i\sin x)^{n}
+\]</div>
+<p>它的虚部为：</p>
+<div class="arithmatex">\[
+\sin nx=\binom{n}{1}\sin x\cos ^{n-1}x-\binom{n}{3}\sin ^{3}x\cos ^{n-3}x\pm\dots
+\]</div>
+<p>令<span><span class="heti-spacing"> </span><span class="arithmatex">\(n=2m+1\)</span></span>，而对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>我们将要考虑<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>个不同的值<span><span class="heti-spacing"> </span><span class="arithmatex">\(x= \frac{r\pi}{2m+1}\)</span></span>，其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(r=1,2,\dots,m\)</span></span>，对每个这样的值我们有<span><span class="heti-spacing"> </span><span class="arithmatex">\(nx=r\pi\)</span></span>，于是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sin nx=0\)</span></span>，而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;x&lt; \frac{\pi}{2}\)</span><span class="heti-spacing"> </span></span>表明对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sin x\)</span><span class="heti-spacing"> </span></span>我们得到了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>个互异的正值。</p>
+<p>特别地，我们对上式两边同时除以<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sin ^{n}x\)</span></span>，得到：</p>
+<div class="arithmatex">\[
+0=\binom{n}{1}\cot ^{n-1}x-\binom{n}{3}\cot ^{n-3}x\pm\dots
+\]</div>
+<p>即对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>所取的这<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>个值中的每一个值都有：</p>
+<div class="arithmatex">\[
+0=\binom{2m+1}{1}\cot ^{2m}x-\binom{2m+1}{3}\cot ^{2m-2}x\pm\dots
+\]</div>
+<p>因此以下的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>次多项式：</p>
+<div class="arithmatex">\[
+f(t) = \binom{2m+1}{1}t^{m}-\binom{2m+1}{3}t^{m-1}\pm\dots+(-1)^{m}\binom{2m+1}{2m+1}
+\]</div>
+<p>有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>个互异的根：</p>
+<div class="arithmatex">\[
+a_{r}=\cot ^{2}\left( \frac{r\pi}{2m+1} \right),\quad r=1,2,\dots,m.
+\]</div>
+<p>这些根互异是因为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\cot ^{2}x=\cot ^{2}y\)</span><span class="heti-spacing"> </span></span>隐含了<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sin ^{2}x=\sin ^{2}y\)</span></span>，所以对于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x,y\in \left\{ \frac{r\pi}{2m+1} \mid 1\leqslant r\leqslant m \right\}\)</span><span class="heti-spacing"> </span></span>有<span><span class="heti-spacing"> </span><span class="arithmatex">\(x=y\)</span>.</span></p>
+<p>从而这个多项式正是：</p>
+<div class="arithmatex">\[
+f(t)=\binom{2m+1}{1}\left( t-\cot ^{2}\left( \frac{\pi}{2m+1} \right) \right)\dots\left( t-\cot ^{2}\left( \frac{m\pi}{2m+1} \right) \right)
+\]</div>
+<p>根据韦达定理，得：</p>
+<div class="arithmatex">\[
+a_{1}+a_{2}+\dots+a_{m}= \frac{\binom{2m+1}{3}}{\binom{2m+1}{1}}=\frac{2m(2m-1)}{6}
+\]</div>
+<p>此外，我们还需要余割函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\csc x\)</span><span class="heti-spacing"> </span></span>的一个同样类型的恒等式：</p>
+<div class="arithmatex">\[
+\csc ^{2}\left( \frac{\pi}{2m+1} \right)+\csc ^{2}\left( \frac{2\pi}{2m+1} \right)+\dots+\csc ^{2}\left( \frac{m\pi}{2m+1} \right)= \frac{2m(2m+2)}{6}
+\]</div>
+<p>这个证明直接利用前文的结论就可以了，因为我们有恒等式<span><span class="heti-spacing"> </span><span class="arithmatex">\(\csc ^{2}=\cot ^{2}+1\)</span></span>，所以对余切函数的恒等式左右两边同时加上<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>就得证了。</p>
+<p>现在准备工作都做好了，我们正式开始证明：</p>
+<p>在区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;y&lt; \frac{\pi}{2}\)</span><span class="heti-spacing"> </span></span>内有<span><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;\sin y&lt;y&lt;\tan y\)</span></span>，从而<span><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;\cot y&lt; \frac{1}{y}&lt; \csc y\)</span></span>，平方可得：</p>
+<div class="arithmatex">\[
+\cot ^{2}y&lt; \frac{1}{y^{2}} &lt; \csc ^{2}y
+\]</div>
+<p>代入前文<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>的那<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>个互异的根，再将结果累加，运用上文两个恒等式可得：</p>
+<div class="arithmatex">\[
+\frac{2m(2m-1)}{6}&lt; \sum_{k=1}^{m} \left( \frac{2m+1}{k\pi} \right)^{2}&lt; \frac{2m(2m+2)}{6}
+\]</div>
+<p>即：</p>
+<div class="arithmatex">\[
+\frac{\pi^{2}}{6}\cdot \frac{2m}{2m+1}\cdot \frac{2m-1}{2m+1}&lt; \sum_{k=1}^{m} \frac{1}{k^{2}} &lt; \frac{\pi^{2}}{6}\cdot \frac{2m}{2m+1}\cdot \frac{2m+2}{2m+1}
+\]</div>
+<p>令<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\to \infty\)</span><span class="heti-spacing"> </span></span>取极限得：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6}
+\]</div>
+<h2 id="_7">意外的收获<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum \frac{1}{n^{2}}\)</span><span class="heti-spacing"> </span></span>收敛到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{\pi^{2}}{6}\)</span><span class="heti-spacing"> </span></span>的速度到底有多快呢？我们只需要估计误差：</p>
+<div class="arithmatex">\[
+\frac{\pi^{2}}{6}-\sum_{n=1}^{m} \frac{1}{n^{2}}=\sum_{n=m+1}^{\infty} \frac{1}{n^{2}}
+\]</div>
+<p>根据几何意义放缩可得剩余部分和的上界：</p>
+<div class="arithmatex">\[
+\sum_{n=m+1}^{\infty} \frac{1}{n^{2}}&lt; \int_{m}^{+\infty} \frac{1}{t^{2}} \mathrm{~d} t =\frac{1}{m}
+\]</div>
+<p>以及下界：</p>
+<div class="arithmatex">\[
+\sum_{n=m+1}^{\infty} \frac{1}{n^{2}}&gt; \int_{m+1}^{+\infty} \frac{1}{t^{2}} \mathrm{~d} t = \frac{1}{m+1}
+\]</div>
+<p>如果想做更加精确一点的估计，我们还可以利用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{1}{x^{2}}\)</span><span class="heti-spacing"> </span></span>的下凸性质，得到：</p>
+<div class="arithmatex">\[
+\sum_{n=m+1}^{\infty} \frac{1}{n^{2}} &gt; \int_{m+\frac{1}{2}}^{+\infty} \frac{1}{t^{2}} \mathrm{~d} t = \frac{1}{m+\frac{1}{2}}
+\]</div>
+<p>这说明我们的级数<strong>收敛得并不好</strong>，对前<span class="heti-skip"><span class="heti-spacing"> </span>1000<span class="heti-spacing"> </span></span>项求和，小数点后第三位还会有误差，而如果对前一百万项求和，<span class="arithmatex">\(m=1000000\)</span>，那我们预期在小数点后第六位有误差，利用计算机计算发现的确是这样。</p>
+<p>尽管如此，有一个<strong>很大的意外</strong>，我们将估计值精确到第<span class="heti-skip"><span class="heti-spacing"> </span>45<span class="heti-spacing"> </span></span>位：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac{\pi^{2}}{6}&amp;=1.644934066848226436472415166646025189218949901\\
+\sum_{n=1}^{10^{6}}&amp;=1.644933066848726436305748499979391855885616544 
+\end{aligned}
+\]</div>
+<p>所以小数点后第<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>位错了（小了<span><span class="heti-spacing"> </span>1</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，但是接下去的<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个数都是准确的！在接下去的数字又是错的（大了<span><span class="heti-spacing"> </span>5</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，然后又有<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个数是对的！这个惊奇的事实是由<span class="heti-skip"><span class="heti-spacing"> </span>Colorado Springs<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Roy D.North<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>1988<span class="heti-spacing"> </span></span>年发现的。如此奇特，不可能完全属于巧合……观察误差项，我们仍只取<span class="heti-skip"><span class="heti-spacing"> </span>45<span class="heti-spacing"> </span></span>位：</p>
+<div class="arithmatex">\[
+\sum_{n=10^{6}+1}^{\infty} \frac{1}{n^{2}}=0.000000999999500000166666666666633333333333357
+\]</div>
+<p>观察误差项，我们可以将其写为：</p>
+<div class="arithmatex">\[
++10^{-6}-\frac{1}{2}10^{-12}+\frac{1}{6}10^{-18}-\frac{1}{30}10^{-30}+\frac{1}{42}10^{-42}+\dots
+\]</div>
+<p>则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(10^{-6i}\)</span><span class="heti-spacing"> </span></span>项的系数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\left\{ 1,-\frac{1}{2}, \frac{1}{6},  0, -\frac{1}{30}, 0, \frac{1}{42} \right\}\)</span><span class="heti-spacing"> </span></span>构成了<span class="heti-skip"><span class="heti-spacing"> </span>Bernoulli<span class="heti-spacing"> </span></span>数序列的起始部分！！！</p>
+<p>这里简单提一下<span class="heti-skip"><span class="heti-spacing"> </span>Bernoulli<span class="heti-spacing"> </span></span>数，首先给出<span class="heti-skip"><span class="heti-spacing"> </span>Bernoulli<span class="heti-spacing"> </span></span>的递推计算式：</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{n-1} \frac{B_{k}}{k!(n-k)!}=\begin{cases}
+1, \quad 当 \;n=1, \\
+0, \quad 当 \; n\neq 1
+\end{cases}
+\]</div>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n=1\)</span><span class="heti-spacing"> </span></span>时有<span><span class="heti-spacing"> </span><span class="arithmatex">\(B_{0}=1\)</span></span>；当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n=2\)</span><span class="heti-spacing"> </span></span>时有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{B_{0}}{2}+B_{1}=0\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(B_{1}=-\frac{1}{2}\)</span></span>，以此类推。</p>
+<p><span>Euler<span class="heti-spacing"> </span></span>给出过一个<span class="heti-skip"><span class="heti-spacing"> </span>Bernoulli<span class="heti-spacing"> </span></span>数和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2k)\)</span><span class="heti-spacing"> </span></span>的关系式：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2k}} = \frac{(-1)^{k-1}2^{2k-1}B_{2k}}{(2k)!}\pi^{2k} \quad (k\in \mathbb{N})
+\]</div>
+<p>让我们读<span class="heti-skip"><span class="heti-spacing"> </span>Bernoulli<span class="heti-spacing"> </span></span>数的表，再根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)\)</span><span class="heti-spacing"> </span></span>的值，就可以得到：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sum_{n=1}^{\infty} \frac{1}{n^{4}}&amp;=\frac{\pi^{4}}{90}\\
+\sum_{n=1}^{\infty} \frac{1}{n^{6}}&amp;=\frac{\pi^{6}}{945}\\
+\sum_{n=1}^{\infty} \frac{1}{n^{8}}&amp;=\frac{\pi^{8}}{9450}\\
+\sum_{n=1}^{\infty} \frac{1}{n^{10}}&amp;=\frac{\pi^{10}}{93555}\\
+\sum_{n=1}^{\infty} \frac{1}{n^{12}}&amp;=\frac{691\pi^{12}}{638512875}\\
+&amp;\dots\dots
+\end{aligned}
+\]</div>
+<h2 id="_8">黎曼<span class="heti-skip"><span class="heti-spacing"> </span>ζ<span class="heti-spacing"> </span></span>函数<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>说了这么久的黎曼<span class="heti-skip"><span class="heti-spacing"> </span>ζ<span class="heti-spacing"> </span></span>函数到底是什么呢？对于实数<span><span class="heti-spacing"> </span><span class="arithmatex">\(s&gt;1\)</span></span>，<span><span class="arithmatex">\(\mathrm{Riemann}\)</span>  <span class="arithmatex">\(\mathrm{zeta}\)</span><span class="heti-spacing"> </span></span>函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(s)\)</span><span class="heti-spacing"> </span></span>定义为：</p>
+<div class="admonition abstract">
+<p class="admonition-title">黎曼<span class="heti-skip"><span class="heti-spacing"> </span>ζ<span class="heti-spacing"> </span></span>函数</p>
+<div class="arithmatex">\[
+\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^{s}}
+\]</div>
+</div>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s=1\)</span><span class="heti-spacing"> </span></span>的时候就是我们熟知的调和级数，因此级数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(1)\)</span><span class="heti-spacing"> </span></span>是发散的；而对实数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s&gt;1\)</span><span class="heti-spacing"> </span></span>都是收敛的。<span><span class="arithmatex">\(\zeta\)</span><span class="heti-spacing"> </span></span>函数在整个复平面内有着经典的连续（在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s=1\)</span><span class="heti-spacing"> </span></span>处有一个简单的奇点）并可以用幂级数构造出来。所得的复函数在素数理论中是至关重要的，下面让我介绍三个不同的关联问题：</p>
+<h3 id="_9">素数无穷多<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>第一个是<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>提出的一个著名等式：</p>
+<div class="arithmatex">\[
+\zeta(s) = \prod_{p} \frac{1}{1-p^{-s}}
+\]</div>
+<p>它蕴含了每个自然数有唯一的素数分解的基本事实，通过这个事实，<span>Euler<span class="heti-spacing"> </span></span>的等式就是下面几何级数展开的自然推论了：</p>
+<div class="arithmatex">\[
+\frac{1}{1-p^{-s}} = 1+\frac{1}{p^{s}}+\frac{1}{p^{2s}}+\frac{1}{p^{3s}}+\dots
+\]</div>
+<p><span><span class="arithmatex">\(\zeta(2)\)</span><span class="heti-spacing"> </span></span>的无理性再加上<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>的等式再一次推出：素数无穷多。</p>
+<h3 id="zeta4"><span><span class="arithmatex">\(\zeta(4)\)</span><span class="heti-spacing"> </span></span>的计算<a class="headerlink" href="#zeta4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>下面<span class="heti-skip"><span class="heti-spacing"> </span>Don Zagier<span class="heti-spacing"> </span></span>的令人惊奇的论断可用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)\)</span><span class="heti-spacing"> </span></span>来计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(4)\)</span></span>，考虑二元函数：</p>
+<div class="arithmatex">\[
+f(m,n)= \frac{2}{m^{3}n}+\frac{1}{m^{2}n^{2}}+\frac{2}{mn^{3}}
+\]</div>
+<p>其中整数<span><span class="heti-spacing"> </span><span class="arithmatex">\(m,n\geqslant 1\)</span></span>，容易验证对所有的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>有：</p>
+<div class="arithmatex">\[
+f(m,n)-f(m+n,n)-f(m,m+n)= \frac{2}{m^{2}n^{2}}
+\]</div>
+<p>对所有的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m,n\geqslant 1\)</span><span class="heti-spacing"> </span></span>对上式求和，考虑二维坐标系第一象限中的所有正整数网格点<span><span class="heti-spacing"> </span><span class="arithmatex">\((m,n)\)</span></span>。我们可以将所有点严格划分为三个不相交的区域：对角线上的点、对角线上方的点，和对角线下方的点。而我们对左式累加的过程中，<span><span class="arithmatex">\(\displaystyle \sum_{m=1}^{\infty} \sum_{n=1}^{\infty} f(m,n)\)</span><span class="heti-spacing"> </span></span>相当于对所有的正整数对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((m,n)\)</span><span class="heti-spacing"> </span></span>求和；<span><span class="arithmatex">\(\displaystyle \sum_{m=1}^{\infty} \sum_{n=1}^{\infty} f(m+n,n)\)</span><span class="heti-spacing"> </span></span>覆盖了所有<span><span class="heti-spacing"> </span><span class="arithmatex">\(x &gt; y\)</span></span>（即对角线下方） 的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x,y)\)</span><span class="heti-spacing"> </span></span>项；第三项<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sum_{m=1}^{\infty} \sum_{n=1}^{\infty} f(m,m+n)\)</span><span class="heti-spacing"> </span></span>覆盖了所有<span><span class="heti-spacing"> </span><span class="arithmatex">\(x &lt; y\)</span></span>（即对角线上方） 的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x,y)\)</span><span class="heti-spacing"> </span></span>项。因此左式累加后只剩下对角线上的项了，代入函数表达式得：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{\infty} f(n,n) = \sum_{n=1}^{\infty} \frac{5}{n^{4}}= 5\zeta(4)
+\]</div>
+<p>而对右式进行累加可以得到：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{2}{m^{2}n^{2}}=2\left( \sum_{n=1}^{\infty} \frac{1}{n^{2}} \right)\left( \sum_{m=1}^{\infty} \frac{1}{m^{2}} \right)=2\zeta^{2}(2)
+\]</div>
+<p>所以得到等式：<span class="arithmatex">\(5\zeta(4)=2\zeta^{2}(2)\)</span>，通过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)=\frac{\pi^{2}}{6}\)</span><span class="heti-spacing"> </span></span>便可得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(4)=\frac{\pi^{4}}{90}\)</span>.</span></p>
+<h3 id="_10">有理还是无理<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>第三个事实是，如果<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s\geqslant 2\)</span><span class="heti-spacing"> </span></span>且是偶数，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(s)\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\pi^{s}\)</span><span class="heti-spacing"> </span></span>是有理数倍，所以的无理数。对比之下，直到<span class="heti-skip"><span class="heti-spacing"> </span>1979<span class="heti-spacing"> </span></span>年，才由<span class="heti-skip"><span class="heti-spacing"> </span>Roger Apéry<span class="heti-spacing"> </span></span>证明了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(3)\)</span><span class="heti-spacing"> </span></span>的无理性。尽管人们付出了相当大的努力，关于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(s)\)</span><span class="heti-spacing"> </span></span>在其他奇整数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s=2t+1\geqslant 5\)</span><span class="heti-spacing"> </span></span>时的类似结果仍旧颇为欠缺。虽然后来<span class="heti-skip"><span class="heti-spacing"> </span>Keith Ball<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Tanguy Rivoal<span class="heti-spacing"> </span></span>证明了有无穷多个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2t+1)\)</span><span class="heti-spacing"> </span></span>是无理的，然而，我们还不知道对任何一个奇的<span><span class="heti-spacing"> </span><span class="arithmatex">\(s\geqslant 5\)</span></span>，<span><span class="arithmatex">\(\zeta(s)\)</span><span class="heti-spacing"> </span></span>是无理数。另外，<span>Wadim Zudilin<span class="heti-spacing"> </span></span>证明了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(5),\zeta(7),\zeta(9)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(11)\)</span><span class="heti-spacing"> </span></span>中<strong>至少有一个是无理</strong>的。相关内容可以参考下面这篇论文：</p>
+<ul>
+<li><a href="https://smf.emath.fr/sites/default/files/2023-05/smf_ast_294_27-62__sample.pdf">smf_ast_294_27-62__sample.pdf</a></li>
+</ul>
+<h2 id="_11">黎曼猜想<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>最后，<span><span class="arithmatex">\(\zeta\)</span><span class="heti-spacing"> </span></span>函数复零点的位置是黎曼猜想的主题，是整个数学领域中最著名和重要的待解决问题之一，该猜想断言<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta\)</span><span class="heti-spacing"> </span></span>函数的所有<strong>非平凡零点</strong> <span><span class="arithmatex">\(s\in \mathbb{C}\)</span><span class="heti-spacing"> </span></span>满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Re}(s)=\frac{1}{2}\)</span></span><heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（<span><span class="arithmatex">\(\zeta\)</span><span class="heti-spacing"> </span></span>函数在所有负的偶数点处为<span><span class="heti-spacing"> </span>0</span>，这些点被称为“<strong>平凡零点</strong>”.）</p>
+<p>提到黎曼函数在小于<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>时的取值，你肯定第一时间联想到的是下面这个式子：</p>
+<div class="arithmatex">\[
+1+2+3+\dots \stackrel{?}{=}  -\frac{1}{12}
+\]</div>
+<p>我记得这好像是小学六年级课本上的一个思考题还是啥，记不太清了。我们从直觉上，正数相加怎么可能等于一个负数，更何况左式还是发散的。</p>
+<p>因此，黎曼进行了解析延拓，在他的论文中提出了一个堪称神迹的反射公式，将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s&lt;0\)</span><span class="heti-spacing"> </span></span>区域映射到了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s&gt;1\)</span><span class="heti-spacing"> </span></span>区域：</p>
+<div class="arithmatex">\[
+\zeta(s)=2^{s}\pi^{s-1}\sin\left( \frac{\pi s}{2} \right)\Gamma(1-s)\zeta(1-s)
+\]</div>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s\)</span><span class="heti-spacing"> </span></span>是负偶数，也就是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s=-2n\)</span><span class="heti-spacing"> </span></span>时，根据式子中的正弦部分，<span><span class="arithmatex">\(\zeta(-2n)\)</span><span class="heti-spacing"> </span></span>显然得<span><span class="heti-spacing"> </span>0</span>，这也就是上文提到的“平凡零点”。当我们把<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s=-1\)</span><span class="heti-spacing"> </span></span>代入上式，就可以得到：</p>
+<div class="arithmatex">\[
+\zeta(-1)= \frac{1}{2\pi^{2}}\cdot(-1)\cdot1\cdot \frac{\pi^{2}}{6}=-\frac{1}{12}
+\]</div>
+<p>所以说上面那个求和式属于滥用符号，正确的说法应该是：经过解析延拓后的黎曼<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta\)</span><span class="heti-spacing"> </span></span>函数，在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s=-1\)</span><span class="heti-spacing"> </span></span>处的函数值为<span><span class="heti-spacing"> </span><span class="arithmatex">\(-\frac{1}{12}\)</span></span>。</p>
+<p><span>Jeff Lagarias<span class="heti-spacing"> </span></span>出人意料地证明了黎曼猜想等价于以下初等命题：对所有的<span><span class="heti-spacing"> </span><span class="arithmatex">\(n\geqslant 1\)</span></span>：</p>
+<div class="arithmatex">\[
+\sum_{d|n}d\leqslant H_{n} + \exp(H_{n})\log(H_{n})
+\]</div>
+<p>等式成立当且仅当<span><span class="heti-spacing"> </span><span class="arithmatex">\(n=1\)</span></span>，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H_{n}\)</span><span class="heti-spacing"> </span></span>是调和级数。</p>
+<p>以上就是今天关于巴塞尔问题与黎曼<span class="heti-skip"><span class="heti-spacing"> </span>ζ<span class="heti-spacing"> </span></span>函数的全部内容。</p>
+<p>我们一起走过了欧拉那份惊为天人的天才证明，见识了<span class="heti-skip"><span class="heti-spacing"> </span>William J. LeVeque<span class="heti-spacing"> </span></span>坐标变换的奇思妙想，领略了<span><span class="heti-spacing"> </span>Beukers</span>、<span>Calabi<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Kolk<span class="heti-spacing"> </span></span>三人用重积分统一求解<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2k)\)</span><span class="heti-spacing"> </span></span>的优雅构造，也看过<span class="heti-skip"><span class="heti-spacing"> </span>F. Holme<span class="heti-spacing"> </span></span>等人借助三角恒等式的初等巧证；我们从黎曼函数与伯努利数的关联出发，一路延伸到悬而未决的黎曼猜想。</p>
+<p>这是我第一次尝试写数学科普类的公众号文章，希望今天的内容能给你带来一点点数学上的震撼，也能唤起你对数学最纯粹的那份热爱。</p>
+<p>我们下期再见啦！</p>
+<ul>
+<li>更多精彩内容欢迎关注我的微信公众号！</li>
+</ul>
+<center>
+<p>搜一搜</p>
+<a href="../graph/qcode2.png" target="_blank">
+<img src="../graph/qcode2.png" style="width: 450px; height: auto;"/>
+</a>
+</center>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月6日 06:48:50 UTC">2026年8月6日</span>
+</span>
+</aside>
+<h2 id="__comments">评论区</h2>
+<!-- 你自己生成的 Giscus 代码 -->
+<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOTsrfcc4DCqOl" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Miracle606/mathcandy" data-repo-id="R_kgDOTsrfcQ" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- 同步 Giscus 主题与 MkDocs 明暗色调切换的代码 -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]")
+
+  // 初始加载时设置主题
+  var palette = __md_get("__palette")
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate"
+      ? "transparent_dark"
+      : "light"
+    giscus.setAttribute("data-theme", theme) 
+  }
+
+  // 监听右上角主题切换按钮的点击事件
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component=palette]")
+    ref.addEventListener("change", function() {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate"
+          ? "transparent_dark"
+          : "light"
+
+        var frame = document.querySelector(".giscus-frame")
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        )
+      }
+    })
+  })
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 逆矩阵方法大全" class="md-footer__link md-footer__link--prev" href="../../LA/%E9%80%86%E7%9F%A9%E9%98%B5/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                逆矩阵方法大全
+              </div>
+</div>
+</a>
+<a aria-label="下一页: Index" class="md-footer__link md-footer__link--next" href="../../40/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                Index
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Miracle的数学小课糖 · 内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 协议
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="http://mp.weixin.qq.com/mp/homepage?__biz=MzcwNDM0MTUyNQ==&amp;hid=3&amp;sn=ccdc4d61f574d84acd58a4fe4830da59&amp;scene=18#wechat_redirect" rel="noopener" target="_blank" title="mp.weixin.qq.com">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154m-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4m-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2M563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4m-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6m107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6"></path></svg>
+</a>
+<a class="md-social__link" href="https://github.com/Miracle606/mathcandy" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.path", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.action.edit", "content.tabs.link", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
