@@ -4,7 +4,7 @@ window.MathJax = {
     displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true,
-    packages: {'[+]': ['ams']} // 这里将你 main.html 里的 ams 配置合并过来了
+    packages: {'[+]': ['ams']}
   },
   options: {
     ignoreHtmlClass: ".*|",
@@ -12,7 +12,6 @@ window.MathJax = {
   }
 };
 
-// 配合 MkDocs Material 页面无刷新跳转（SPA）的官方推荐重载代码
 document$.subscribe(() => { 
   if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
     MathJax.typesetClear();
