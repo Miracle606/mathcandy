@@ -183,7 +183,7 @@
 </nav>
 <main class="md-main" data-md-component="main">
 <div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
@@ -1300,7 +1300,7 @@
 </div>
 </div>
 </div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
@@ -1330,7 +1330,13 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. --><center><font class="custom-font ml3 shine-text">Miracle的数学小课糖</font></center>
+        ...       # Other markdown pages, images and other files. --><div align="center">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="bloom-header-night.svg">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="bloom-header.svg"><img alt="Miracle的数学小课糖" src="bloom-header.svg" width="900"/></a>
+</source></picture>
+</div>
+<!-- <center><font class="custom-font ml3 shine-text">Miracle的数学小课糖</font></center>
 <script src="https://cdn.statically.io/libs/animejs/2.0.2/anime.min.js"></script>
 <style>
     .custom-font {
@@ -1359,29 +1365,260 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         font-size: 25px; /* 移动端字体大小为6px */
     }
 }
-</style>
-<p>每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。</p>
-<p>由于水平有限，网站中不足和错误之处难免，诚望读者批评指正，及时通过公众号后台交流联系。</p>
-<ul>
-<li>欢迎关注我的微信公众号！</li>
-</ul>
+</style> -->
+<p class="home-lede">甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到科普考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。</p>
+<!-- - 欢迎关注我的微信公众号！
+
+
 <center>
-<p>微信公众号</p>
+
+<p>微信公众号</p>  
 <a href="graph/qcode1.jpg" target="_blank">
-<img src="graph/qcode1.jpg" style="width: 450px; height: auto;"/>
+<img src="graph/qcode1.jpg" style="width: 450px; height: auto;">
 </a>
+
+<p>搜一搜</p>
+<a href="graph/qcode2.png" target="_blank">
+<img src="graph/qcode2.png" style="width: 450px; height: auto;">
+</a>
+</center> -->
+<style>
+.home-lede {
+  position: relative;
+  max-width: 640px;
+  margin: 1.8rem auto 2.6rem;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--md-accent-fg-color);
+  color: var(--md-default-fg-color--light);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+.home-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin: 2.6rem 0 .6rem;
+}
+.home-eyebrow span {
+  color: var(--md-accent-fg-color);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.home-eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--md-default-fg-color--lightest), transparent);
+}
+.note-shelves {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+  margin: 0 0 2.8rem;
+}
+.note-section {
+  padding: 1.3rem 1.4rem 1.5rem;
+  border-radius: .85rem;
+  background: var(--md-code-bg-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.note-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .1);
+}
+.note-heading {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-bottom: .5rem;
+}
+.note-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.7rem;
+  height: 1.7rem;
+  padding: 0 .3rem;
+  border-radius: 999px;
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+  font-family: Georgia, serif;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.note-heading h3 { margin: 0; font-size: 1.12rem; }
+.note-intro {
+  margin: 0 0 .9rem;
+  color: var(--md-default-fg-color--light);
+  font-size: .88rem;
+  line-height: 1.65;
+}
+.note-links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.note-links a {
+  display: inline-block;
+  padding: .28rem .75rem;
+  border-radius: 999px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color) !important;
+  font-size: .82rem;
+  text-decoration: none !important;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.note-links a:hover {
+  color: var(--md-accent-fg-color) !important;
+  border-color: var(--md-accent-fg-color);
+  background: var(--md-accent-fg-color--transparent);
+}
+.home-note {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto 2.6rem;
+  padding: 1.1rem 1.5rem;
+  border-left: 3px solid var(--md-default-fg-color--lighter);
+  background: var(--md-code-bg-color);
+  border-radius: 0 .6rem .6rem 0;
+  color: var(--md-default-fg-color--light);
+  font-size: .92rem;
+  line-height: 1.85;
+  font-style: italic;
+}
+.home-qr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 6vw, 4rem);
+  margin: 1.5rem auto 2rem;
+}
+.home-qr figure {
+  flex: 0 1 320px;
+  margin: 0;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  background: var(--md-code-bg-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+  text-align: center;
+}
+.home-qr a { display: block; }
+.home-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: .5rem;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.home-qr figcaption {
+  margin-top: .8rem;
+  color: var(--md-default-fg-color--light);
+  font-size: .86rem;
+}
+@media (max-width: 640px) {
+  .home-qr { flex-direction: column; gap: 1.75rem; }
+  .home-qr figure { flex: none; width: min(82vw, 320px); }
+}
+</style>
+<div class="home-eyebrow"><span>Where to start</span></div>
+<div class="note-shelves">
+<section class="note-section">
+<div class="note-heading"><span class="note-no">01</span><h3>高数数分</h3></div>
+<p class="note-intro">这里没有从第一页讲起的教材，更像是做题时留下的一册旁注：一个专题、一种技巧，或一道值得多想几步的号题。</p>
+<div class="note-links"><a href="AM/Beta/1.md"><span>Beta<span class="heti-spacing"> </span></span>函数专题</a></div>
+</section>
+<section class="note-section">
+<div class="note-heading"><span class="note-no">02</span><h3>线代高代小辑</h3></div>
+<p class="note-intro">将零散的计算重新连成线，带你梳理线性代数的核心概念与解题技巧。仍在持续更新中<span><span class="heti-spacing"> </span>...</span></p>
+<div class="note-links"><a href="LA/矩阵的秩.md">矩阵的秩</a><a href="LA/逆矩阵.md">逆矩阵方法大全</a></div>
+</section>
+<section class="note-section">
+<div class="note-heading"><span class="note-no">03</span><h3>数一真题</h3></div>
+<p class="note-intro">从<span class="heti-skip"><span class="heti-spacing"> </span>1987<span class="heti-spacing"> </span></span>年起按年份归档。答案之外，也尽量留下每一步为什么这样走，以及还能怎样走。</p>
+<div class="note-links"><a href="40/">进入档案</a></div>
+</section>
+<section class="note-section">
+<div class="note-heading"><span class="note-no">04</span><h3>课本外的数学</h3></div>
+<p class="note-intro">偶尔离开考纲，顺着一个经典问题看看它的来路。数学不只在答题纸上，也藏在漫长而有趣的追问里。</p>
+<div class="note-links"><a href="History/巴塞尔.md">巴塞尔问题</a></div>
+</section>
+</div>
+<style>
+.popular-list {
+  margin: 1.2rem 0 2.8rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+.popular-item {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: .8rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.popular-no {
+  padding-top: .1rem;
+  color: var(--md-accent-fg-color);
+  font-family: Georgia, serif;
+  font-size: .9rem;
+  font-style: italic;
+}
+.popular-title { margin: 0 0 .3rem; font-size: 1rem; }
+.popular-title a { color: var(--md-default-fg-color) !important; text-decoration: none; }
+.popular-title a:hover { color: var(--md-accent-fg-color) !important; }
+.popular-desc { margin: 0; color: var(--md-default-fg-color--light); font-size: .86rem; line-height: 1.65; }
+</style>
+<div class="home-eyebrow"><span>Popular Articles</span></div>
+<div class="popular-list">
+<article class="popular-item">
+<span class="popular-no">01</span>
+<div><h3 class="popular-title"><a href="AM/取整函数/1.md">取整函数的神级结论</a></h3><p class="popular-desc">这个积分结果竟然和调和级数有关<span><span class="heti-spacing"></span><span><span class="heti-spacing"> </span>...</span></span></p></div>
+</article>
+<article class="popular-item">
+<span class="popular-no">02</span>
+<div><h3 class="popular-title"><a href="AM/区间再现.md">区间再现模型大全</a></h3><p class="popular-desc">全网最全的区间再现模型，一篇文章带你从入门到精通。</p></div>
+</article>
+<article class="popular-item">
+<span class="popular-no">03</span>
+<div><h3 class="popular-title"><a href="LA/逆矩阵.md">逆矩阵方法大全</a></h3><p class="popular-desc">系统梳理求逆矩阵的各种方法与技巧，凑因子法、分块初等变换、<span><span>SMW<span class="heti-spacing"> </span></span><span class="heti-spacing"></span></span>公式、线性方程组、互素多项式……你想不想得到的这里全都有！</p></div>
+</article>
+<article class="popular-item">
+<span class="popular-no">04</span>
+<div><h3 class="popular-title"><a href="AM/Froullani.md"><span><span>Froullani<span class="heti-spacing"> </span></span><span class="heti-spacing"></span></span>积分</a></h3><p class="popular-desc">从<span class="heti-skip"><span class="heti-spacing"></span>0<span class="heti-spacing"> </span></span>系统掌握<span class="heti-skip"><span class="heti-spacing"></span>Froullani<span class="heti-spacing"> </span></span>积分，你只差这篇文章！</p></div>
+</article>
+<article class="popular-item">
+<span class="popular-no">05</span>
+<div><h3 class="popular-title"><a href="AM/指数积分.md">一类复杂的指数积分问题</a></h3><p class="popular-desc">这难道也有通法？！</p></div>
+</article>
+<article class="popular-item">
+<span class="popular-no">06</span>
+<div><h3 class="popular-title"><a href="AM/Beta/1.md">一次学穿<span class="heti-skip"><span class="heti-spacing"></span>Beta<span class="heti-spacing"> </span></span>函数</a></h3><p class="popular-desc">从定义到三角形式、分式形式，从基础应用到用积分求解级数，这一次，彻底掌握<span class="heti-skip"><span class="heti-spacing"></span>Beta<span class="heti-spacing"> </span></span>函数！</p></div>
+</article>
+</div>
+<div class="home-eyebrow"><span>Note</span></div>
+<p>由于水平有限，网站中不足和错误之处难免，诚望读者批评指正，及时在评论区评论或通过公众号后台交流联系。希望这里能陪你把数学从<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>会做<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>读到<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>看懂<span><span class="heti-spacing"> </span>"</span>，再读到<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>喜欢<span><span class="heti-spacing"> </span>"</span>。</p>
+<div class="home-eyebrow"><span>Follow me</span></div>
+<center>
 <p>搜一搜</p>
 <a href="graph/qcode2.png" target="_blank">
 <img src="graph/qcode2.png" style="width: 450px; height: auto;"/>
 </a>
 </center>
-<hr/>
+<div align="center">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="garden-footer-night.svg">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="garden-footer.svg"><img alt="garden footer" src="garden-footer.svg" width="900"/></a>
+</source></picture>
+<p style="text-align:center;color:#8a93a3;font-size:.82rem">世间数理自有浪漫，期待与每一份热爱在此邂逅。</p></div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月5日 10:06:39 UTC">2026年8月5日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月6日 17:48:52 UTC">2026年8月6日</span>
 </span>
 </aside>
 <h2 id="__comments">评论区</h2>
