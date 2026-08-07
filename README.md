@@ -54,13 +54,13 @@ Miracle的数学小课糖致力于分享趣味、深刻且实用的数学内容�
 
 <div align="center">
   <p>搜一搜</p>
-  <a href="graph/qcode2.png"><img src="qcode2.png" width="280" alt="微信公众号二维码" /></a>
+  <a href="graph/qcode2.png"><img src="graph/qcode2.png" width="280" alt="微信公众号二维码" /></a>
 </div>
 
 如果你喜欢我的内容，或者我的网站对你有一定的帮助，欢迎随意打赏。你的支持是本项目继续的动力。🥳🥳🥳
 
 <div align="center">
-  <a href="M.png"><img src="qcode2.png" width="280" alt="打赏码" /></a>
+  <a href="M.png"><img src="M.png" width="280" alt="打赏码" /></a>
 </div>
 
 
