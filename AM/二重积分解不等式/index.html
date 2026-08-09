@@ -4,12 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
 <meta content="Miracle" name="author"/>
-<link href="https://miracle606.github.io/mathcandy/AM/Fresnel/" rel="canonical"/>
-<link href="../Froullani/" rel="prev"/>
-<link href="../Laplace/" rel="next"/>
+<link href="https://miracle606.github.io/mathcandy/AM/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E8%A7%A3%E4%B8%8D%E7%AD%89%E5%BC%8F/" rel="canonical"/>
+<link href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/" rel="prev"/>
+<link href="../Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/" rel="next"/>
 <link href="../../graph/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>菲涅尔积分和狄利克雷积分 - Miracle的数学小课糖</title>
+<title>二重积分巧解积分不等式 - Miracle的数学小课糖</title>
 <link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#fresnel">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              菲涅尔积分和狄利克雷积分
+              二重积分巧解积分不等式
             
           </span>
 </div>
@@ -845,8 +845,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -858,7 +858,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
             
@@ -880,8 +880,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E8%A7%A3%E4%B8%8D%E7%AD%89%E5%BC%8F/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    二重积分巧解积分不等式
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -891,6 +903,139 @@
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        简要介绍
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+</a>
+<nav aria-label="例题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1cauchy-schwartz">
+<span class="md-ellipsis">
+      
+        例 1（Cauchy-Schwartz）
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2chebyshev">
+<span class="md-ellipsis">
+      
+        例 2（Chebyshev）
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        例 3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        例 4
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        例 5
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        例 6
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+<nav aria-label="习题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q1">
+<span class="md-ellipsis">
+      
+        Q1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q2">
+<span class="md-ellipsis">
+      
+        Q2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q3">
+<span class="md-ellipsis">
+      
+        Q3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q4">
+<span class="md-ellipsis">
+      
+        Q4
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -945,8 +1090,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -958,7 +1103,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_8">
 <span class="md-nav__icon md-icon"></span>
             
@@ -992,20 +1137,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    菲涅尔积分和狄利克雷积分
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fresnel/">
 <span class="md-ellipsis">
     
   
@@ -1015,63 +1148,6 @@
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fresnel">
-<span class="md-ellipsis">
-      
-        Fresnel积分
-      
-    </span>
-</a>
-<nav aria-label="Fresnel积分" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      
-        方法一
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        方法2
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        例题
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dirichlet">
-<span class="md-ellipsis">
-      
-        Dirichlet积分
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Laplace/">
@@ -1568,35 +1644,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fresnel">
-<span class="md-ellipsis">
-      
-        Fresnel积分
-      
-    </span>
-</a>
-<nav aria-label="Fresnel积分" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
       
-        方法一
+        简要介绍
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        方法2
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
@@ -1606,15 +1660,113 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="例题" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dirichlet">
+<a class="md-nav__link" href="#1cauchy-schwartz">
 <span class="md-ellipsis">
       
-        Dirichlet积分
+        例 1（Cauchy-Schwartz）
       
     </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2chebyshev">
+<span class="md-ellipsis">
+      
+        例 2（Chebyshev）
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        例 3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        例 4
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        例 5
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        例 6
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+<nav aria-label="习题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q1">
+<span class="md-ellipsis">
+      
+        Q1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q2">
+<span class="md-ellipsis">
+      
+        Q2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q3">
+<span class="md-ellipsis">
+      
+        Q3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q4">
+<span class="md-ellipsis">
+      
+        Q4
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1639,191 +1791,329 @@
 </a>
 </li>
 <li class="md-path__item">
-<a class="md-path__link" href="../%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86/">
+<a class="md-path__link" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
 <span class="md-ellipsis">
-    反常积分
+    重积分
   </span>
 </a>
 </li>
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/tree/6f8ce4e6588a7f54e347e42a368163bb760b751c/edit/master/docs/AM/Fresnel.md" rel="edit" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/tree/6f8ce4e6588a7f54e347e42a368163bb760b751c/edit/master/docs/AM/二重积分解不等式.md" rel="edit" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
 </a>
-<h1>菲涅尔积分和狄利克雷积分</h1>
-<h2 id="fresnel"><span>Fresnel<span class="heti-spacing"> </span></span>积分<a class="headerlink" href="#fresnel" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>首先来看下面这道题目：</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="arithmatex">\[
-\int_{0}^{+\infty} t^{-\frac{1}{2}}\sin t \mathrm{~d} t 
-\]</div>
-</div>
-<p>在我没学过菲涅尔（<span class="arithmatex">\(\mathrm{Fresnel}\)</span>）积分的时候，我是这样做这道题的：</p>
-<h3 id="_1">方法一<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>回顾<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Gamma\)</span><span class="heti-spacing"> </span></span>函数的一般定义：</p>
-<div class="arithmatex">\[
-\Gamma(z) = \int_{0}^{+\infty} x^{z-1}\mathrm{e}^{ -x } \mathrm{~d} x 
-\]</div>
-<p>下面考虑这样的一个积分：</p>
-<div class="arithmatex">\[
-\int_{0}^{+\infty} x^{z-1}\mathrm{e}^{ -ax } \mathrm{~d} x 
-\]</div>
-<p>做换元：<span class="arithmatex">\(t=ax\)</span></p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int_{0}^{+\infty} x^{z-1}\mathrm{e}^{ -ax } \mathrm{~d} x &amp;= \int_{0}^{+\infty} \left( \frac{t}{a} \right)^{z-1}\mathrm{e}^{ -t } \mathrm{~d} \left( \frac{t}{a} \right)\\
-&amp;= \frac{1}{a^{z}} \int_{0}^{+\infty} t^{z-1}\mathrm{e}^{ -t } \mathrm{~d} t\\
-&amp;= \frac{\Gamma(z)}{a^{z}}
-\end{aligned}
-\]</div>
-<p>因此原题目就可以使用<strong>欧拉公式</strong>巧妙解决了！</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int_{0}^{+\infty} t^{-\frac12}\sin t \mathrm{~d}t
-&amp;=\mathrm{Im}\left( \int_{0}^{+\infty}t^{-\frac12}e^{it}\mathrm{d}t \right)\\
-&amp;=\mathrm{Im}\left( \int_{0}^{+\infty}t^{\frac12 -1}e^{-(-i)t}\mathrm{d}t \right)\\
-&amp;=\mathrm{Im}\left( \frac{\Gamma(\frac12)}{(-i)^{\frac12}} \right)\\
-&amp;=\mathrm{Im}\left( \sqrt{\pi}\cdot \frac{\sqrt{2}}{2}(1+i) \right)\\
-&amp;=\sqrt{\frac{\pi}{2}}
-\end{aligned}
-\]</div>
-<p><span><span class="arithmatex">\(\Gamma\left( \dfrac{1}{2} \right) = \sqrt{ \pi }\)</span><span class="heti-spacing"> </span></span>这个我们都知道，但是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((-i)^{-1/2}\)</span><span class="heti-spacing"> </span></span>怎么求呢？</p>
-<p>我们考虑再次使用<strong>欧拉公式</strong>并结合<strong>棣莫弗定理</strong>，得：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-(-i)^{-1/2} &amp;= (i\sin\theta+\cos\theta)^{-1/2}\\
-&amp;= \left[ i\sin\left( -\frac{\pi}{2} \right)+\cos\left( -\frac{\pi}{2} \right) \right]^{-1/2}\\
-&amp;= i\sin\left( \frac{\pi}{4} \right)+\cos\left( \frac{\pi}{4} \right)\\
-&amp;= \frac{\sqrt{ 2 }}{2}(1+i)
-\end{aligned}
-\]</div>
-<h3 id="2">方法<span><span class="heti-spacing"> </span>2</span><a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>在我了解菲涅尔积分（<span class="arithmatex">\(\mathrm{Fresnel}\)</span>）后，才发现这道题原来这么简单！</p>
-<p>先给出菲涅尔积分的常用结论，这里不做证明。</p>
+<h1>二重积分巧解积分不等式</h1>
+<p>本节和大家分享一些使用二重积分证明积分不等式的技巧，干货满满，快快学起来！</p>
+<h2 id="_1">简要介绍<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>首先要熟练掌握两个技巧：</p>
+<p>一个是<strong>轮换对称性</strong>：当不等式中出现两个积分乘积的形式，若能转化为区域关于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y=x\)</span><span class="heti-spacing"> </span></span>对称的二重积分，则可利用轮换对称性，结合单调性、导数有界性等条件判断被积函数的符号来证明。想要系统学习轮换对称性的朋友可以参考下面这篇文章：<a href="https://miracle606.github.io/mathcandy/AM/%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/#11994t4">轮换对称性，如此简单！</a></p>
+<p>特别地，应注意到：</p>
 <div class="admonition abstract">
-<p class="admonition-title">形式<span><span class="heti-spacing"> </span>1</span></p>
-<div class="arithmatex">\[
-\int_{0}^{+\infty} \frac{\sin x}{\sqrt{ x }} \mathrm{~d} x = \int_{0}^{+\infty} \frac{\cos x}{\sqrt{ x }} \mathrm{~d} x = \sqrt{ \frac{\pi}{2} }
-\]</div>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">形式<span><span class="heti-spacing"> </span>2</span></p>
-<div class="arithmatex">\[
-\int_{0}^{+\infty} \sin(x^{2}) \mathrm{~d} x =\int_{0}^{+\infty} \cos(x^{2}) \mathrm{~d} x = \frac{1}{2}\sqrt{ \frac{\pi}{2} }
-\]</div>
-</div>
-<p>那么我们回到原题目，我们发现我们可以通过换元<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t=u^{2}\)</span><span class="heti-spacing"> </span></span>转化到菲涅尔积分：</p>
+<p class="admonition-title">积累</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\int_{0}^{+\infty} t^{-\frac{1}{2}}\sin t \mathrm{~d} t &amp;= \int_{0}^{+\infty} \frac{1}{u}\sin (u^{2}) \mathrm{~d} (u^{2})\\
-&amp;= 2\int_{0}^{+\infty} \sin(u^{2}) \mathrm{~d} u\\
-&amp;= \sqrt{ \frac{\pi}{2} }
+b-a &amp;=\int_{a}^{b}  \mathrm{~d} x\\
+\frac{b^{2}-a^{2}}{2} &amp;= \int_{a}^{b} x \mathrm{~d} x\\
+\frac{(b-a)^{3}}{12}&amp;=\int_{a}^{b} \left( x-\frac{a+b}{2} \right)^{2} \mathrm{~d} x \\
+\frac{(b-a)^{5}}{30}&amp;= \int_{a}^{b} (x-a)^{2}(x-b)^{2} \mathrm{~d} x 
 \end{aligned}
 \]</div>
-<p>下面再看这样一道题目：</p>
+</div>
+<p>类似这样的式子还有很多，大家在做题时慢慢积累即可。由此将参数转化为积分形式便于化归处理。</p>
+<p>第二个技巧是<strong>交换积分次序</strong>：当不等式中出现变限积分时，可结合牛莱公式，将其转化为三角区域上的二重积分，通过换序， 将内层积分化为关于外层变量的函数，再结合柯西<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>施瓦茨不等式证明。</p>
+<p>特别地，<span><span class="arithmatex">\(f(a)=0\)</span><span class="heti-spacing"> </span></span>时，有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(x) &amp;= \int_{a}^{x} f'(t) \mathrm{~d} t\\
+\int_{a}^{b} f(x) \mathrm{~d} x &amp;= \int_{a}^{b} f'(t)(b-t) \mathrm{~d} t 
+\end{aligned}
+\]</div>
 <h2 id="_2">例题<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="1cauchy-schwartz">例<span><span class="heti-spacing"> </span>1</span>（Cauchy-Schwartz）<a class="headerlink" href="#1cauchy-schwartz" title="Permanent link">¶</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(I(x)=\displaystyle \int_{0}^{+\infty} \mathrm{e}^{ -xy^{2} }\sin x \mathrm{~d} y\)</span></span>，<span class="arithmatex">\(x\geqslant 0\)</span>，求：<span class="arithmatex">\(\displaystyle \int_{0}^{+\infty} I(x) \mathrm{~d} x\)</span></p>
+<p>证明柯西<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>施瓦茨积分不等式：</p>
+<div class="arithmatex">\[
+\left( \int^{b}_{a} f\left( x\right)  g\left( x\right)  \mathrm{d} x\right)^{2}  \leqslant \int^{b}_{a} f^{2}\left( x\right)  \mathrm{d} x\int^{b}_{a} g^{2}\left( x\right)  \mathrm{d} x
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(f\left( x\right)\)</span></span>， <span><span class="arithmatex">\(g\left( x\right)\)</span><span class="heti-spacing"> </span></span>均为区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\left[a,b\right]\)</span><span class="heti-spacing"> </span></span>上的连续函数。</p>
 </div>
-<p><strong>解</strong>：当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\geqslant 0\)</span><span class="heti-spacing"> </span></span>时，有：</p>
+<p>在之前的专题中我给出过三种证明方法，忘记的朋友可以复习一下：<a href="https://miracle606.github.io/mathcandy/AM/Cauchy/">柯西<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>施瓦茨不等式的三种证明方法</a></p>
+<p>下面把使用<strong>二重积分</strong>的证明方法复习一下：</p>
+<p>记区域<span><span class="heti-spacing"> </span><span class="arithmatex">\(D: a\leqslant x\leqslant b,\ a\leqslant y\leqslant b\)</span></span>，则</p>
 <div class="arithmatex">\[
-\begin{aligned}
-I(x) &amp;= \int_{0}^{+\infty} \mathrm{e}^{ -xy^{2} }\sin x \mathrm{~d} y\\
-&amp;= \frac{\sin x}{\sqrt{ x }} \int_{0}^{+\infty} \mathrm{e}^{ -(\sqrt{ x }y)^{2} } \mathrm{~d} (\sqrt{ x }y)\\
-&amp;= \frac{\sin x}{\sqrt{ x }}\cdot \frac{\sqrt{ \pi }}{2}
-\end{aligned}
+\begin{aligned} \left( \int_a^b f(x)g(x)\,\mathrm{d}x \right)^2 &amp;= \int_a^b f(x)g(x)\,\mathrm{d}x \cdot \int_a^b f(y)g(y)\,\mathrm{d}y \\ &amp;= \iint\limits_D f(x)g(x)f(y)g(y)\,\mathrm{d}x\mathrm{d}y \\ &amp;= \iint\limits_D \big[f(x)g(y)\big]\big[f(y)g(x)\big]\,\mathrm{d}x\mathrm{d}y. \end{aligned}
 \]</div>
-<p>上面的最后一步利用的是<strong>高斯积分</strong>：</p>
+<p>由基本不等式<span><span class="heti-spacing"> </span><span class="arithmatex">\(ab \leqslant \dfrac{a^2+b^2}{2}\)</span></span>，得</p>
 <div class="arithmatex">\[
-\int_{0}^{+\infty} \mathrm{e}^{ -x^{2} } \mathrm{~d} x = \frac{\sqrt{ \pi }}{2}
+\big[f(x)g(y)\big]\big[f(y)g(x)\big] \leqslant \frac12\Big[f^2(x)g^2(y)+f^2(y)g^2(x)\Big].
 \]</div>
+<p>代入上式并积分：</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{+\infty} \mathrm{e}^{ -x^{2} } \mathrm{~d} x =\sqrt{ \pi }
+\begin{aligned} \left( \int_a^b f(x)g(x)\,\mathrm{d}x \right)^2 &amp;\leqslant \iint\limits_D \frac12\Big[f^2(x)g^2(y)+f^2(y)g^2(x)\Big]\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\iint\limits_D f^2(x)g^2(y)\,\mathrm{d}x\mathrm{d}y  + \frac12\iint\limits_D f^2(y)g^2(x)\,\mathrm{d}x\mathrm{d}y \\ &amp;= \frac12\left( \int_a^b f^2\,\mathrm{d}x \int_a^b g^2\,\mathrm{d}y \right)  + \frac12\left( \int_a^b f^2\,\mathrm{d}y \int_a^b g^2\,\mathrm{d}x \right) \\ &amp;= \left( \int_a^b f^2(x)\,\mathrm{d}x \right) \left( \int_a^b g^2(x)\,\mathrm{d}x \right). \end{aligned}
 \]</div>
-<p>那么我们要求的积分就可解了：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int_{0}^{+\infty} I(x) \mathrm{~d} x &amp;= \frac{\sqrt{ \pi }}{2}\int_{0}^{+\infty} \frac{\sin x}{\sqrt{ x }} \mathrm{~d} x \\
-&amp;= \frac{\sqrt{ \pi }}{2} \cdot \sqrt{ \frac{\pi}{2} }\\
-&amp;= \frac{\pi}{2\sqrt{ 2 }}
-\end{aligned}
-\]</div>
-<p>上面用到的就是菲涅尔积分的结论。</p>
-<p>事实上，菲涅尔积分结论可以<strong>推广</strong>为如下形式：</p>
-<div class="admonition abstract">
-<p class="admonition-title">推广</p>
-<div class="arithmatex">\[
-\int_{0}^{+\infty} \sin(x^{n}) \mathrm{~d} x =\frac{1}{n}\Gamma\left( \frac{1}{n} \right)\sin\left( \frac{\pi}{2n} \right)
-\]</div>
-</div>
-<h2 id="dirichlet"><span>Dirichlet<span class="heti-spacing"> </span></span>积分<a class="headerlink" href="#dirichlet" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>写到这里，我又联想到了一个形式类似的积分（狄利克雷积分<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，但是解决方法完全不一样：</p>
-<div class="admonition abstract">
-<p class="admonition-title"><span>Dirichlet<span class="heti-spacing"> </span></span>积分</p>
-<div class="arithmatex">\[
-\int_{0}^{+\infty} \frac{\sin x}{x} \mathrm{~d} x 
-\]</div>
-</div>
-<p>解：费曼积分法经典例题，也就是所谓的含参积分法。忘记这种方法的朋友可以看之前的文章，链接附在下面了：<a href="https://miracle606.github.io/mathcandy/AM/%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86/">泊松积分</a></p>
-<p>如果我们记含参积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(I(a) = \displaystyle \int_{0}^{+\infty} \frac{\sin(ax)}{x} \mathrm{~d} x\)</span></span></p>
-<p>那么：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I'(a) &amp;= \int_{0}^{+\infty} \frac{\cos(ax)}{x}\cdot x \mathrm{~d} x \\
-&amp;= \int_{0}^{+\infty} \cos(ax) \mathrm{~d} x 
-\end{aligned}
-\]</div>
-<p>这个积分是<strong>不存在</strong>的，因此考虑更换含参积分的设法。</p>
-<p>我们设<span><span class="heti-spacing"> </span><span class="arithmatex">\(I(a) = \displaystyle \int_{0}^{+\infty} \frac{\sin x}{x}\cdot \mathrm{e}^{ -ax } \mathrm{~d} x\)</span></span>，<span class="arithmatex">\(a&gt;0\)</span></p>
-<p>则我们要求的积分就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(I(0)\)</span></span>，下面求导：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I'(a) &amp;= \int_{0}^{+\infty} \frac{\sin x}{x}\cdot \mathrm{e}^{ -ax }\cdot(-x) \mathrm{~d} x \\
-&amp;= -\int_{0}^{+\infty} \sin x\cdot \mathrm{e}^{ -ax } \mathrm{~d} x \\
-&amp;= \frac{a\sin x\mathrm{e}^{ -ax }+\cos x\mathrm{e}^{ -ax }}{a^{2}+1}\bigg|_{0}^{+\infty}\\
-&amp;= -\frac{1}{a^{2}+1}
-\end{aligned}
-\]</div>
-<p>积分得：</p>
-<div class="arithmatex">\[
-I(a) = -\arctan a+C
-\]</div>
-<p>即：</p>
-<div class="arithmatex">\[
--\arctan a+C= \displaystyle \int_{0}^{+\infty} \frac{\sin x}{x}\cdot \mathrm{e}^{ -ax } \mathrm{~d} x
-\]</div>
-<p>考虑<span><span class="heti-spacing"> </span><span class="arithmatex">\(a \to +\infty\)</span></span>，有：</p>
-<div class="arithmatex">\[
--\frac{\pi}{2}+C = 0
-\]</div>
-<p>因此<span><span class="heti-spacing"> </span><span class="arithmatex">\(C=\dfrac{\pi}{2}\)</span>.</span></p>
-<p>故原积分为：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-I(0) &amp;= \lim_{ a \to 0^{+} } I(a)\\
-&amp;= \lim_{ a \to 0^{+} } \left( -\arctan a+\frac{\pi}{2} \right)\\
-&amp;= \frac{\pi}{2}
-\end{aligned}
-\]</div>
-<p>至此，我通过一道题向大家介绍了菲涅尔积分的常见结论，并复习了费曼积分法，常见形式千万不要弄混哦！</p>
+<p>不等式得证。</p>
+<p>下面分析何时取等：</p>
+<p>不等式取等号，当且仅当证明中每一步不等式都取等号。 唯一的不等式来自均值不等式，下面分两种情况讨论：</p>
 <ul>
-<li>更多精彩内容欢迎关注我的微信公众号！</li>
+<li><strong>情况<span><span class="heti-spacing"> </span>1</span></strong>：存在某个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y_0\)</span><span class="heti-spacing"> </span></span>使<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(y_0)\neq0\)</span></span> ，此时对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in[a,b]\)</span></span> ，有</li>
 </ul>
-<center>
-<p>搜一搜</p>
-<a href="../graph/qcode2.png" target="_blank">
-<img src="../graph/qcode2.png" style="width: 450px; height: auto;"/>
-</a>
-</center>
+<div class="arithmatex">\[
+f(x)g(y_0)=f(y_0)g(x) \implies f(x)=\frac{f(y_0)}{g(y_0)}g(x).
+\]</div>
+<p>令常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(k=\dfrac{f(y_0)}{g(y_0)}\)</span></span> ，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)=k\,g(x),\quad\forall x\in[a,b].\)</span></span></p>
+<ul>
+<li><strong>情况<span><span class="heti-spacing"> </span>2</span></strong>：对所有<span><span class="heti-spacing"> </span><span class="arithmatex">\(y\in[a,b]\)</span></span> ，都有<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(y)=0\)</span></span> ，此时<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\equiv0\)</span></span> ，不等式两边均为<span><span class="heti-spacing"> </span><span class="arithmatex">\(0\)</span></span> ，等号成立。</li>
+</ul>
+<p>综上：<span>Cauchy-Schwarz<span class="heti-spacing"> </span></span>不等式等号成立<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\iff\)</span><span class="heti-spacing"> </span></span>存在常数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span>,<span class="heti-spacing"> </span></span>使得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)=k\,g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上几乎处处成立<span><span class="heti-spacing"> </span>.</span></p>
+<h2 id="2chebyshev">例<span><span class="heti-spacing"> </span>2</span>（Chebyshev）<a class="headerlink" href="#2chebyshev" title="Permanent link">¶</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>证明切比雪夫不等式的积分形式：设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(p(x),f(x),g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续，<span class="arithmatex">\(p(x)&gt;0\)</span>，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上具有相同的单调性，则：</p>
+<div class="arithmatex">\[
+\int_{a}^{b} p(x)f(x) \mathrm{~d} x \cdot \int_{a}^{b} p(x)g(x) \mathrm{~d} x \leqslant \int_{a}^{b} p(x) \mathrm{~d} x \cdot \int_{a}^{b} p(x)f(x)g(x) \mathrm{~d} x 
+\]</div>
+</div>
+<p>记积分：</p>
+<div class="arithmatex">\[
+I=\int_{a}^{b} p(x) \mathrm{~d} x \cdot \int_{a}^{b} p(x)f(x)g(x) \mathrm{~d} x -\int_{a}^{b} p(x)f(x) \mathrm{~d} x \cdot \int_{a}^{b} p(x)g(x) \mathrm{~d} x
+\]</div>
+<p>将其转化为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D=[a,b]\times[a,b]\)</span><span class="heti-spacing"> </span></span>上的二重积分：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \iint\limits_{D}p(x)p(y)f(x)g(x)\mathrm{~d} x\mathrm{d} y  -\iint\limits_{D}p(x)p(y)f(x)f(y)\mathrm{~d} x\mathrm{d} y \\
+&amp;= \iint\limits_{D}p(x)p(y)f(x)[g(x)-g(y)]\mathrm{~d} x\mathrm{d} y  
+\end{aligned}
+\]</div>
+<p>根据<strong>轮换对称性</strong>，交换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>得：</p>
+<div class="arithmatex">\[
+I=\iint\limits_{D}p(y)p(x)f(y)[g(y)-g(x)]\mathrm{~d} x\mathrm{d} y  
+\]</div>
+<p>将两式相加，得：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+2I&amp;=\iint\limits_{D}p(x)p(y)[f(x)g(x)-f(x)g(y)+f(y)g(y)-f(y)g(x)]\mathrm{~d} x\mathrm{d} y  \\
+&amp;= \iint\limits_{D}p(x)p(y)\cdot[f(x)-f(y)]\cdot[g(x)-g(y)]\mathrm{~d} x\mathrm{d} y 
+\end{aligned}
+\]</div>
+<p>因为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上具有相同的单调性，所以<span><span class="heti-spacing"> </span><span class="arithmatex">\([f(x)-f(y)]\cdot[g(x)-g(y)]\geqslant 0\)</span></span>，再结合题干条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(p(x)&gt;0,p(y)&gt;0\)</span></span>，所以被积函数非负，从而得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\geqslant 0\)</span></span>，得证！</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上具有<strong>相反</strong>的单调性，则原不等式<strong>反向</strong>。</p>
+</div>
+<h2 id="3">例<span><span class="heti-spacing"> </span>3</span><a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(0\leqslant f(x)&lt;1\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x \geqslant \frac{\int_{0}^{1} f(x) \mathrm{~d} x }{1-\int_{0}^{1} f(x) \mathrm{~d} x }
+\]</div>
+</div>
+<p>因为<span><span class="heti-spacing"> </span><span class="arithmatex">\(0\leqslant f(x)&lt;1\)</span></span>，那么<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int_{0}^{1} 1-f(x) \mathrm{~d} x\geqslant 0\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(1-\displaystyle \int_{0}^{1} f(x) \mathrm{~d} x\geqslant 0\)</span>.</span></p>
+<p>所以对待证式两边同乘分母，等价于证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x \cdot \left( 1-\int_{0}^{1} f(x) \mathrm{~d} x  \right) \geqslant \int_{0}^{1} f(x) \mathrm{~d} x 
+\]</div>
+<p>记：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I&amp;=\int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x \cdot \left( 1-\int_{0}^{1} f(x) \mathrm{~d} x  \right) - \int_{0}^{1} f(x) \mathrm{~d} x \\
+&amp;= \int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x - \int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x \cdot \int_{0}^{1} f(x) \mathrm{~d} x - \int_{0}^{1} f(x) \mathrm{~d} x \\
+&amp;= \int_{0}^{1} \left( \frac{f(x)}{1-f(x)} -f(x)\right) \mathrm{~d} x -\int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x \cdot \int_{0}^{1} f(x) \mathrm{~d} x\\
+&amp;= \int_{0}^{1} \frac{f^{2}(x)}{1-f(x)} \mathrm{~d} x - \int_{0}^{1} \frac{f(x)}{1-f(x)} \mathrm{~d} x \cdot \int_{0}^{1} f(x) \mathrm{~d} x
+\end{aligned}
+\]</div>
+<p>将其转化为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D=[0,1]\times[0,1]\)</span><span class="heti-spacing"> </span></span>上的二重积分：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \iint\limits_{D} \frac{f^{2}(x)}{1-f(x)}\mathrm{~d} x\mathrm{d} y  - \iint\limits_{D} \frac{f(x)f(y)}{1-f(x)}\mathrm{~d} x\mathrm{d} y  \\
+&amp;= \iint\limits_{D} \frac{f(x)}{1-f(x)}\cdot[f(x)-f(y)]\mathrm{~d} x\mathrm{d} y  
+\end{aligned}
+\]</div>
+<p>根据<strong>轮换对称性</strong>，交换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>得：</p>
+<div class="arithmatex">\[
+I = \iint\limits_{D} \frac{f(y)}{1-f(y)}\cdot[f(y)-f(x)]\mathrm{~d} x\mathrm{d} y 
+\]</div>
+<p>两式相加得：</p>
+<div class="arithmatex">\[
+2I=\iint\limits_{D} [f(x)-f(y)]\cdot\left( \frac{f(x)}{1-f(x)}-\frac{f(y)}{1-f(y)} \right) \mathrm{~d} x\mathrm{d} y 
+\]</div>
+<p>由于函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)=\dfrac{x}{1-x}\)</span><span class="heti-spacing"> </span></span>在区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1)\)</span><span class="heti-spacing"> </span></span>上递增，所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)-f(y)\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(f(x))-g(f(y))\)</span><span class="heti-spacing"> </span></span>一定同号，即被积函数非负，所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\geqslant 0\)</span><span class="heti-spacing"> </span></span>得证！</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>事实上，本题使用<span class="heti-skip"><span class="heti-spacing"> </span>Cauchy-Schwartz<span class="heti-spacing"> </span></span>不等式即可证明，这里只是为了演示二重积分的证明通法。</p>
+</div>
+<h2 id="4">例<span><span class="heti-spacing"> </span>4</span><a class="headerlink" href="#4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上有连续的导函数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(|f'(x)|\leqslant M\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+(b-a)\int_{a}^{b} f^{2}(x) \mathrm{~d} x -\left( \int_{a}^{b} f(x) \mathrm{~d} x  \right)^{2} \leqslant \frac{M^{2}}{12}(b-a)^{4}
+\]</div>
+</div>
+<p>记积分：</p>
+<div class="arithmatex">\[
+I = (b-a)\int_{a}^{b} f^{2}(x) \mathrm{~d} x -\left( \int_{a}^{b} f(x) \mathrm{~d} x  \right)^{2}
+\]</div>
+<p>将其转化为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D=[a,b]\times[a,b]\)</span><span class="heti-spacing"> </span></span>上的二重积分：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \int_{a}^{b} \int_{a}^{b} f^{2}(x) \mathrm{~d} x \mathrm{d} y -\int_{a}^{b} \int_{a}^{b} f(x)f(y) \mathrm{~d} x  \mathrm{d} y \\
+&amp;= \iint\limits_{D} f(x)\cdot[f(x)-f(y)]\mathrm{~d} x\mathrm{d} y  
+\end{aligned}
+\]</div>
+<p>根据<strong>轮换对称性</strong>，交换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>得：</p>
+<div class="arithmatex">\[
+I= \iint\limits_{D} f(y)\cdot[f(y)-f(x)]\mathrm{~d} x\mathrm{d} y  
+\]</div>
+<p>两式相加得：</p>
+<div class="arithmatex">\[
+2I=\iint\limits_{D} [f(x)-f(y)]^{2}\mathrm{~d} x\mathrm{d} y  
+\]</div>
+<p>由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Lagrange}\)</span><span class="heti-spacing"> </span></span>中值定理，存在介于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>之间的<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\)</span></span>，使得：</p>
+<div class="arithmatex">\[
+f(x)-f(y)=f'(\xi)(x-y)
+\]</div>
+<p><strong>平方</strong>并结合<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|f'(\xi)|\leqslant M\)</span><span class="heti-spacing"> </span></span>得：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \frac{1}{2}\iint\limits_{D} [f(x)-f(y)]^{2}\mathrm{~d} x\mathrm{d} y  \\
+&amp;=\frac{1}{2} \iint\limits_{D} [f'(\xi)]^{2}\cdot(x-y)^{2}\mathrm{~d} x\mathrm{d} y \\
+&amp;\leqslant \frac{1}{2}M^{2}\iint\limits_{D} (x-y)^{2}\mathrm{~d} x\mathrm{d} y  \\
+&amp;= \frac{M^{2}}{2}\int_{a}^{b}  \mathrm{~d} x \int_{a}^{b} (x-y)^{2} \mathrm{~d} y \\
+&amp;= \frac{M^{2}(b-a)^{4}}{12}
+\end{aligned}
+\]</div>
+<h2 id="5">例<span><span class="heti-spacing"> </span>5</span><a class="headerlink" href="#5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上有连续导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(a)=0\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{a}^{b} f^{2}(x) \mathrm{~d} x \leqslant \frac{(b-a)^{2}}{2}\int_{a}^{b} [f'(x)]^{2} \mathrm{~d} x 
+\]</div>
+</div>
+<p>逆用牛莱公式得：</p>
+<div class="arithmatex">\[
+f(x)=\int_{a}^{x} f'(t) \mathrm{~d} t 
+\]</div>
+<p>由<span class="heti-skip"><span class="heti-spacing"> </span>Cauchy-Schwartz<span class="heti-spacing"> </span></span>不等式：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f^{2}(x) &amp;= \left( \int_{a}^{x} f'(t) \mathrm{~d} t  \right)^{2}\\
+&amp;\leqslant \left( \int_{a}^{x} 1^{2} \mathrm{~d} t  \right)\cdot\left( \int_{a}^{x} [f'(t)]^{2} \mathrm{~d} t  \right)\\
+&amp;=(x-a)\int_{a}^{x} [f'(t)]^{2} \mathrm{~d} t \\
+&amp;\leqslant (x-a)\int_{a}^{b} [f'(t)]^{2} \mathrm{~d} t
+\end{aligned}
+\]</div>
+<p>两边同时在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上积分，把不等号右边转化为矩形区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D=[a,b]\times[a,b]\)</span><span class="heti-spacing"> </span></span>上的二重积分：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\int_{a}^{b} f^{2}(x) \mathrm{~d} x &amp;\leqslant \iint\limits_{D}(x-a)[f'(t)]^{2} \mathrm{~d} t\mathrm{d} x \\
+&amp;= \int_{a}^{b} [f'(t)]^{2} \mathrm{~d} t \int_{a}^{b} (x-a) \mathrm{~d} x \\
+&amp;= \int_{a}^{b} [f'(t)]^{2}\cdot \frac{(b-a)^{2}}{2} \mathrm{~d} t\\
+&amp;= \frac{(b-a)^{2}}{2}\int_{a}^{b} [f'(x)]^{2} \mathrm{~d} x 
+\end{aligned}
+\]</div>
+<p>得证！</p>
+<h2 id="6">例<span><span class="heti-spacing"> </span>6</span><a class="headerlink" href="#6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续可导，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(|f'(x)|\leqslant M\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\left| \int_{a}^{b} f(x) \mathrm{~d} x -\frac{f(a)+f(b)}{2}(b-a) \right| \leqslant \frac{1}{4}M(b-a)^{2}
+\]</div>
+</div>
+<p>利用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle b-a=\int_{a}^{b}  \mathrm{~d} x\)</span><span class="heti-spacing"> </span></span>统一结构，将左式拆成如下两项：</p>
+<div class="arithmatex">\[
+LHS=\frac{1}{2}\left|\int_{a}^{b} [f(x)-f(a)] \mathrm{~d} x +\int_{a}^{b} [f(x)-f(b)] \mathrm{~d} x \right|
+\]</div>
+<p>逆用牛莱公式，得：</p>
+<div class="arithmatex">\[
+LHS=\frac{1}{2}\left| \int_{a}^{b} \mathrm{~d} x\int_{a}^{x} f'(t) \mathrm{~d} t   +\int_{a}^{b} \mathrm{~d} x\int_{b}^{x} f'(t) \mathrm{~d} t    \right| 
+\]</div>
+<p>换序：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+LHS &amp;= \frac{1}{2}\left| \int_{a}^{b} f'(t) \mathrm{~d} t\int_{t}^{b}  \mathrm{~d} x +\int_{a}^{b} f'(t) \mathrm{~d} t\int_{t}^{a}  \mathrm{~d} x    \right| \\
+&amp;= \frac{1}{2}\left| \int_{a}^{b} f'(t)[(b-t)+(a-t)] \mathrm{~d} t  \right| \\
+&amp;= \frac{1}{2}\left| \int_{a}^{b} f'(t) (a+b-2t)\mathrm{~d} t  \right| \\
+&amp;\leqslant \frac{1}{2}\int_{a}^{b} \left| f'(t) \right| |a+b-2t| \mathrm{~d} t \\
+&amp;\leqslant \frac{1}{2}M\cdot \int_{a}^{b} |a+b-2t| \mathrm{~d} t\\
+&amp;= \frac{M}{4}(b-a)^{2}
+\end{aligned}
+\]</div>
+<p>得证！</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>最后一步积分带有绝对值，建议直接画图求面积。</p>
+</div>
+<h2 id="_3">习题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上有一阶连续导数，<span class="arithmatex">\(f(1)=0\)</span>，证明：</p>
+<div class="arithmatex">\[
+4\int_{0}^{1} x^{2}|f'(x)|^{2} \mathrm{~d} x \geqslant \int_{0}^{1} f^{2}(x) \mathrm{~d} x + \left( \int_{0}^{1} |f(x)| \mathrm{~d} x  \right)^{2}
+\]</div>
+</div>
+<h3 id="q2">Q2<a class="headerlink" href="#q2" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上连续且单调递增，证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} \sin \frac{\pi x}{2}f(x) \mathrm{~d} x &gt; \frac{2}{\pi}\int_{0}^{1} f(x) \mathrm{~d} x 
+\]</div>
+</div>
+<h3 id="q3">Q3<a class="headerlink" href="#q3" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)&gt;0\)</span><span class="heti-spacing"> </span></span>且连续、单调减少，证明：</p>
+<div class="arithmatex">\[
+\frac{\int_{0}^{1} xf^{2}(x) \mathrm{~d} x }{\int_{0}^{1}xf(x)  \mathrm{~d} x }\leqslant \frac{\int_{0}^{1} f^{2}(x) \mathrm{~d} x }{\int_{0}^{1}f(x)  \mathrm{~d} x }
+\]</div>
+</div>
+<details class="answer">
+<summary>Answer</summary>
+<p>由于分母都恒正，所以原问题等价于证明：</p>
+<div class="arithmatex">\[
+\int_{0}^{1} f^{2}(x) \mathrm{~d} x \int_{0}^{1} xf(x) \mathrm{~d} x \geqslant \int_{0}^{1} f(x) \mathrm{~d} x \int_{0}^{1} xf^{2}(x) \mathrm{~d} x 
+\]</div>
+<p>记积分：</p>
+<div class="arithmatex">\[
+I = \int_{0}^{1} f^{2}(x) \mathrm{~d} x \int_{0}^{1} xf(x) \mathrm{~d} x -\int_{0}^{1} f(x) \mathrm{~d} x \int_{0}^{1} xf^{2}(x) \mathrm{~d} x 
+\]</div>
+<p>将其转化为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D=[0,1]\times[0,1]\)</span><span class="heti-spacing"> </span></span>上的二重积分：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \iint\limits_{D} f^{2}(x)yf(y)-f(x)yf^{2}(y)\mathrm{~d} x\mathrm{d} y  \\
+&amp;= \iint\limits_{D}  yf(x)f(y)\cdot[f(x)-f(y)] \mathrm{~d} x\mathrm{d} y  
+\end{aligned}
+\]</div>
+<p>根据<strong>轮换对称性</strong>，交换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>得：</p>
+<div class="arithmatex">\[
+I = \iint\limits_{D} xf(x)f(y)\cdot [f(y)-f(x)]\mathrm{~d} x\mathrm{d} y  
+\]</div>
+<p>两式相加得：</p>
+<div class="arithmatex">\[
+2I = \iint\limits_{D} f(x)f(y)\cdot(y-x)\cdot[f(x)-f(y)]\mathrm{~d} x\mathrm{d} y  
+\]</div>
+<p>因为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)&gt;0\)</span><span class="heti-spacing"> </span></span>且单调减少，所以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y-x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)-f(y)\)</span><span class="heti-spacing"> </span></span>同号，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\geqslant 0\)</span></span>，得证！</p>
+</details>
+<h3 id="q4">Q4<a class="headerlink" href="#q4" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>区间上的连续函数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)&gt;-1\)</span></span>，证明：</p>
+<div class="arithmatex">\[
+\int_{a}^{b} f(x) \mathrm{~d} x \geqslant \frac{(b-a)\int_{a}^{b} \frac{f(x)}{1+f(x)} \mathrm{~d} x }{(b-a)-\int_{a}^{b} \frac{f(x)}{1+f(x)} \mathrm{~d} x }
+\]</div>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月6日 06:48:50 UTC">2026年8月6日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月9日 15:37:17 UTC">2026年8月9日</span>
 </span>
 </aside>
 <h2 id="__comments">评论区</h2>
@@ -1874,7 +2164,7 @@ I(0) &amp;= \lim_{ a \to 0^{+} } I(a)\\
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Froullani积分" class="md-footer__link md-footer__link--prev" href="../Froullani/">
+<a aria-label="上一页: 轮换对称性" class="md-footer__link md-footer__link--prev" href="../%E8%BD%AE%E6%8D%A2%E5%AF%B9%E7%A7%B0%E6%80%A7/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -1883,17 +2173,17 @@ I(0) &amp;= \lim_{ a \to 0^{+} } I(a)\\
                 上一页
               </span>
 <div class="md-ellipsis">
-                Froullani积分
+                轮换对称性
               </div>
 </div>
 </a>
-<a aria-label="下一页: 拉普拉斯变换" class="md-footer__link md-footer__link--next" href="../Laplace/">
+<a aria-label="下一页: Poisson积分公式" class="md-footer__link md-footer__link--next" href="../Poisson%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                拉普拉斯变换
+                Poisson积分公式
               </div>
 </div>
 <div class="md-footer__button md-icon">
