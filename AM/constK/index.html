@@ -4,12 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
 <meta content="Miracle" name="author"/>
-<link href="https://miracle606.github.io/mathcandy/AM/%E4%B8%89%E8%A7%92%E7%A7%AF%E5%88%86/" rel="canonical"/>
-<link href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/" rel="prev"/>
-<link href="../%E6%8C%87%E6%95%B0%E7%A7%AF%E5%88%86/" rel="next"/>
+<link href="https://miracle606.github.io/mathcandy/AM/constK/" rel="canonical"/>
+<link href="../%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/" rel="prev"/>
+<link href="../zzdl%E5%A5%BD%E9%A2%98/" rel="next"/>
 <link href="../../graph/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>三角积分 - Miracle的数学小课糖</title>
+<title>常数K值法 - Miracle的数学小课糖</title>
 <link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#n">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              三角积分
+              常数K值法
             
           </span>
 </div>
@@ -403,8 +403,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -416,7 +416,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
             
@@ -426,8 +426,20 @@
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../constK/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    常数K值法
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -437,6 +449,148 @@
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        简要介绍
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+</a>
+<nav aria-label="例题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      
+        例 1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        例 2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        例 3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        例 4
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        例 5
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        例 6
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        例 7
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      
+        例 8
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+<nav aria-label="习题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q-1">
+<span class="md-ellipsis">
+      
+        Q 1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q-2">
+<span class="md-ellipsis">
+      
+        Q 2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q-3">
+<span class="md-ellipsis">
+      
+        Q 3
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../zzdl%E5%A5%BD%E9%A2%98/">
@@ -477,8 +631,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -490,7 +644,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_4">
 <span class="md-nav__icon md-icon"></span>
             
@@ -512,20 +666,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    三角积分
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E4%B8%89%E8%A7%92%E7%A7%AF%E5%88%86/">
 <span class="md-ellipsis">
     
   
@@ -535,160 +677,6 @@
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#n">
-<span class="md-ellipsis">
-      
-        n 项和模型
-      
-    </span>
-</a>
-<nav aria-label="n 项和模型" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
-<span class="md-ellipsis">
-      
-        例1
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      
-        巧妙凑微分
-      
-    </span>
-</a>
-<nav aria-label="巧妙凑微分" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        例2
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        恒等变形
-      
-    </span>
-</a>
-<nav aria-label="恒等变形" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3">
-<span class="md-ellipsis">
-      
-        例3
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4">
-<span class="md-ellipsis">
-      
-        例4
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5">
-<span class="md-ellipsis">
-      
-        例5
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#6">
-<span class="md-ellipsis">
-      
-        例6
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        和参数有关吗
-      
-    </span>
-</a>
-<nav aria-label="和参数有关吗" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#7">
-<span class="md-ellipsis">
-      
-        例7
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      
-        习题
-      
-    </span>
-</a>
-<nav aria-label="习题" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q1">
-<span class="md-ellipsis">
-      
-        Q1
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#q2">
-<span class="md-ellipsis">
-      
-        Q2
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E6%8C%87%E6%95%B0%E7%A7%AF%E5%88%86/">
@@ -1677,64 +1665,47 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#n">
-<span class="md-ellipsis">
-      
-        n 项和模型
-      
-    </span>
-</a>
-<nav aria-label="n 项和模型" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
-<span class="md-ellipsis">
-      
-        例1
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
       
-        巧妙凑微分
+        简要介绍
       
     </span>
 </a>
-<nav aria-label="巧妙凑微分" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        例2
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       
-        恒等变形
+        例题
       
     </span>
 </a>
-<nav aria-label="恒等变形" class="md-nav">
+<nav aria-label="例题" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      
+        例 1
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        例 2
+      
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#3">
 <span class="md-ellipsis">
       
-        例3
+        例 3
       
     </span>
 </a>
@@ -1743,7 +1714,7 @@
 <a class="md-nav__link" href="#4">
 <span class="md-ellipsis">
       
-        例4
+        例 4
       
     </span>
 </a>
@@ -1752,7 +1723,7 @@
 <a class="md-nav__link" href="#5">
 <span class="md-ellipsis">
       
-        例5
+        例 5
       
     </span>
 </a>
@@ -1761,29 +1732,25 @@
 <a class="md-nav__link" href="#6">
 <span class="md-ellipsis">
       
-        例6
+        例 6
       
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        和参数有关吗
-      
-    </span>
-</a>
-<nav aria-label="和参数有关吗" class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#7">
 <span class="md-ellipsis">
       
-        例7
+        例 7
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      
+        例 8
       
     </span>
 </a>
@@ -1792,7 +1759,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       
         习题
@@ -1802,19 +1769,28 @@
 <nav aria-label="习题" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#q1">
+<a class="md-nav__link" href="#q-1">
 <span class="md-ellipsis">
       
-        Q1
+        Q 1
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#q2">
+<a class="md-nav__link" href="#q-2">
 <span class="md-ellipsis">
       
-        Q2
+        Q 2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q-3">
+<span class="md-ellipsis">
+      
+        Q 3
       
     </span>
 </a>
@@ -1845,227 +1821,291 @@
 </a>
 </li>
 <li class="md-path__item">
-<a class="md-path__link" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<a class="md-path__link" href="./">
 <span class="md-ellipsis">
-    不定积分
+    微分中值定理
   </span>
 </a>
 </li>
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/tree/6f8ce4e6588a7f54e347e42a368163bb760b751c/edit/master/docs/AM/三角积分.md" rel="edit" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Miracle606/mathcandy/tree/6f8ce4e6588a7f54e347e42a368163bb760b751c/edit/master/docs/AM/constK.md" rel="edit" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
 </a>
-<h1>三角积分</h1>
-<p>本节来看几道和三角函数有关的不定积分，</p>
-<h2 id="n"><span>n<span class="heti-spacing"> </span></span>项和模型<a class="headerlink" href="#n" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h1>常数<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>值法</h1>
+<h2 id="_1">简要介绍<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>涉及中值定理的题，往往需要构造辅助函数，然而有一些辅助函数的构造又令人费解。常数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span><span class="heti-spacing"> </span></span>值法是适用于一类中值定理题目的构造方法，通过将中值变元之外的常数部分设为<span><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span></span>，然后再利用<strong>主元法或分离端点</strong>，再结合其他的中值定理就可以完成证明。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>主元法是通法，能用分离端点做的题基本上都能用主元法做。但分离端点在部分题目中计算量较小，都需要熟练掌握！两种方法具体怎么用，如何根据题目进行选择，相信你学完本文的例题就都明白了！</p>
+</div>
+<h2 id="_2">例题<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="1">例<span><span class="heti-spacing"> </span>1</span><a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>计算不定积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int \frac{\sin10x}{\sin x}\mathrm{d}x\)</span></span></p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上的可导函数，求证：<span><span class="arithmatex">\(\exists\xi\in (a,b)\)</span><span class="heti-spacing"> </span></span>满足：</p>
+<div class="arithmatex">\[
+f(b) - f(a) = f'(\xi)(b-a)
+\]</div>
 </div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>看到题目的第一想法肯定是觉得分母太碍事了，如果能消掉就容易计算了。为此，我们需要对分子做添项处理，然后利用三角和差化积裂项拆分分子，便可消去分母<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sin x\)</span></span>，将分式拆为余弦多项式再逐项积分。</p>
-</div>
-<p>由和差化积公式：</p>
+<h4 id="_3">主元法<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>分离常数，并令常数部分为<span><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span></span>，即：</p>
 <div class="arithmatex">\[
-\sin A-\sin B=2\cos\frac{A+B}{2}\sin\frac{A-B}{2}
+K=\frac{f(b)-f(a)}{b-a}
 \]</div>
-<p>对分子拆项：</p>
+<p>整理得：<span class="arithmatex">\(f(b)-f(a)-K(b-a)=0\)</span>，选<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(b\)</span><span class="heti-spacing"> </span></span>为主元，构造辅助函数：</p>
 <div class="arithmatex">\[
-\begin{aligned} \sin10x &amp;=(\sin10x-\sin8x)+(\sin8x-\sin6x)+(\sin6x-\sin4x)+(\sin4x-\sin2x)+\sin2x \\ &amp;=2\sin x\cos9x+2\sin x\cos7x+2\sin x\cos5x+2\sin x\cos3x+2\sin x\cos x \\ &amp;=2\sin x\left(\cos9x+\cos7x+\cos5x+\cos3x+\cos x\right) \end{aligned}
+F(x)=f(x)-f(a)-K(x-a)
 \]</div>
-<p>代入原积分，约去<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sin x\)</span>:</span></p>
-<div class="arithmatex">\[
-\begin{aligned} \int\frac{\sin10x}{\sin x}\mathrm{d}x &amp;=\int \frac{2\sin x\left(\cos9x+\cos7x+\cos5x+\cos3x+\cos x\right)}{\sin x}\mathrm{d}x \\ &amp;=2\int\left(\cos9x+\cos7x+\cos5x+\cos3x+\cos x\right)\mathrm{d}x \\ &amp;=2\left(\frac19\sin9x+\frac17\sin7x+\frac15\sin5x+\frac13\sin3x+\sin x\right)+C \end{aligned}
-\]</div>
+<p>显然有<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a)=F(b)=0\)</span></span>，根据罗尔定理，存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\xi)=0\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(f'(\xi)=K\)</span></span>，得证！</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>事实上，我们可以通过类似方法得到如下结论：</p>
-<div class="arithmatex">\[
- \begin{aligned} \frac{\sin2nx}{\sin x}&amp;=2\sum_{k=1}^{n}\cos(2k-1)x\\[4pt] \frac{\sin(2n+1)x}{\sin x}&amp;=1+2\sum_{k=1}^{n}\cos2kx \end{aligned} 
-\]</div>
+<p>使用主元法，往往观察到变量的对称性，而且有一个天然条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a) = 0\)</span></span></p>
 </div>
-<h2 id="_1">巧妙凑微分<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>接下来这题是一个不常见的三角定积分，常规做法可能会考虑对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\tan\)</span><span class="heti-spacing"> </span></span>换元变成有理函数积分处理，虽然计算步骤更多，但是普适性强。下面我分享一种凑微分的方法。</p>
+<h4 id="_4">分离端点<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>根据法一得到：<span class="arithmatex">\(f(b)-f(a)-K(b-a)=0\)</span>，分离端点得到：</p>
+<div class="arithmatex">\[
+f(b)-Kb=f(a)-Ka
+\]</div>
+<p>左右为相同结构，故构造辅助函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(x)=f(x)-Kx\)</span></span>，则上式即为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a)=F(b)\)</span></span>，根据罗尔定理，存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\xi)=0\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(f'(\xi)=K\)</span></span>，得证！</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>分离端点，有点像高中学的<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>同构<span><span class="heti-spacing"> </span>"</span></p>
+</div>
 <h3 id="2">例<span><span class="heti-spacing"> </span>2</span><a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>计算：<span class="arithmatex">\(\displaystyle \int_{0}^{\frac{\pi}{2}} \frac{1}{a \tan x+b \cot x} \mathrm{d}x\)</span></p>
-</div>
-<p>首先切化弦，然后注意到分母的导数和分子的关系，从而顺利整体凑微分。</p>
+<p><span class="arithmatex">\(b&gt;a&gt;0\)</span>，设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上的可导函数，求证：<span><span class="arithmatex">\(\exists\xi\in (a,b)\)</span><span class="heti-spacing"> </span></span>满足：</p>
 <div class="arithmatex">\[
-\begin{aligned} \int_{0}^{\frac{\pi}{2}} \frac{1}{a \tan x+b \cot x} \mathrm{d}x &amp;=\int_{0}^{\frac{\pi}{2}} \frac{\sin x \cos x}{a \sin^{2} x+b \cos^{2} x} \mathrm{d}x \\ &amp;=\frac{1}{2(a-b)} \int_{0}^{\frac{\pi}{2}} \frac{\mathrm{d}\left(a \sin^{2} x+b \cos^{2} x\right)}{a \sin^{2} x+b \cos^{2} x} \\ &amp;=\frac{1}{2(a-b)}\left.\ln\left(a \sin^{2} x+b \cos^{2} x\right)\right|_{0}^{\frac{\pi}{2}} \\ &amp;=\frac{\ln a-\ln b}{2(a-b)} \end{aligned}
+\dfrac{bf(a)-af(b)}{b-a} = f(\xi) - \xi f'(\xi)
 \]</div>
-<h2 id="_2">恒等变形<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+</div>
+<h4 id="_5">主元法<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{bf(a)-af(b)}{b-a} = K\)</span></span>，整理得：</p>
+<div class="arithmatex">\[
+bf(a) - af(b) = K(b-a)
+\]</div>
+<p>选择<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(b\)</span><span class="heti-spacing"> </span></span>为主元，故构造辅助函数：</p>
+<div class="arithmatex">\[
+F(x) = [xf(a) - af(x)] - K(x - a)
+\]</div>
+<p><strong>那么，恭喜你！掉入陷阱</strong>，因为根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F(a)=F(b)=0\)</span><span class="heti-spacing"> </span></span>结合罗尔定理我们只能证明出：</p>
+<div class="arithmatex">\[
+F'(\xi)=f(a)-af'(\xi)-K=0
+\]</div>
+<p>这和我们的目标不一致，故在构造辅助函数的时候我们应当进行变形，考虑对原辅助函数同除<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(ax\)</span><span class="heti-spacing"> </span></span>得新辅助函数：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+F(x)&amp;=\frac{f(a)}{a}-\frac{f(x)}{x}-\frac{K}{ax}(x-a)\\
+&amp;= \frac{f(a)}{a}-\frac{f(x)}{x}-K\left( \frac{1}{a}-\frac{1}{x} \right)
+\end{aligned}
+\]</div>
+<p>则<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a)=F(b)=0\)</span></span>，根据罗尔定理，存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\xi)=0\)</span></span>，即：</p>
+<div class="arithmatex">\[
+\frac{f(\xi)-\xi f'(\xi)-K}{x^{2}}=0
+\]</div>
+<p>化简得：<span><span class="arithmatex">\(K=f(\xi)-\xi f'(\xi)\)</span><span class="heti-spacing"> </span></span>得证！</p>
+<h4 id="_6">分离端点<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>对法一得到的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(bf(a) - af(b) = K(b-a)\)</span><span class="heti-spacing"> </span></span>同除<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(ab\)</span><span class="heti-spacing"> </span></span>得：</p>
+<div class="arithmatex">\[
+\dfrac{f(a)}{a} - \dfrac{K}{a} = \dfrac{f(b)}{b} - \dfrac{K}{b}
+\]</div>
+<p>左右两边为相同结构，故构造辅助函数：</p>
+<div class="arithmatex">\[
+F(x)=\frac{f(x)}{x}-\frac{K}{x}
+\]</div>
+<p>于是有：<span class="arithmatex">\(F(a)=F(b)\)</span>，根据罗尔定理，存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\xi)=0\)</span></span>，即：</p>
+<div class="arithmatex">\[
+\frac{f(\xi)-\xi f'(\xi)-K}{x^{2}}=0
+\]</div>
+<p>化简得：<span><span class="arithmatex">\(K=f(\xi)-\xi f'(\xi)\)</span><span class="heti-spacing"> </span></span>得证！</p>
 <h3 id="3">例<span><span class="heti-spacing"> </span>3</span><a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="arithmatex">\[
-\int \tan x\tan 2x\tan 3x\mathrm{~d} x 
-\]</div>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上连续，在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((a,b)\)</span><span class="heti-spacing"> </span></span>内二阶可导，证明：<span class="arithmatex">\(\exists\xi\in (a,b)\)</span>，使得：
+$$
+f(b)-2f\left( \frac{a+b}{2} \right)+f(a)=\frac{1}{4}(b-a)^{2}f''(\xi)
+$$</p>
 </div>
-<p>首先我们考虑正切和角公式：</p>
+<p>令常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=f''(\xi)\)</span></span>，选择<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(b\)</span><span class="heti-spacing"> </span></span>为主元，构造如下辅助函数：</p>
 <div class="arithmatex">\[
-\tan3x=\tan(x+2x)=\frac{\tan x+\tan 2x}{1-\tan x \tan 2x}
+F(x)=f(x)-2f\left( \frac{a+x}{2} \right)+f(a)-\frac{1}{4}K(x-a)^{2}
 \]</div>
-<p>则：</p>
+<p>则有：<span class="arithmatex">\(F(a)=F(b)=0\)</span>，根据罗尔定理：存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\eta\in(a,b)\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\eta)=0\)</span></span>，即：</p>
 <div class="arithmatex">\[
-\tan 3x-\tan x \tan 2x \tan 3x=\tan x+\tan 2x
+f'(\eta)-f'\left( \frac{a+\eta}{2} \right)-\frac{K}{2}(\eta-a)=0
 \]</div>
-<p>移项得：</p>
+<p>由于我们要证明的式子是二阶导，所以考虑对上式中一阶导的差使用拉格朗日中值定理：</p>
 <div class="arithmatex">\[
-\tan x \tan2x\tan 3x=\tan3x-\tan x-\tan 2x
+\left( \eta-\frac{a+\eta}{2} \right)\cdot f''(\xi)-\frac{K}{2}(\eta-a)=0
 \]</div>
-<p>这样被积函数就被我们化简了！</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int \tan x\tan 2x\tan 3x\mathrm{~d} x &amp;= \int( \tan3x-\tan x-\tan 2x)\mathrm{~d} x\\
-&amp;= -\frac{1}{3}\ln |\cos 3x|+\ln |\cos x|+\frac{1}{2}\ln |\cos 2x|+C
-\end{aligned}
-\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，整理得<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=f''(\xi)\)</span></span>，得证！</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>基于上面的恒等式，我们可以把题目中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x, 2x, 3x\)</span><span class="heti-spacing"> </span></span>推广为任意实数倍数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(ax, bx\)</span><span class="heti-spacing"> </span></span>以及它们的和<span><span class="heti-spacing"> </span><span class="arithmatex">\((a+b)x\)</span></span>。</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a, b\)</span><span class="heti-spacing"> </span></span>为非零常数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(a+b \neq 0\)</span></span>，则有：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int \tan(ax) \tan(bx) \tan((a+b)x) \mathrm{~d}x&amp;= \int \left[ \tan((a+b)x) - \tan(ax) - \tan(bx) \right] \mathrm{~d}x\\
-&amp;= \int \tan(ax) \tan(bx) \tan((a+b)x) \mathrm{~d}x \\
-&amp;= -\frac{1}{a+b}\ln\vert{}\cos((a+b)x)\vert{} + \frac{1}{a}\ln\vert{}\cos(ax)\vert{} + \frac{1}{b}\ln\vert{}\cos(bx)\vert{} + C
-\end{aligned}
-\]</div>
+<p>很多同学会认为使用主元法最后只要无脑罗尔就行了，但是想本题，直接无脑罗尔是做不出来的。所以对其他微分中值定理也要熟悉，不要陷入思维定式。</p>
 </div>
-<p>对于正、余弦连乘的积分，直接考虑积化和差即可，回顾一下和差化积和积化和差公式：</p>
-<div class="admonition abstract">
-<p class="admonition-title">和差化积</p>
-<ul>
-<li><span class="arithmatex">\(\displaystyle \sin x\pm \sin y=2\sin \frac{x\pm y}{2}\cos \frac{x\mp y}{2}\)</span></li>
-<li><span class="arithmatex">\(\displaystyle \cos x+ \cos y=2\cos \frac{x+ y}{2}\cos \frac{x- y}{2}\)</span></li>
-<li><span class="arithmatex">\(\displaystyle \cos x- \cos y=-2\sin \frac{x+ y}{2}\sin \frac{x- y}{2}\)</span></li>
-</ul>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">积化和差</p>
-<ul>
-<li><span class="arithmatex">\(\displaystyle \sin x\sin y=\frac{1}{2}(\cos(x-y)-\cos(x+y))\)</span></li>
-<li><span class="arithmatex">\(\displaystyle\sin x\cos y=\frac{1}{2}(\sin(x+y)+\sin(x-y))\)</span></li>
-<li><span class="arithmatex">\(\displaystyle \cos x\cos y=\frac{1}{2}(\cos(x+y)+\cos(x-y))\)</span></li>
-</ul>
-</div>
-<p>来看下面这道题：</p>
 <h3 id="4">例<span><span class="heti-spacing"> </span>4</span><a class="headerlink" href="#4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(b&gt;a&gt;0\)</span>，设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上的可导函数，求证<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\exists\xi\in (a,b)\)</span><span class="heti-spacing"> </span></span>使得：</p>
 <div class="arithmatex">\[
-\int \sin x\sin 3x\sin 5x\mathrm{~d} x  
+\dfrac{f(b) - f(a)}{b-a} = \dfrac{\xi^2 f'(\xi)}{ab}
 \]</div>
 </div>
-<p>直接运用积化和差公式：</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=\dfrac{ab[f(b) - f(a)]}{b-a}\)</span></span>，整理得：</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\int \sin x\sin 3x\sin 5x\mathrm{~d} x  &amp;= \int \frac{\cos 2x-\cos 4x}{2}\cdot \sin 5x\mathrm{~d} x\\
-&amp;= \frac{1}{4}\int (\sin 7x+\sin 3x - \sin 9x-\sin x)\mathrm{~d} x\\
-&amp;= -\frac{1}{4}\left( \frac{\cos 7x}{7}+\frac{\cos 3x}{3}-\frac{\cos 9x}{9}-\cos x \right)+C
-\end{aligned}
+f(b) - f(a) = \dfrac{K(b-a)}{ab} = \dfrac{K}{a} - \dfrac{K}{b}
 \]</div>
-<p>再来看一个需要灵活运用恒等变形的题目：</p>
+<p>很明显分离端点是很方便的，即：</p>
+<div class="arithmatex">\[
+f(b)+\dfrac{K}{b} = f(a)+\dfrac{K}{a}
+\]</div>
+<p>故构造辅助函数：</p>
+<div class="arithmatex">\[
+F(x)=f(x)+\frac{K}{x}
+\]</div>
+<p>于是有：<span class="arithmatex">\(F(a)=F(b)\)</span>，根据罗尔定理，存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\xi)=0\)</span></span>，即：</p>
+<div class="arithmatex">\[
+f'(\xi)-\frac{K}{\xi^{2}}=0
+\]</div>
+<p>化简得：<span><span class="arithmatex">\(K=\xi^{2}f'(\xi)\)</span><span class="heti-spacing"> </span></span>得证！</p>
 <h3 id="5">例<span><span class="heti-spacing"> </span>5</span><a class="headerlink" href="#5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
+<p>已知<span><span class="heti-spacing"> </span><span class="arithmatex">\(a&lt;b&lt;c\)</span></span>，<span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>二阶可导，证明<span><span class="heti-spacing"> </span><span class="arithmatex">\(\exists\xi\in(a,b)\)</span></span>，使得：</p>
 <div class="arithmatex">\[
-\int \frac{2x+2x\cos x+1}{x^{2}+x^{2}\cos x+\sin x}\mathrm{~d} x 
+\dfrac{1}{2}f''(\xi) = \dfrac{f(a)}{(a-c)(a-b)}+\dfrac{f(b)}{(b-c)(b-a)}+\dfrac{f(c)}{(c-b)(c-a)}
 \]</div>
 </div>
-<p>首先提出分子分母的部分公因式，做商发现出现正切的半角公式，于是顺利解决。</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(K = \dfrac{f(a)}{(a-c)(a-b)}+\dfrac{f(b)}{(b-c)(b-a)}+\dfrac{f(c)}{(c-b)(c-a)}\)</span></span></p>
+<p>同乘<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((a-b)(b-c)(c-a)\)</span><span class="heti-spacing"> </span></span>得：</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\int \frac{2x+2x\cos x+1}{x^{2}+x^{2}\cos x+\sin x}\mathrm{~d} x &amp;= \int \frac{2x(1+\cos x)+1}{x^{2}(1+\cos x)+\sin x}\mathrm{~d} x\\
-&amp;= \int \frac{2x+\frac{1}{1+\cos x}}{x^{2}+ \frac{\sin x}{1+\cos x}}\mathrm{~d} x\\
-&amp;= \int \frac{2x+\frac{1}{2}\sec ^{2}x}{x^{2}+\tan \frac{x}{2}}\mathrm{~d} x\\
-\end{aligned}
+f(a)(c-b)+f(b)(a-c)+f(c)(b-a) = K(a-b)(b-c)(c-a)
 \]</div>
-<p>化简到这里我们发现分子正好是分母的导数！于是结束。</p>
+<p>我们选择<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a\)</span><span class="heti-spacing"> </span></span>为主元，则构造辅助函数：</p>
 <div class="arithmatex">\[
-I=\ln\left( x^{2}+\tan \frac{x}{2} \right)+C
+F(x) = f(x)(c-b)+f(b)(x-c)+f(c)(b-x) - K(x-b)(b-c)(c-x)
 \]</div>
-<p>再来看一道和配方结合的题目：</p>
+<p>则有连等式<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a) = F(b) = F(c) = 0\)</span></span>，接下来连续使用罗尔定理就做完了。</p>
+<p>由罗尔定理<span><span class="heti-spacing"> </span><span class="arithmatex">\(\exists m_1\in(a,b),m_2\in(b,c)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(m_1) = F'(m_2) = 0\)</span></span></p>
+<p>由罗尔定理<span><span class="heti-spacing"> </span><span class="arithmatex">\(\exists\xi\in(m_1,m_2)\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F''(\xi) = 0\)</span></span> ​</p>
+<p>即：<span class="arithmatex">\(F''(x) = (c-b)f''(x) - (c-b)2K \Rightarrow f''(\xi) = 2K\)</span>，得证！</p>
 <h3 id="6">例<span><span class="heti-spacing"> </span>6</span><a class="headerlink" href="#6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上二阶可导，<span class="arithmatex">\(f(a) = f(b) = 0\)</span>，求证：对于任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in(a,b)\)</span></span>，存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span></span>，使得：</p>
 <div class="arithmatex">\[
-\int \frac{\mathrm{~d} x }{\sin ^{6}x+\cos ^{6}x}
+f(x) = \dfrac{f''(\xi)}{2}(x-a)(x-b)
 \]</div>
 </div>
-<p>对分母反复因式分解、配方，并结合<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sin ^{2}x+\cos ^{2}x=1\)</span><span class="heti-spacing"> </span></span>进行化简：</p>
+<p>对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in(a,b)\)</span></span>，记常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=K(x) = \dfrac{f(x)}{(x-a)(x-b)}\)</span></span></p>
+<p>选择<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>作为主元，构造如下辅助函数：</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\int \frac{\mathrm{~d} x }{\sin ^{6}x+\cos ^{6}x}&amp;= \int \frac{\mathrm{~d} x }{(\sin ^{2}x+\cos ^{2}x)(\sin ^{4}x+\cos ^{4}x-\sin ^{2}x\cos ^{2}x)}\\
-&amp;= \int \frac{\mathrm{~d} x }{\sin ^{4}x+\cos ^{4}x-\sin ^{2}x\cos ^{2}x}\\
-&amp;= \int \frac{\mathrm{~d} x }{(\sin ^{2}x-\cos ^{2}x)^{2}+\sin ^{2}x\cos ^{2}x}\\
-&amp;= 4\int \frac{\mathrm{~d} x }{4\cos ^{2}2x+\sin ^{2}2x}\\
-&amp;= 4\int \frac{\sec ^{2}2x}{\tan ^{2}2x+4}\mathrm{~d} x\\
-&amp;= 2\int \frac{\mathrm{~d} \tan 2x }{\tan ^{2}2x+2^{2}}\\
-&amp;= \arctan\left( \frac{\tan 2x}{2} \right)+C
-\end{aligned}
+F(t) = f(t) - K(t-a)(t-b)
 \]</div>
-<h2 id="_3">和参数有关吗<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>初次看到这个题目我还以为是含参变量积分那一类的题目，做完才知道竟然与参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a\)</span><span class="heti-spacing"> </span></span>无关！这么有意思的题目当然要分享给大家啦！</p>
+<p>则有连等<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a) = F(x) = F(b) = 0\)</span></span>，两次罗尔即可得到：</p>
+<p><span><span class="arithmatex">\(\exists\xi\in(a,b)\)</span><span class="heti-spacing"> </span></span>使得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F''(\xi) = 0\)</span><span class="heti-spacing"> </span></span>即<span><span class="heti-spacing"> </span><span class="arithmatex">\(f''(\xi) = 2K\)</span></span>，得证！</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>注意<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span><span class="heti-spacing"> </span></span>的选取依赖于<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span></span>，但是对于区间内选定的<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span></span>，就变成了一个给定的常数，因此千万不要误以为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span><span class="heti-spacing"> </span></span>的表达式中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>是自变量！</p>
+</div>
 <h3 id="7">例<span><span class="heti-spacing"> </span>7</span><a class="headerlink" href="#7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><span class="arithmatex">\(\displaystyle \int_{0}^{\infty} \frac{\arctan x^{\color{red}{a}}}{1+x^2} \, dx\)</span></p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上三阶连续可导，且有<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(0)=-1,f'(0)=0,f(1)=0\)</span></span>，证明对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in(0,1)\)</span></span>，存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(0,1)\)</span><span class="heti-spacing"> </span></span>使得：</p>
+<div class="arithmatex">\[
+f(x)=-1+x^{2}+ \frac{x^{2}(x-1)}{6}f'''(\xi)
+\]</div>
 </div>
-<p>倒代换<span><span class="heti-spacing"> </span><span class="arithmatex">\(x \to \dfrac{1}{x}\)</span></span>：</p>
+<p>对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in(0,1)\)</span></span>，记常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=K(x) = \dfrac{f(x)+1-x^{2}}{x^{2}(x-1)}\)</span></span>，整理得：</p>
 <div class="arithmatex">\[
-\begin{aligned}
-I &amp;= \int_{0}^{\infty} \frac{\arctan x^{a}}{1+x^2} \, dx \\
-  &amp;= \int_{\infty}^{0} \frac{\arctan \left(\frac{1}{t}\right)^{\!a}}{1+\left(\frac{1}{t}\right)^{\!2}} \left(-\frac{1}{t^2} dt\right) \quad (x = 1/t,\ dx = -1/t^2 dt) \\
-  &amp;= \int_{0}^{\infty} \frac{\arctan \frac{1}{t^a}}{\frac{t^2+1}{t^2}} \cdot \frac{1}{t^2} dt \\
-  &amp;= \int_{0}^{\infty} \frac{\arctan \frac{1}{t^a}}{1+t^2} dt \\
-  &amp;= \int_{0}^{\infty} \frac{\arctan \frac{1}{x^a}}{1+x^2} dx 
-\end{aligned}
+f(x)+1-x^{2}-Kx^{2}(x-1)=0
 \]</div>
-<p>利用反正切恒等式，即：</p>
+<p>选取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>作为主元，构造如下辅助函数：</p>
 <div class="arithmatex">\[
-\arctan t + \operatorname{arctan} \dfrac1t = \frac{\pi}{2},\quad t&gt;0
+F(t)=f(t)+1-t^{2}-Kt^{2}(t-1)
 \]</div>
-<p>原积分可以进一步化简：</p>
+<p>则有：<span class="arithmatex">\(F(0)=F(x)=F(1)=0\)</span>，根据罗尔定理，存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi_{1}\in(0,x),\xi_{2}\in(x,1)\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(\xi_{1})=F'(\xi_{2})=0\)</span></span>，又因为：</p>
 <div class="arithmatex">\[
-  I = \frac{1}{2} \int_{0}^{\infty} \frac{\frac{\pi}{2}}{1+x^2} \, dx = \frac{1}{2} \cdot \frac{\pi}{2} \cdot \left[ \arctan x \right]_{0}^{\infty} = \frac{\pi}{4} \cdot \frac{\pi}{2} = \frac{\pi^2}{8} 
+F'(t)=f'(t)-2t-K(3t^{2}-2t)
 \]</div>
+<p>显然有<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'(0)=0\)</span></span>，故<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F'(t)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上至少存在<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个零点；再次罗尔定理：<span><span class="arithmatex">\(F''(t)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上至少存在<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>个零点；再次罗尔定理：<span><span class="arithmatex">\(F'''(t)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,1]\)</span><span class="heti-spacing"> </span></span>上至少存在<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>个零点<span><span class="heti-spacing"> </span>.</span></p>
+<p>即存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(0,1)\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F'''(\xi)=0\)</span></span>，即：</p>
+<div class="arithmatex">\[
+F'''(\xi)=f'''(\xi)-6K=0\implies K=\frac{f'''(\xi)}{6}
+\]</div>
+<p>得证！</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>本题的第一个重点是利用倒代换，而注意到这个方法的核心是发现倒代换之后分母结构不变，这是很重要的一个结构，希望大家能将它积累下来。而本题的另一个重点则是反三角函数恒等式的灵活运用，在考场上我们不一定积累到了这么多的恒等式，所以大家在意识到无法化简的时候，不妨考虑一下是否存在恒等式。而验证恒等式的方法也很简单，我们只需要对其求导，验证导数是否恒等于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0\)</span><span class="heti-spacing"> </span></span>即可，如果发现是恒等式，那么我们任意代入一个符合定义域的值，就可以知道这个恒等式恒等于哪个常数了<span><span class="heti-spacing"> </span>!</span></p>
+<p>本题的本质是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Hermite}\)</span><span class="heti-spacing"> </span></span>插值，感兴趣的朋友可以自行了解。</p>
 </div>
-<h2 id="_4">习题<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h3>
+<h3 id="8">例<span><span class="heti-spacing"> </span>8</span><a class="headerlink" href="#8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_1 &lt; a_2 &lt; \cdots &lt; a_n\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个不同的实数，<span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a_ 1, a_n]\)</span><span class="heti-spacing"> </span></span>上有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶导数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(a_1) = f(a_2) = \cdots = f(a_n) = 0\)</span></span>。求证：对<span><span class="heti-spacing"> </span><span class="arithmatex">\(\forall c \in [a_1, a_n]\)</span></span>，<span><span class="arithmatex">\(\exists \xi \in (a_1, a_n)\)</span><span class="heti-spacing"> </span></span>使得：</p>
+</div>
+<div class="arithmatex">\[
+\frac{f(c)}{(c - a_1)(c - a_2)\cdots(c - a_n)} = \frac{f^{(n)}(\xi)}{n!}
+\]</div>
+<p>Case 1：若<span><span class="heti-spacing"> </span><span class="arithmatex">\(c = a_k (k = 1,2,\cdots,n)\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(c) = 0\)</span></span>；从而，对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\forall \xi \in (a_1, a_n)\)</span><span class="heti-spacing"> </span></span>结论均成立。</p>
+<p>Case 2：若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c \neq a_k\)</span>  (<span class="heti-spacing"> </span></span>对<span><span class="heti-spacing"> </span><span class="arithmatex">\(\forall k = 1,2,\cdots,n\)</span>)</span>，记<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=\dfrac{f(c)}{(c - a_1)(c - a_2)\cdots(c - a_n)}\)</span>.</span></p>
+<p>令<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(x) = f(x) - K(x - a_1)(x - a_2)\cdots(x - a_n)\)</span></span>，则：<span><span class="arithmatex">\(F(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a_1, a_n]\)</span><span class="heti-spacing"> </span></span>上有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶导数<span><span class="heti-spacing"> </span>.</span></p>
+<p>且<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(a_1) = F(a_2) = \cdots = F(a_n) = 0\)</span></span>，<span class="arithmatex">\(F(c) = 0\)</span>，即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a_1, a_n]\)</span><span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((n + 1)\)</span><span class="heti-spacing"> </span></span>个零点。</p>
+<p>由罗尔定理，<span><span class="arithmatex">\(\exists \xi \in (a_1, a_n)\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(F^{(n)}(\xi) = 0\)</span></span>；而<span><span class="heti-spacing"> </span><span class="arithmatex">\(F^{(n)}(x) = f^{(n)}(x) - n!K\)</span></span>。</p>
+<p>因此，<span><span class="arithmatex">\(\exists \xi \in (a_1, a_n)\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(K=\dfrac{f^{(n)}(\xi)}{n!}\)</span></span>，得证！</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>常数<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>值法通过把一大堆常数设成<span><span class="heti-spacing"> </span>k</span>，不仅简化了题面，还对构造函数有着辅助作用。构造函数需要观察函数的对称性质。</p>
+</div>
+<h2 id="_7">习题<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="q-1">Q 1<a class="headerlink" href="#q-1" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>求<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle\int \frac{\mathrm{d}x}{\sin 2x+2\sin x}\)</span>.</span></p>
+<p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(a&lt;b&lt;c\)</span></span>，<span><span class="arithmatex">\(f(x),g(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,c]\)</span><span class="heti-spacing"> </span></span>上二阶可导，证明：<span class="arithmatex">\(\exists \xi\in(a,c)\)</span>，使得：</p>
+<div class="arithmatex">\[
+\frac{f(b)-f(a)-(b-a)f'(a)}{g(b)-g(a)-(b-a)g'(a)}= \frac{f'''(\xi)}{g'''(\xi)}
+\]</div>
 </div>
-<h3 id="q2">Q2<a class="headerlink" href="#q2" title="Permanent link">¶</a></h3>
+<details class="hint">
+<summary>Hint</summary>
+<p>主元法<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(+\)</span><span class="heti-spacing"> </span></span>柯西中值定理</p>
+</details>
+<h3 id="q-2">Q 2<a class="headerlink" href="#q-2" title="Permanent link">¶</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>求<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \int \mathrm{e}^{ x } \frac{1+\sin x}{1+\cos x}\mathrm{~d} x\)</span></span></p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上三阶可导，证明<span><span class="heti-spacing"> </span><span class="arithmatex">\(\exists \xi\in(a,b)\)</span></span>，使得：</p>
+<div class="arithmatex">\[
+f(b)=f(a)+f'\left( \frac{a+b}{2} \right)(b-a)+\frac{1}{24}f'''(\xi)(b-a)^{3}
+\]</div>
+</div>
+<details class="hint">
+<summary>Hint</summary>
+<p>主元法<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(+\)</span><span class="heti-spacing"> </span></span>泰勒</p>
+</details>
+<h3 id="q-3">Q 3<a class="headerlink" href="#q-3" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>上二阶可导，证明：对于任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in(a,b)\)</span></span>，存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\in(a,b)\)</span><span class="heti-spacing"> </span></span>使得：</p>
+<div class="arithmatex">\[
+\frac{1}{x-b}\left[ \frac{f(x)-f(a)}{x-a} -\frac{f(b)-f(a)}{b-a}\right]=\frac{1}{2}f''(\xi)
+\]</div>
 </div>
 <ul>
 <li>更多精彩内容欢迎关注我的微信公众号！</li>
 </ul>
 <center>
 <p>搜一搜</p>
-<a href="../graph/qcode2.png" target="_blank">
+<p><a href="../graph/qcode2.png" target="_blank">
 <img src="../graph/qcode2.png" style="width: 450px; height: auto;"/>
 </a>
-</center>
+</p></center><p></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月5日 09:24:26 UTC">2026年8月5日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月10日 11:53:40 UTC">2026年8月10日</span>
 </span>
 </aside>
 <h2 id="__comments">评论区</h2>
@@ -2116,7 +2156,7 @@ I &amp;= \int_{0}^{\infty} \frac{\arctan x^{a}}{1+x^2} \, dx \\
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 组合积分法" class="md-footer__link md-footer__link--prev" href="../%E7%BB%84%E5%90%88%E7%A7%AF%E5%88%86%E6%B3%95/">
+<a aria-label="上一页: 高阶导数" class="md-footer__link md-footer__link--prev" href="../%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -2125,17 +2165,17 @@ I &amp;= \int_{0}^{\infty} \frac{\arctan x^{a}}{1+x^2} \, dx \\
                 上一页
               </span>
 <div class="md-ellipsis">
-                组合积分法
+                高阶导数
               </div>
 </div>
 </a>
-<a aria-label="下一页: 一类复杂的指数积分" class="md-footer__link md-footer__link--next" href="../%E6%8C%87%E6%95%B0%E7%A7%AF%E5%88%86/">
+<a aria-label="下一页: 导数有界约束下积分估值证明" class="md-footer__link md-footer__link--next" href="../zzdl%E5%A5%BD%E9%A2%98/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                一类复杂的指数积分
+                导数有界约束下积分估值证明
               </div>
 </div>
 <div class="md-footer__button md-icon">
