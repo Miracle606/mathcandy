@@ -788,6 +788,15 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2362,6 +2371,15 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -2773,6 +2791,47 @@ I_n = -\frac{1}{n}x^{n-1}\sqrt{1-x^2} + \frac{n-1}{n}I_{n-2}
 <p class="admonition-title">Tip</p>
 <p>总结一下，递推求解不定积分的核心就是<strong>凑微分</strong>和<strong>分部积分</strong>，常见的形式就是上面列出的这些，至于更复杂的情况都可以通过上面的方法进行求解。</p>
 </div>
+<h2 id="_3">习题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="arithmatex">\[
+I_{n}=\int_{0}^{\frac{\pi}{2}} \cos ^{n}x\sin(nx) \mathrm{~d} x ,\quad n\in \mathbb{N}
+\]</div>
+</div>
+<details class="answer">
+<summary>Answer</summary>
+<p>非常经典的一道题目。为了出现递推结构，我们需要让<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sin (nx)\)</span><span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>发生变化，因此考虑使用<strong>积化和差</strong>。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I_{n} &amp;= \int_{0}^{\frac{\pi}{2}} \cos ^{n-1}x\cdot \cos x\cdot\sin(nx) \mathrm{~d} x \\
+&amp;= \frac{1}{2}\int_{0}^{\frac{\pi}{2}} \cos ^{n-1}x \cdot[\sin(n+1)x+\sin(n-1)x] \mathrm{~d} x \\
+&amp;= \frac{1}{2}\int_{0}^{\frac{\pi}{2}} \cos ^{n-1}x\sin(n+1)x \mathrm{~d} x + \frac{1}{2}I_{n-1}\\
+&amp;= \frac{1}{2}I_{n-1} + \frac{1}{2}\int_{0}^{\frac{\pi}{2}} \cos ^{n-1}x\cdot [\sin nx\cdot \cos x+\cos nx\cdot \sin x] \mathrm{~d} x \\
+&amp;= \frac{1}{2}I_{n-1} + \frac{1}{2}I_{n} + \frac{1}{2}\int_{0}^{\frac{\pi}{2}} \cos ^{n-1}x\cdot\cos(nx)\cdot \sin x \mathrm{~d} x \\
+&amp;= \frac{1}{2}I_{n-1}+\frac{1}{2}I_{n}-\frac{1}{2}\int_{0}^{\frac{\pi}{2}} \cos ^{n-1}x\cdot\cos(nx) \mathrm{~d} (\cos x)\\
+&amp;= \frac{1}{2}I_{n-1}+\frac{1}{2}I_{n}-\frac{1}{2n}\int_{0}^{\frac{\pi}{2}} \cos(nx) \mathrm{~d} (\cos ^{n}x) \\
+&amp;= \frac{1}{2}I_{n-1}+\frac{1}{2}I_{n}-\frac{1}{2n}\cos(nx)\cos ^{n}x\bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{2n}\int_{0}^{\frac{\pi}{2}} \cos ^{n}x \cdot (-\sin(nx))\cdot n \mathrm{~d} x \\
+&amp;= \frac{1}{2}I_{n-1}+\frac{1}{2}I_{n}+\frac{1}{2n}-\frac{1}{2}I_{n}\\
+&amp;= \frac{1}{2}I_{n-1}+\frac{1}{2n}
+\end{aligned}
+\]</div>
+<p>于是我们得到递推式：</p>
+<div class="arithmatex">\[
+I_{n}=\frac{1}{2}I_{n-1}+\frac{1}{2n}
+\]</div>
+<p>且<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{0}=0\)</span></span>，同构得：</p>
+<div class="arithmatex">\[
+2^{n}I_{n}=2^{n-1}I_{n-1} + \frac{2^{n-1}}{n}
+\]</div>
+<p>累加得：</p>
+<div class="arithmatex">\[
+2^{n}I_{n}=\sum_{k=1}^{n} \frac{2^{k-1}}{k}
+\]</div>
+<p>故：</p>
+<div class="arithmatex">\[
+I_{n}=\frac{1}{2^{n}}\sum_{k=1}^{n} \frac{2^{k-1}}{k}
+\]</div>
+</details>
 <ul>
 <li>更多精彩内容欢迎关注我的微信公众号！</li>
 </ul>
@@ -2787,7 +2846,7 @@ I_n = -\frac{1}{n}x^{n-1}\sqrt{1-x^2} + \frac{n-1}{n}I_{n-2}
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年9月8日 07:42:04 UTC">2026年9月8日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年10月8日 07:37:36 UTC">2026年10月8日</span>
 </span>
 </aside>
 <h2 id="__comments">评论区</h2>
