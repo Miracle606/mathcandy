@@ -2319,7 +2319,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
 </a>
 <h1 id="_1">跨越百年的智力接力：从巴塞尔问题到黎曼猜想<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image.png"><img alt="alt text" src="../graph/image.png"/></a></p>
+<p></p>
 <h2 id="_2">前言<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>在之前的<a href="https://miracle606.github.io/mathcandy/AM/%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/2/">取整函数专题</a>中，我讲过下面这个题目，其求解过程用到了经典级数——<span>Eluer<span class="heti-spacing"> </span></span>级数，也就是我们常说的巴塞尔问题。</p>
 <div class="admonition example">
@@ -2383,7 +2383,6 @@ I &amp;= \int_{0}^{1} \int_{0}^{1} \sum_{n=0}^{\infty} (xy)^{n} \mathrm{~d} x  \
 <p>这个计算也说明这个在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x=y=1\)</span><span class="heti-spacing"> </span></span>处有一个奇点的正函数的二重积分是有限的。注意，从后往前看这个计算也是简单且直接了当的，所以对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\zeta(2)\)</span><span class="heti-spacing"> </span></span>的估值把我们引向了二重积分<span><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span></span>。</p>
 <p>第二个计算<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I\)</span><span class="heti-spacing"> </span></span>的方法来自坐标系变换：我们构造如下坐标系：<span class="arithmatex">\(u= \frac{x+y}{2}\)</span>，<span class="arithmatex">\(v= \frac{y-x}{2}\)</span>，其定积分的定义域是一个边长为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{1}{\sqrt{ 2 }}\)</span><span class="heti-spacing"> </span></span>的正方形，可以通过将旧坐标系旋转<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(45\)</span><span class="heti-spacing"> </span></span>度再以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sqrt{ 2 }\)</span><span class="heti-spacing"> </span></span>的比例缩小。如下图所示：</p>
 <div align="center">
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image-1.png"><img src="../graph/image-1.png" style="width:60%; height:auto;"/></a>
 </div>
 <p>于是做换元：<span class="arithmatex">\(x=u-v,y=u+v\)</span>，结合<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Jacobi}\)</span><span class="heti-spacing"> </span></span>换元得到：</p>
 <div class="arithmatex">\[
@@ -2397,7 +2396,6 @@ I &amp;= 4\int_{0}^{\frac{1}{2}} \left( \int_{0}^{u} \frac{\mathrm{~d} v }{1-u^{
 \end{aligned}
 \]</div>
 <div align="center">
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image-2.png"><img src="../graph/image-2.png" style="width:60%; height:auto;"/></a>
 </div>
 <p>而这两个积分可以通过三角换元化简并计算处理，但我们也可以直接做，考虑函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(u)=\arctan\left( \frac{u}{\sqrt{ 1-u^{2} }} \right)\)</span><span class="heti-spacing"> </span></span>的导数是<span><span class="heti-spacing"> </span><span class="arithmatex">\(g'(u)=\frac{1}{\sqrt{ 1-u^{2} }}\)</span></span>；函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(h(u)=\arctan\left( \frac{1-u}{\sqrt{ 1-u^{2} }} \right)\)</span><span class="heti-spacing"> </span></span>的导数是<span><span class="heti-spacing"> </span><span class="arithmatex">\(h'(u)=-\frac{1}{2} \frac{1}{\sqrt{ 1-u^{2} }}\)</span></span>，所以我们可以利用如下积分公式：</p>
 <div class="admonition success">
@@ -2445,7 +2443,6 @@ x=\frac{\sin u}{\cos v},\quad y=\frac{\sin v}{\cos u}
 \]</div>
 <p>从而可见以上的公式在单位正方形<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S=\left\{ (x,y)\mid 0\leqslant x,y\leqslant 1 \right\}\)</span><span class="heti-spacing"> </span></span>的内部和三角形<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T=\left\{ (u,v)\mid u,v\geqslant 0,u+v\leqslant \frac{\pi}{2} \right\}\)</span><span class="heti-spacing"> </span></span>的内部之间定义了一个双射的坐标变换。如下图所示：</p>
 <div align="center">
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../graph/image-3.png"><img src="../graph/image-3.png" style="width:60%; height:auto;"/></a>
 </div>
 <p>现在我们要计算坐标变换的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{Jacobi}\)</span><span class="heti-spacing"> </span></span>行列式，奇妙的是它就是：</p>
 <div class="arithmatex">\[
@@ -2668,7 +2665,7 @@ f(m,n)-f(m+n,n)-f(m,m+n)= \frac{2}{m^{2}n^{2}}
 </aside>
 <h2 id="__comments">评论区</h2>
 <!-- 你自己生成的 Giscus 代码 -->
-<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOTsrfcc4DCqOm" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Miracle606/mathcandy" data-repo-id="R_kgDOTsrfcQ" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOTsrfcc4DCqOm" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="url" data-reactions-enabled="1" data-repo="Miracle606/mathcandy" data-repo-id="R_kgDOTsrfcQ" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
 </script>
 <!-- 同步 Giscus 主题与 MkDocs 明暗色调切换的代码 -->
 <script>
