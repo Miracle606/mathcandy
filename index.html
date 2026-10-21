@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zh"><head>
+<html class="no-js" lang="zh">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Miracle的数学小课糖是一个专注于数学学习的知识分享平台，致力于为广大数学爱好者提供高质量的数学学习资源。无论你是初学者还是有一定基础的学习者，都可以在这里找到适合自己的学习内容和交流机会。我们希望通过这个平台，帮助更多的人爱上数学，提升数学素养，共同探索数学的奥秘。每日甄选趣味好题，深耕一题多解与创意思路。跳出课本定式与标准答案，破除数学只剩公式计算的刻板印象。从初等数学到高数考研，于逻辑推演里领略数理之美，带你换个视角读懂数学。" name="description"/>
@@ -20,17 +21,16 @@
 <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-DZQVL1DHKG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-DZQVL1DHKG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-DZQVL1DHKG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
-        </style><script src="./assets/javascripts/toggle-sidebar.js"></script></head>
+<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script><script src="./assets/javascripts/toggle-sidebar.js"></script></head>
 <body data-md-color-accent="deep-orange" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -2082,10 +2082,12 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. --><div align="center">
+        ...       # Other markdown pages, images and other files. -->
+<div align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="bloom-header-night.svg">
-</source></picture>
+<source media="(prefers-color-scheme: dark)" srcset="bloom-header-night.svg"/>
+<img alt="Miracle的数学小课糖" class="off-glb" src="bloom-header.svg" width="900"/>
+</picture>
 </div>
 <!-- <center><font class="custom-font ml3 shine-text">Miracle的数学小课糖</font></center>
 <script src="https://cdn.statically.io/libs/animejs/2.0.2/anime.min.js"></script>
@@ -2125,12 +2127,12 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 <p>微信公众号</p>  
 <a href="graph/qcode1.jpg" target="_blank">
-<img src="graph/qcode1.jpg" style="width: 450px; height: auto;">
+<a class="glightbox" href="graph/qcode1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="graph/qcode1.jpg" style="width: 450px; height: auto;"></a>
 </a>
 
 <p>搜一搜</p>
 <a href="graph/qcode2.png" target="_blank">
-<img src="graph/qcode2.png" style="width: 450px; height: auto;">
+<a class="glightbox" href="graph/qcode2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="graph/qcode2.png" style="width: 450px; height: auto;"></a>
 </a>
 </center> -->
 <style>
@@ -2358,20 +2360,20 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 <center>
 <p>搜一搜</p>
 <a href="graph/qcode2.png" target="_blank">
-<img src="graph/qcode2.png" style="width: 450px; height: auto;"/>
-</a>
+</a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="graph/qcode2.png"><img src="graph/qcode2.png" style="width: 450px; height: auto;"/></a>
 </center>
 <div align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="garden-footer-night.svg">
-</source></picture>
-<p style="text-align:center;color:#8a93a3;font-size:.82rem">世间数理自有浪漫，期待与每一份热爱在此邂逅。</p></div>
+<source media="(prefers-color-scheme: dark)" srcset="garden-footer-night.svg"/>
+<img alt="garden footer" class="off-glb" src="garden-footer.svg" width="900"/>
+</picture>
+<p style="text-align:center;color:#8a93a3;font-size:.82rem">世间数理自有浪漫，期待与每一份热爱在此邂逅。</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月7日 17:01:54 UTC">2026年8月7日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年10月21日 03:43:51 UTC">2026年10月21日</span>
 </span>
 </aside>
 <h2 id="__comments">评论区</h2>
@@ -2410,16 +2412,14 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     })
   })
 </script>
-</article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-</div>
+</article></div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
-</main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
 <a aria-label="下一页: Cauchy-Schwarz不等式" class="md-footer__link md-footer__link--next" href="AM/Cauchy/">
@@ -2469,5 +2469,6 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 <script src="javascripts/mathjax.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+document$.subscribe(() => { lightbox.reload() });
+</script></main></div></body>
+</html>
